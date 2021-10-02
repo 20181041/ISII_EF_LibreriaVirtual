@@ -7,6 +7,27 @@ h1 {
     color: rgb(255, 255, 255);
 }
 
+.footer {
+    background-color: #0d7712 !important;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header {
+    background-color: #0d7712 !important;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 89px !important;
+}
+
+.catalogo {
+    width: 100%;
+}
+
 .fondoNegro {
     padding-top: 10px;
     background-color: black;
@@ -47,21 +68,4 @@ h1 {
 
 .font-60 {
     font-size: 60px;
-}
-
-.footer {
-    background-color: #0d7712 !important;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-.header {
-    background-color: #0d7712 !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 89px;
 }
