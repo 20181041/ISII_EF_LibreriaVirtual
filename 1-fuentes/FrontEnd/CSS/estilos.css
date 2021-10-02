@@ -59,9 +59,28 @@ h1 {
 
 .header {
     background-color: #0d7712 !important;
-    position: absolute;
+    
     top: 0;
     left: 0;
     width: 100%;
     height: 89px;
+}
+.pwrd {
+    position: static;
+    width: 384px;
+    height: 40px;
+    left: 19.5px;
+    top: 0px;    
+    font-family: ABeeZee;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 40px;    
+    display: flex;
+    align-items: flex-end;    
+    color: #000000;    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 35px 0px;
 }
