@@ -1,3 +1,7 @@
+.body {
+    width: 100% !important;
+}
+
 h1 {
     font-family: 'Fleur De Leah', cursive;
     color: rgb(255, 255, 255);
@@ -47,10 +51,10 @@ h1 {
 
 .footer {
     background-color: #0d7712 !important;
-    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 100%;
 }
 
 .header {
