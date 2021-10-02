@@ -1,3 +1,11 @@
-body {
+h1 {
     font-family: 'Fleur De Leah', cursive;
+    background-color: black;
+    color: blanchedalmond;
+}
+.footer{
+    background-color: #0d7712 !important;
+}
+.header{
+    background-color: #0d7712 !important;
 }
