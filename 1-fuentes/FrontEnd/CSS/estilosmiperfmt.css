@@ -25,9 +25,35 @@ margin-left: 250px;
     width: 240px;
     background-color: #EC6D12!important;
     border: solid 1px rgb(0, 0, 0);
+    
+
+
+
+}
+
+#imagen-tienda{
+
+margin-left:194px
+
 
 
 
 
 }
 
+#descp{
+
+font-size: 19px;
+
+
+}
+
+
+.bloque-cons{
+
+border: solid 2px rgb(0, 0, 0);
+height:187px;
+
+
+
+}
