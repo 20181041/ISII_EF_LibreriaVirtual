@@ -21,15 +21,18 @@
         </div>
         <div class="col-sm-10"></div>
     </div>
-    
+
     <!-- INICIO DE CONTENIDO -->
     <div class="row p-3 w-100">
         <div class="col-sm-3">
-            <input class="w-100 alto" type="text">
+            <div class="form-floating">
+                <input type="email" class="w-100 form-control alto" id="floatingInput" placeholder="name@example.com">
+                <label class="font-12 floatingInput">Email address</label>
+            </div>
         </div>
         <div class="col-sm-3">
             <div class="dropdown w-100">
-                <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle w-100 alto" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                     Dropdown button
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -43,9 +46,8 @@
     <div class="catalogo">
         <div class="container">
             <div class="row">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-2">
-                    <div class="card" style="width: 10rem;left: 3rem">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 14rem;left: 3rem">
                         <img src="/1-fuentes/FrontEnd/Images/portada2.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title font-16">Atlantis</h5>
@@ -54,8 +56,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div class="card" style="width: 10rem;left: 3rem">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 14rem;left: 3rem">
                         <img src="/1-fuentes/FrontEnd/Images/portada2.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title font-16">Atlantis</h5>
@@ -64,8 +66,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div class="card" style="width: 10rem;left: 3rem">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 14rem;left: 3rem">
                         <img src="/1-fuentes/FrontEnd/Images/portada2.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title font-16">Atlantis</h5>
@@ -74,18 +76,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-2">
-                    <div class="card" style="width: 10rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/portada2.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title font-16">Atlantis</h5>
-                            <p class="card-text font-12">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary"> <span class="font-12"> Go somewhere</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card" style="width: 10rem;left: 3rem">
+                <div class="col-sm-3">
+                    <div class="card" style="width: 14rem;left: 3rem">
                         <img src="/1-fuentes/FrontEnd/Images/portada2.jpg" class="card-img-top">
                         <div class="card-body">
                             <h5 class="card-title font-16">Atlantis</h5>
@@ -97,48 +89,6 @@
                 <div class="col-sm-1"></div>
             </div>
         </div>
-        <!--         
-        <div class="row p-5">
-            <div class="col-sm-3">
-                <div class="card" style="width: 14rem;left: 3rem">
-                    <img src="/1-fuentes/FrontEnd/Images/portada2.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada4.jpg">
-            </div>
-            <div class="col-sm-3">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-            <div class="col-sm-3">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-        </div>
-        <div class="row border border-dark">
-            <div class="col-sm-2">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-            <div class="col-sm-2">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-            <div class="col-sm-2">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-            <div class="col-sm-2">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-            <div class="col-sm-2">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-            <div class="col-sm-2">
-                <img class="imgCat" src="/1-fuentes/FrontEnd/Images/portada1.jpg">
-            </div>
-        </div> -->
     </div>
     <!-- FIN DE CONTENIDO -->
 
@@ -152,7 +102,7 @@
             </div>
         </div>
         <div class="col-sm-12">
-            <p class="text-center text-white"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
+            <p class="text-center text-white mb-0"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
         </div>
     </div>
 </div>
