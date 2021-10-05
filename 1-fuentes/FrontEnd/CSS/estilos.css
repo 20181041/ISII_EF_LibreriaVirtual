@@ -16,6 +16,7 @@ h1 {
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 9999999 !important;
 }
 
 .header {
@@ -34,11 +35,19 @@ h1 {
     height: 100% !important;
 }
 
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
 
 /* CSS Texto */
 
 .font-12 {
     font-size: 12px !important;
+}
+
+.font-13 {
+    font-size: 13px !important;
 }
 
 .font-14 {
