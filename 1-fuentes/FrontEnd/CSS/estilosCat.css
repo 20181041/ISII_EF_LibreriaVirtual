@@ -2,11 +2,27 @@
     width: 100%;
 }
 
+.fondoGris {
+    background-color: #E5E5E5;
+}
+
+.dropdown-white {
+    background-color: white !important;
+}
+
 .imgCat {
     weight: 100% !important;
     height: 320px !important;
 }
 
+.m-0 {
+    margin: 0 !important;
+}
+
 .mb-0 {
     margin-bottom: 0 !important;
+}
+
+.alto {
+    height: 50px !important;
 }
