@@ -1,0 +1,58 @@
+
+.fondoInicio{
+     filter:brightness(115%);
+     background-image: url("/1-fuentes/FrontEnd/Images/ImagenInicio.jpg");
+     width: 100% !important;
+     opacity: 85%;
+     
+}
+
+.TituloPrincipal{
+     font-size: 40px;
+     color: white;
+     font-weight: bold;
+     font-family: 'Share', cursive;
+     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.Acceder{
+     width:150px; 
+	height:350px; 
+     background-color: black;
+     opacity: 75%;
+     color: white;
+     font-family: 'Share Tech', sans-serif;
+     font-size: 30px;
+     
+     
+}
+
+.boton-inicio{
+     padding: 6%;
+     margin-top: 20px;
+     font-family: 'Share', cursive;
+     font-weight: bold;
+     color: white;
+     background-color: Transparent;
+     border: 2px solid rgb(70, 69, 69);
+     width:203px; 
+	height:73px; 
+     border-radius: 25px;
+     font-size: 25px;
+     text-decoration: none;
+}
+
+.boton-inicio:hover {
+     color: rgb(88, 88, 88);
+     border: 2px solid rgb(20, 20, 20);
+}
+
+.HipatiaDescripcion{
+     text-align: center;
+     padding:  59px 75px 75px;
+     margin-bottom: 10x;
+}
+
+.final{
+     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}

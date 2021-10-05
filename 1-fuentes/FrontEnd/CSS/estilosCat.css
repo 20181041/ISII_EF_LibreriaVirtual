@@ -1,0 +1,12 @@
+.catalogo {
+    width: 100%;
+}
+
+.imgCat {
+    weight: 100% !important;
+    height: 320px !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
