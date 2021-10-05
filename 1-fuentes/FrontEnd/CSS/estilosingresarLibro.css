@@ -223,10 +223,43 @@ input[type=texto] {
 
 display: inline-block;
 margin-left: 20px;
+border-radius: 12px;
+padding: 5px;
 
+}
 
+#botonfoto{
+   
+    border-radius: 12px;
+    padding: 5px;
+    width: 100px;
+    background-color: #e5e5e5;
+    border: 0.82px solid rgb(0, 0, 0);
 
+}
 
+#botoncate{
+    border-radius: 12px;
+    padding: 5px;
+    width: 100px;
+    background-color: #e5e5e5;
 
 
 }
+
+
+
+#dropdownMenuButton1{
+
+    border-radius: 12px;
+    padding: 5px;
+    width: 100px;
+    background-color: #e5e5e5;  
+
+    
+}
+
+
+
+
+
