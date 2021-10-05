@@ -140,7 +140,7 @@ input[type=texto] {
     padding: 5px;
     width: 100px;
     background-color: #e5e5e5;
-    border: 0.82px solid rgb(0, 0, 0);
+    border: 0.5px solid rgb(0, 0, 0);
 }
 
 #botoncate {
@@ -171,7 +171,6 @@ input[type=texto] {
 }
 
 #botoncomfirmar {
-    margin-left: 1055px;
     border-radius: 12px;
     background-color: #53c5e7;
     border: solid 1px rgb(0, 0, 0);
