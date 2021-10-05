@@ -28,15 +28,6 @@ h1 {
     z-index: 99999 !important;
 }
 
-.catalogo {
-    width: 100%;
-}
-
-.imgCat {
-    width: 100% !important;
-    height: 320px !important;
-}
-
 .fondoNegro {
     padding-top: 10px !important;
     background-color: black;
