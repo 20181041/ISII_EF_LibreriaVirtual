@@ -22,6 +22,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 89px !important;
+    z-index: 9999 !important;
 }
 
 .catalogo {
