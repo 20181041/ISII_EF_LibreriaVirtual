@@ -69,13 +69,51 @@
                 </div>
 
             </div>
-            <button type="button" class="btn btn-info w-100">
+            <button type="button" class="btn btn-info w-100"data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         <div class=""> Confirmar </div>
       </button>
 
+      <!-- Modal -->
+    <div class="modal fade priori" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Verificación en dos pasos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body fondoModalRegistro">
+                <div class= "row">
+                    <div class="col-sm-5">
+                        <img id="candado" src="/1-fuentes/FrontEnd/Images/Candado.png">
+                    </div>
+
+                    <div class="col-sm-6 p-3">
+
+                        <div >
+                            <div class="row mb-4 Margenes">
+                                Introduce el código de verificación enviado a tu correo para poder ingresar
+                            </div>
+
+                            <div class="row mb-4">
+                                <input class="form-control" type="text" placeholder="Introduce el Código" aria-label="default input example">
+                            </div>
+
+                            <div class="row">
+                                <button type="button" class=" rosado" data-bs-dismiss="modal">Verificar</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        </div>
+    </div>
+
             <div class="container signin">
                 <br>
-                <p>Ya tienes una cuenta? <a href="#">Crea una aquí</a>.</p>
+                <p>Ya tienes una cuenta? <a href="#">Inciar Sesión</a>.</p>
             </div>
     </form>
     
