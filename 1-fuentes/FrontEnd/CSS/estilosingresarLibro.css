@@ -1,26 +1,18 @@
-
-
-#dropdownMenu2{
-
-display: block;
-box-shadow: transparent;
-background-color: rgb(255, 255, 255);
-height: 38px;
-width: 420px;
-
-
+#dropdownMenu2 {
+    display: block;
+    box-shadow: transparent;
+    background-color: rgb(255, 255, 255);
+    height: 38px;
+    width: 420px;
 }
 
-
-#titulo1{
-
-
-color: #787a78;
-
-    
+.p-soles {
+    padding: 0.5rem .75rem !important;
 }
 
-
+#titulo1 {
+    color: #787a78;
+}
 
 .login-box {
     margin-top: 75px;
@@ -29,8 +21,6 @@ color: #787a78;
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-
-
 
 .login-title {
     margin-top: 15px;
@@ -60,8 +50,6 @@ input[type=text] {
     color: #ECF0F5;
 }
 
-
-
 .form-group {
     margin-bottom: 40px;
     outline: 0px;
@@ -86,15 +74,12 @@ label {
     margin-bottom: 0px;
 }
 
-
 .form-control-label {
     font-size: 20px;
     color: #383535;
     font-weight: bold;
     letter-spacing: 1px;
-
 }
-
 
 .btn-outline-primary {
     border-color: #0DB8DE;
@@ -143,76 +128,51 @@ input[type=texto] {
     color: #ECF0F5;
 }
 
-
-.menudrop2{
-
-display: inline-block;
-margin-left: 20px;
-border-radius: 12px;
-padding: 5px;
-
+.menudrop2 {
+    display: inline-block;
+    margin-left: 20px;
+    border-radius: 12px;
+    padding: 5px;
 }
 
-#botonfoto{
-   
+#botonfoto {
     border-radius: 12px;
     padding: 5px;
     width: 100px;
     background-color: #e5e5e5;
     border: 0.82px solid rgb(0, 0, 0);
-
 }
 
-#botoncate{
+#botoncate {
     border-radius: 12px;
     padding: 5px;
     width: 100px;
     background-color: #e5e5e5;
-
-
 }
 
-#botprin{
-
-width: 500px;
-background-color: #ffffff;
-border-radius: 12px;
-
-
-
-
+#botprin {
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 12px;
 }
 
-
-#dropdownMenuButton1{
-
+#dropdownMenuButton1 {
     border-radius: 12px;
     padding: 5px;
     width: 100px;
-    background-color: #e5e5e5;  
-
-    
+    background-color: #e5e5e5;
 }
 
-#botoncatex{
+#botoncatex {
     border-radius: 12px;
     padding: 5px;
     width: 500px;
     background-color: #ffffff;
-    
-
 }
 
-
-
-#botoncomfirmar{
-
-margin-left: 1055px;
-border-radius: 12px;
-background-color: #53c5e7;
-border: solid 1px rgb(0, 0, 0);
-
-
-
+#botoncomfirmar {
+    margin-left: 1055px;
+    border-radius: 12px;
+    background-color: #53c5e7;
+    border: solid 1px rgb(0, 0, 0);
 }
-
