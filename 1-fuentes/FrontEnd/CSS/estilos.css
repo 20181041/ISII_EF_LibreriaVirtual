@@ -1,3 +1,11 @@
+<<<<<<< Updated upstream
+=======
+.body {
+    width: 100% !important;
+    
+}
+
+>>>>>>> Stashed changes
 h1 {
     font-family: 'Fleur De Leah', cursive;
     color: rgb(255, 255, 255);
@@ -28,6 +36,18 @@ h1 {
     z-index: 99999 !important;
 }
 
+<<<<<<< Updated upstream
+=======
+.catalogo {
+    width: 100%;
+}
+
+.imgCat {
+    width: 100% !important;
+    height: 320px !important;
+}
+
+>>>>>>> Stashed changes
 .fondoNegro {
     padding-top: 10px !important;
     background-color: black;
