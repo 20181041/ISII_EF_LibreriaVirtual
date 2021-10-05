@@ -52,11 +52,14 @@ font-size: 19px;
 .bloque-cons{
 
 border: solid 2px rgb(0, 0, 0);
-height:187px;
+height:200px;
+
 
 
 
 }
+
+
 
 
 #menu{
@@ -86,6 +89,14 @@ font-style: italic;
 
     background-color:#6A7384 !important;
     color: #ffffff !important;
+
+
+}
+
+#img1{
+margin-top:10px;
+margin-left: 10px;
+
 
 
 }
