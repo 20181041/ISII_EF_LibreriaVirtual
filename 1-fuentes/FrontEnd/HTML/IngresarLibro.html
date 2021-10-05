@@ -33,28 +33,18 @@
         <div class="row">
             <div class="col-md-8">
                 <label for="">
-          <strong class="display-6"> Ingresa la información del libro</strong>
-        </label>
+                    <strong class="display-6"> Ingresa la información del libro</strong>
+                </label>
                 <br />
                 <br />
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">
-            <p id="titulo1">Tipo de transaccion</p>
-          </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <li>
-                            <button class="dropdown-item" type="button">Action</button>
-                        </li>
-                        <li>
-                            <button class="dropdown-item" type="button">
-                Another action
-              </button>
-                        </li>
-                        <li>
-                            <button class="dropdown-item" type="button">
-                Something else here
-              </button>
-                        </li>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" id="botprin" style="color:rgb(0, 0, 0)">
+                        Prestamo
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" href="#">Menu item</a></li>
+                        <li><a class="dropdown-item" href="#">Menu item</a></li>
+                        <li><a class="dropdown-item" href="#">Menu item</a></li>
                     </ul>
                 </div>
             </div>
@@ -78,12 +68,31 @@
                     </div>
                 </form>
 
-                <form>
-                    <div class="form-group">
-                        <label class="form-control-label">Precio</label>
-                        <input type="texto" class="form-control" />
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-control-label">Precio</label>
+                                <input type="texto" class="form-control" />
+                            </div>
+                        </form>
                     </div>
-                </form>
+                    <div class="col-md-8">
+                        <!-- Example single danger button -->
+                        <div class="btn-group border-2 border-bottom border-dark">
+                            <button type="button" class="btn dropdown-toggle mt-4 p-soles" data-bs-toggle="dropdown" aria-expanded="false">
+                                S/.
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">USD</a></li>
+                                <li><a class="dropdown-item" href="#">EUR</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
 
             <div class="col-md-4">
@@ -92,7 +101,7 @@
                         <label class="form-control-label">Foto</label>
                         <div class="menudrop2">
 
-                            <button id="botonfoto" type="button" class="btn btn-light" style="color:rgb(0, 0, 0)">Examinar</button>
+                            <button id="botonfoto" type="button" class="btn btn-light" style="color:rgb(0, 0, 0)"><u>Examinar</u></button>
                         </div>
 
 
@@ -111,8 +120,8 @@
                         <div class="menudrop2">
                             <div class="dropdown">
                                 <button id="botoncate" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="color:rgb(0, 0, 0)">
-                  Categoría
-                </button>
+                                    Categoría
+                                </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#">Tragedia</a></li>
                                     <li><a class="dropdown-item" href="#">Romance</a></li>
@@ -140,8 +149,8 @@
                         <div class="menudrop2">
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="color:rgb(0, 0, 0)">
-                    Estado
-                  </button>
+                                    Estado
+                                </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#">Nuevo</a></li>
                                     <li><a class="dropdown-item" href="#">Casi nuevo</a></li>
@@ -164,28 +173,81 @@
 
                 <form>
                     <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <textarea name="imperfectos" id="imp" cols="40" rows="4"></textarea>
                     </div>
+                </form>
             </div>
-        </div>
 
-        <!--Made with Love by Larry Geams-->
 
-        <!-- FIN DE CONTENIDO -->
-
-        <div class="footer p-3">
             <div class="row">
-                <div class="col-sm-6">
-                    <p class="text-end text-white"> Condiciones de uso </p>
+                <div class="col-md-8">
+
+                    <form>
+                        <div class="form-group">
+                            <label class="form-control-label">Descripción</label>
+                        </div>
+                    </form>
+
+                    <form>
+                        <div class="form-group">
+                            <textarea name="imperfectos" id="imp" cols="157" rows="4"></textarea>
+                        </div>
+                    </form>
+
+
+
+
                 </div>
-                <div class="col-sm-6">
-                    <p class="text-white"> Aviso de Privacidad </p>
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <p class="text-center text-white"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
+
+
+
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+        <span>
+            <button id="botoncomfirmar" type="button" class="btn btn-light" style="color:rgb(0, 0, 0)"> <strong>Añadir a
+                    mi tienda </strong></button>
+        </span>
+
+    </div>
+
+    <br>
+</div>
+
+
+
+
+
+
+
+<!--Made with Love by Larry Geams-->
+
+<!-- FIN DE CONTENIDO -->
+
+<div class="footer p-3">
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="text-end text-white"> Condiciones de uso </p>
+        </div>
+        <div class="col-sm-6">
+            <p class="text-white"> Aviso de Privacidad </p>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <p class="text-center text-white"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
+    </div>
+</div>
+
+
 
 
 </html>
