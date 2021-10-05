@@ -172,6 +172,16 @@ padding: 5px;
 
 }
 
+#botprin{
+
+width: 500px;
+background-color: #ffffff;
+border-radius: 12px;
+
+
+
+
+}
 
 
 #dropdownMenuButton1{
@@ -184,7 +194,25 @@ padding: 5px;
     
 }
 
+#botoncatex{
+    border-radius: 12px;
+    padding: 5px;
+    width: 500px;
+    background-color: #ffffff;
+    
+
+}
 
 
 
+#botoncomfirmar{
+
+margin-left: 1055px;
+border-radius: 12px;
+background-color: #53c5e7;
+border: solid 1px rgb(0, 0, 0);
+
+
+
+}
 
