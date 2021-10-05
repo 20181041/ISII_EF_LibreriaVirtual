@@ -74,10 +74,18 @@ width:330px;
 background-color:#EFEDED  !important;
 
 color: #000000 !important;
-margin-top: 5px;
+margin-top: 4px;
 border-radius: 0px !important;
-
+font-style: italic;
 
 }
 
+#v-pills-profile-tab{
 
+
+
+    background-color:#6A7384 !important;
+    color: #ffffff !important;
+
+
+}
