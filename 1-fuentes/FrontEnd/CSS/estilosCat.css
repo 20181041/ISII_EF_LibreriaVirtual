@@ -42,3 +42,7 @@
 .alto {
     height: 60px !important;
 }
+
+.priori {
+    z-index: 9999999999999 !important;
+}
