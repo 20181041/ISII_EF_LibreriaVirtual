@@ -1,8 +1,3 @@
- #inan {
-     margin-left: 160px;
-     border: #0000 solid 1px;
- }
- 
  .btn-light {
      border-radius: 6px;
      height: 33px;
@@ -17,7 +12,6 @@
  
  .bloque-cons {
      border: solid 2px rgb(0, 0, 0);
-     height: 200px;
  }
  
  #menu {
@@ -27,7 +21,6 @@
  .nav-link {
      background-color: #EFEDED !important;
      color: #000000 !important;
-     margin-top: 4px;
      border-radius: 0px !important;
      font-style: italic;
  }
@@ -35,9 +28,4 @@
  #v-pills-messages-tab {
      background-color: #6A7384 !important;
      color: #ffffff !important;
- }
- 
- #img1 {
-     margin-top: 10px;
-     margin-left: 10px;
  }
