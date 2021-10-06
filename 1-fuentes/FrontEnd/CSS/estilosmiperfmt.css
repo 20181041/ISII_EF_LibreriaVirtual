@@ -24,21 +24,27 @@
  
  #v-pills-profile-tab {
      background-color: #6A7384 !important;
-     color: #ff0000 !important;
+     color: #ffffff !important;
  }
  
  .titlib {
      font-size: 15px;
      font-weight: bold;
  }
+ .titlibb {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff !important;
+}
  
  .tit {
      border: 1px solid #ff0000;
  }
  
  .etiqueta {
-     border: 1px solid #ff0000;
+     border: 1px solid #ffffff;
  }
+ 
  
  .titlibbb {
      border: 1px solid #0011ff;
@@ -58,8 +64,8 @@
  }
  
  #xddd {
-     border: 1px solid #ff0000;
-     width: 200px;
+     border: 1px solid #ffffff;
+     
  }
  
  .informativo {
@@ -68,8 +74,14 @@
      width: 170px;
      height: 32px;
  }
+ .informativo {
+    border: 2px solid #000000;
+    border-radius: 5px;
+    width: 170px;
+    height: 32px;
+}
  
- #anotacion {}
+
  
  .botonedt {
      z-index: 2;
