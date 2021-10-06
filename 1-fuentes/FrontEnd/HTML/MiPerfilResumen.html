@@ -3,6 +3,7 @@
 <title>
     Mi Perfil - Resumen
 </title>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,116 +17,105 @@
 </head>
 
 <div class="body">
-     <div class="header">
-         <div class="col-sm-2 fondoNegro">
-             <h1 class="font-60 text-center">Hipatia</h1>
-         </div>
-         <div class="col-sm-10"></div>
-     </div>
-
-     <div class= "container p-3">
-          <div class="row">
-               <div class="col-sm-3">
-
-                    <div class="mb-4">
-
-                         <p id="descp"> <span><strong> Inicio  /  Perfil </strong></span></p>
-             
-             
-                     </div>
-                    <div class="mb-4">
-                         <img class="rounded mx-auto d-block" id="ImagenMP" src="/1-fuentes/FrontEnd/Images/MiProfile.png"> 
+    <div class="header">
+        <div class="col-sm-2 fondoNegro">
+            <h1 class="font-35 text-center">Hipatia</h1>
+        </div>
+        <div class="col-sm-10"></div>
+    </div>
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="mb-4">
+                    <p id="descp"> <span><strong> Inicio  /  Perfil </strong></span></p>
+                </div>
+                <div class="mb-4">
+                    <img class="rounded mx-auto d-block" id="ImagenMP" src="/1-fuentes/FrontEnd/Images/MiProfile.png">
+                </div>
+                <div>
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">Resumen</a>
+                        <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/Miperfilmt.html" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mi tienda</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/MiPerfilTrans.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mis transacciones</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/IniciarSesion.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cerrar Sesión</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/Catalogo.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Volver al catálogo</a>
                     </div>
 
-                    <div>
-                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                              <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">Resumen</a>
-                              <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/Miperfilmt.html" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mi tienda</a>
-                              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/MiPerfilTrans.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mis transacciones</a>
-                              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/IniciarSesion.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cerrar Sesión</a>
-                              <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/Catalogo.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Volver al catálogo</a>
-                         </div>
-                         
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="font-40">
+                    Mi información
+                </div>
+                <hr>
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            Nombres y Apellidos:
+                        </div>
+
+                        <div class="col">
+                            Santiago Guillermo Lira Ramirez
+                        </div>
                     </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            Teléfono:
+                        </div>
+
+                        <div class="col">
+                            XXX - XXX - XXX
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            Departamento:
+                        </div>
+
+                        <div class="col">
+                            Cajamarca
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-5">
+                        <div class="col">
+                            Calificación:
+                        </div>
+
+                        <div class="col">
+                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-4.png" class="w-50">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="/1-fuentes/FrontEnd/HTML/MiPerfilEditar.html" id="btnEditar" type="button" class="btn btn-info mt-5.5">Editar</a>
+                        </div>
                     </div>
 
-               <div class = "col-sm-8">
-                  
-                         <div class="font-40">
-                              Mi información
-                         </div>
-                         <hr>
-                         <form>
-                              <div class="row">
-                                   <div class="col">
-                                        Nombres y Apellidos:
-                                   </div>
-                                  
-                                   <div class="col">
-                                        Santiago Guillermo Lira Ramirez
-                                   </div>
-     
-                              </div>
-                              <hr>
-                              <div class="row">
-                                   <div class="col">
-                                        Teléfono:
-                                   </div>
-     
-                                   <div class="col">
-                                        XXX - XXX - XXX
-                                   </div>
-                              </div>
-                              <hr>
-                              <div class="row">
-                                   <div class="col">
-                                        Departamento:
-                                   </div>
-     
-                                   <div class="col">
-                                        Cajamarca
-                                   </div>
-                              </div>
-                              <hr>
-                              <div class="row mb-5">
-                                   <div class="col">
-                                        Calificación:
-                                   </div>
-     
-                                   <div class="col">
-                                        <img src="/1-fuentes/FrontEnd/Images/Calificacion-4.png" class="w-50">
-                                   </div>
-                              </div>
-     
-     
-                    <div class= "row">
-                         <div class="col">
-                             
-                         </div>
-                         <div class="col-sm-2">
-                              <a href="/1-fuentes/FrontEnd/HTML/MiPerfilEditar.html" id= "btnEditar" type="button" class="btn btn-info mt-5.5">Editar</a>
-                         </div>
-                    </div>
-                    
-                    </form>
-              
-               </div>
-          </div>
-    
-     </div>
-     <div class="footer p-3">
-          <div class="row">
-              <div class="col-sm-6">
-                  <p class="text-end text-white"> Condiciones de uso </p>
-              </div>
-              <div class="col-sm-6">
-                  <p class="text-white"> Aviso de Privacidad </p>
-              </div>
-          </div>
-          <div class="col-sm-12">
-              <p class="text-center text-white mb-0"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
-          </div>
-      </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="footer p-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-end text-white"> Condiciones de uso </p>
+            </div>
+            <div class="col-sm-6">
+                <p class="text-white"> Aviso de Privacidad </p>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-center text-white mb-0"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
+        </div>
+    </div>
 
 </div>
 
