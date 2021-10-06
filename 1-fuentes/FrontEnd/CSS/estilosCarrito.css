@@ -1,0 +1,77 @@
+ .btn-light {
+     border-radius: 6px;
+     height: 33px;
+     width: 240px;
+     background-color: #f85b00!important;
+     border: solid 1px rgb(0, 0, 0);
+ }
+ 
+ .bloque-cons {
+     border: solid 2px rgb(0, 0, 0);
+ }
+ 
+ .nav-link {
+     background-color: #EFEDED !important;
+     color: #000000 !important;
+     border-radius: 0px !important;
+     font-style: italic;
+ }
+ 
+ #v-pills-profile-tab {
+     background-color: #6A7384 !important;
+     color: #ffffff !important;
+ }
+ 
+ .titlib {
+     font-size: 15px;
+     font-weight: bold;
+ }
+ 
+ .titlibb {
+     font-size: 15px;
+     font-weight: bold;
+     color: #ffffff !important;
+ }
+ 
+ .tit {
+     border: 1px solid #ff0000;
+ }
+ 
+ .etiqueta {
+     border: 1px solid #ffffff;
+ }
+ 
+ .titlibbb {
+     border: 1px solid #0011ff;
+ }
+ 
+ #xddd {
+     border: 1px solid #ffffff;
+ }
+ 
+ .informativo {
+     border: 2px solid #000000;
+     border-radius: 5px;
+     width: 80%;
+ }
+ 
+ .informativo {
+     border: 2px solid #000000;
+     border-radius: 5px;
+     width: 80%;
+ }
+ 
+ .botonedt {
+     z-index: 2;
+     position: absolute;
+ }
+ 
+ .informativox {
+     border: 2px solid #ffffff;
+     border-radius: 5px;
+     width: 80%;
+ }
+ .verZona{
+    vertical-align: middle; 
+    margin-top: 35%;
+ }
