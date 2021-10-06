@@ -11,9 +11,10 @@ margin-left: 250px;
 
 #inan{
 
-
+    height: 40px;
     margin-left: 160px;
-    border: #0000 solid 1px;
+    border: #0000 solid 3px;
+    margin-bottom: 10px;
 
 }
 
@@ -23,7 +24,7 @@ margin-left: 250px;
     border-radius: 6px;
     height: 33px;
     width: 240px;
-    background-color: #EC6D12!important;
+    background-color: #f85b00!important;
     border: solid 1px rgb(0, 0, 0);
     
 
@@ -115,7 +116,152 @@ font-weight: bold;
 .tit{
 
 margin-left: -80px !important;
-
-
+border: 1px solid #ffffff;
+width : 155px ;
 
 }
+
+.etiqueta{
+
+    margin-left: -10px !important;
+    border : 1px solid #ffffff;
+    margin-bottom: 20px;
+    width: 195px;
+    
+    
+    }
+
+
+ .titlibbb{
+
+    border: 1px solid #ffffff;
+    
+    
+
+
+
+ }   
+
+
+ #Autor{
+
+    
+    margin-right: 33px !important;
+    width:205px;
+    
+
+
+ }
+
+
+
+ #tipotrans{
+
+
+    margin-left: 10px !important;
+    width: 205px;
+
+ }
+
+ 
+ #precio{
+
+margin-left: -165px;
+width: 200px;
+margin-right: 50px;
+
+border: 1px solid #ffffff;
+
+
+ }
+
+ #xddd{
+
+
+    
+    margin-left: -10px !important;
+    border : 1px solid #ffffff;
+    margin-bottom: 20px;
+    width: 200px;
+
+
+
+
+ }
+
+ .informativo{
+
+border: 2px solid #000000;
+border-radius: 5px;
+width:170px;
+height: 32px;
+margin-left: -10px;
+
+
+
+
+
+
+
+
+ }
+
+ #anotacion{
+
+margin-left:10px;
+
+
+ }
+
+
+ .botonagregar{
+
+
+margin-left:69px;
+
+
+
+
+ }
+
+ .botonedt{
+
+
+z-index: 2;
+margin-left: -42px;
+margin-top: 14px;
+
+position: absolute;
+
+
+
+
+
+ }
+
+ #img1{
+
+
+position: relative;
+
+
+
+ }
+
+
+ .informativox{
+
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    width:170px;
+    height: 32px;
+    margin-left: -10px;
+    
+    
+    
+    
+    
+    
+    
+    
+     }
