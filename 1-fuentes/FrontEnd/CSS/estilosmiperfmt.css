@@ -1,232 +1,84 @@
-
-#inpr{
-
-
-
-
-
-
-
-}
-
-#inan{
-
-    height: 40px;
-    
-    border: #0000 solid 3px;
-    
-
-}
-
-.btn-light {
-
-    
-    border-radius: 6px;
-    height: 33px;
-    width: 240px;
-    background-color: #f85b00!important;
-    border: solid 1px rgb(0, 0, 0);
-    
-
-
-
-}
-
-
-
-#descp{
-
-font-size: 19px;
-
-
-}
-
-
-.bloque-cons{
-
-border: solid 2px rgb(0, 0, 0);
-
-
-
-
-
-}
-
-
-
-
-
-
-
-.nav-link {
-
-background-color:#EFEDED  !important;
-
-color: #000000 !important;
-
-border-radius: 0px !important;
-font-style: italic;
-
-}
-
-#v-pills-profile-tab{
-
-
-
-    background-color:#6A7384 !important;
-    color: #ff0000 !important;
-
-
-}
-
-
-
-.titlib{
-
-font-size: 15px;
-font-weight: bold;
-
-
-
-}
-
-
-
-.tit{
-
-
-border: 1px solid #ff0000;
-
-
-}
-
-.etiqueta{
-
-    
-    border : 1px solid #ff0000;
-   
-    width: 195px;
-    
-    
-    }
-
-
- .titlibbb{
-
-    border: 1px solid #0011ff;
-    
-    
-
-
-
- }   
-
-
- #Autor{
-
-    
-   
-    width:205px;
-    
-
-
+ #inan {
+     height: 40px;
+     border: #0000 solid 3px;
  }
-
-
-
- #tipotrans{
-
-
-    
-    width: 205px;
-
- }
-
  
- #precio{
-
-
-width: 200px;
-
-
-border: 1px solid #ffffff;
-
-
+ .btn-light {
+     border-radius: 6px;
+     height: 33px;
+     width: 240px;
+     background-color: #f85b00!important;
+     border: solid 1px rgb(0, 0, 0);
  }
-
- #xddd{
-
-
-    
-  
-    border : 1px solid #ff0000;
-  
-    width: 200px;
-
-
-
-
- }
-
- .informativo{
-
-border: 2px solid #000000;
-border-radius: 5px;
-width:170px;
-height: 32px;
-
-
-
-
-
-
-
-
-
- }
-
- #anotacion{
-
-
-
- }
-
-
  
-
- .botonedt{
-
-
-z-index: 2;
-
-
-position: absolute;
-
-
-
-
-
+ .bloque-cons {
+     border: solid 2px rgb(0, 0, 0);
  }
-
  
-
-
- .informativox{
-
-    border: 2px solid #ffffff;
-    border-radius: 5px;
-    width:170px;
-    height: 32px;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-     }
-
-
-    
+ .nav-link {
+     background-color: #EFEDED !important;
+     color: #000000 !important;
+     border-radius: 0px !important;
+     font-style: italic;
+ }
+ 
+ #v-pills-profile-tab {
+     background-color: #6A7384 !important;
+     color: #ff0000 !important;
+ }
+ 
+ .titlib {
+     font-size: 15px;
+     font-weight: bold;
+ }
+ 
+ .tit {
+     border: 1px solid #ff0000;
+ }
+ 
+ .etiqueta {
+     border: 1px solid #ff0000;
+ }
+ 
+ .titlibbb {
+     border: 1px solid #0011ff;
+ }
+ 
+ #Autor {
+     width: 205px;
+ }
+ 
+ #tipotrans {
+     width: 205px;
+ }
+ 
+ #precio {
+     width: 200px;
+     border: 1px solid #ffffff;
+ }
+ 
+ #xddd {
+     border: 1px solid #ff0000;
+     width: 200px;
+ }
+ 
+ .informativo {
+     border: 2px solid #000000;
+     border-radius: 5px;
+     width: 170px;
+     height: 32px;
+ }
+ 
+ #anotacion {}
+ 
+ .botonedt {
+     z-index: 2;
+     position: absolute;
+ }
+ 
+ .informativox {
+     border: 2px solid #ffffff;
+     border-radius: 5px;
+     width: 170px;
+     height: 32px;
+ }
