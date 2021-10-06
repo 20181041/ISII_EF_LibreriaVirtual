@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <title>
-    Mi Perfil - Editar
+    Mi Perfil - Resumen
 </title>
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/1-fuentes/FrontEnd/CSS/estilosMiPerfil.css">
+    <link rel="stylesheet" href="/1-fuentes/FrontEnd/CSS/estilosResumen.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
@@ -37,19 +37,11 @@
                          <img class="rounded mx-auto d-block" id="ImagenMP" src="/1-fuentes/FrontEnd/Images/MiProfile.png"> 
                     </div>
 
-                    <div class=" mb-4">
-                         <div class="input-group mb-3">
-                              <div class="custom-file">
-                                <input type="file" class="rounded mx-auto d-block custom-file-input" id="IngresarImagen">
-                              </div>
-                            </div>
-                    </div>
-
                     <div>
                          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                               <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">Resumen</a>
                               <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/Miperfilmt.html" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mi tienda</a>
-                              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mis transacciones</a>
+                              <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/MiPerfilTrans.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mis transacciones</a>
                               <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/IniciarSesion.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cerrar Sesión</a>
                               <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/1-fuentes/FrontEnd/HTML/Catalogo.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Volver al catálogo</a>
                          </div>
@@ -64,45 +56,54 @@
                          </div>
                          <hr>
                          <form>
-                              <div class="row mb-4 mt-4">
-                                   <div class = "col-sm-6 form-group">
-                                        <label  class="form-control-label mb-3 font-24"> Nombres y Apellidos </label>
-                                        <input type="text" class="form-control" />
+                              <div class="row">
+                                   <div class="col">
+                                        Nombres y Apellidos:
                                    </div>
-                                   <div class="col-sm-2">
-
+                                  
+                                   <div class="col">
+                                        Santiago Guillermo Lira Ramirez
                                    </div>
-                                   <div class = "col-sm-4 form-group">
-                                        <label  class="form-control-label mb-3 font-24"> Teléfono </label>
-                                        <input type="text" class="form-control" />
+     
+                              </div>
+                              <hr>
+                              <div class="row">
+                                   <div class="col">
+                                        Teléfono:
+                                   </div>
+     
+                                   <div class="col">
+                                        XXX - XXX - XXX
                                    </div>
                               </div>
-                         
-                         <div class ="mb-5">
-                              <label class="form-control-label mb-3 font-24"> Departamento </label>
-                              <select  id="departamentoMiPerfil" class="form-select" aria-label="Default select example">
-                                   <option disabled selected>Elegir departamento</option>
-                                   <option value="1">Amazonas</option>
-                                   <option value="2">Áncash</option>
-                                   <option value="3">Apurímac</option>
-                                   <option value="4">Arequipa</option>
-                                   <option value="5">Ayacucho </option>
-                                   <option value="6">Cajamarca</option>
-                                   <option value="7">Callao</option>
-                                   <option value="8">Cusco</option>
-                                   <option value="9">Huancavelica</option>
-                                   <option value="10">Huánuco</option>
-                                   <option value="11">Ica</option>
-                                   <option value="12">Junin</option>
-                                 </select>
-                         </div>
-
+                              <hr>
+                              <div class="row">
+                                   <div class="col">
+                                        Departamento:
+                                   </div>
+     
+                                   <div class="col">
+                                        Cajamarca
+                                   </div>
+                              </div>
+                              <hr>
+                              <div class="row mb-5">
+                                   <div class="col">
+                                        Calificación:
+                                   </div>
+     
+                                   <div class="col">
+                                        <img src="/1-fuentes/FrontEnd/Images/Calificacion-4.png" class="w-50">
+                                   </div>
+                              </div>
+     
+     
                     <div class= "row">
                          <div class="col">
                              
                          </div>
                          <div class="col-sm-2">
-                              <a href="/1-fuentes/FrontEnd/HTML/MiPerfilResumen.html" id= "btnActualizar" type="button" class="btn btn-warning  mt-5.5">Actualizar</a>
+                              <a href="/1-fuentes/FrontEnd/HTML/MiPerfilEditar.html" id= "btnEditar" type="button" class="btn btn-info mt-5.5">Editar</a>
                          </div>
                     </div>
                     

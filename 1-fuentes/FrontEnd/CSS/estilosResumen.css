@@ -1,0 +1,194 @@
+h1 {
+     font-family: 'Fleur De Leah', cursive;
+     color: rgb(255, 255, 255);
+ }
+ 
+ 
+ /* CSS Divs */
+ 
+ .body {
+     width: 100% !important;
+ }
+ 
+ .footer {
+     background-color: #0d7712 !important;
+     position: sticky;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     z-index: 9999999 !important;
+  
+ }
+ 
+ .header {
+     background-color: #0d7712 !important;
+     position: sticky;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 89px !important;
+     z-index: 99999 !important;
+ }
+ 
+ .fondoNegro {
+     padding-top: 10px !important;
+     background-color: black;
+     height: 100% !important;
+ }
+ 
+ .mb-0 {
+     margin-bottom: 0 !important;
+ }
+ 
+ 
+ /* CSS Texto */
+ 
+ .font-12 {
+     font-size: 12px !important;
+ }
+ 
+ .font-13 {
+     font-size: 13px !important;
+ }
+ 
+ .font-14 {
+     font-size: 14px !important;
+ }
+ 
+ .font-16 {
+     font-size: 16px !important;
+ }
+ 
+ .font-18 {
+     font-size: 18px !important;
+ }
+ 
+ .font-20 {
+     font-size: 20px !important;
+ }
+ 
+ .font-22 {
+     font-size: 22px !important;
+ }
+ 
+ .font-24 {
+     font-size: 24px !important;
+ }
+ 
+ .font-26 {
+     font-size: 26px !important;
+ }
+ .font-40 {
+     font-size: 40px !important;
+ }
+ 
+ .font-60 {
+     font-size: 60px !important;
+ }
+ 
+ 
+ /* ----------------- */
+
+ #ImagenMP{
+      width: 95%;
+ }
+
+ #BotonFile{
+      text-align: center;
+ }
+
+ 
+#inpr{
+
+     margin-left: 250px;
+     
+     
+     
+     
+     
+}
+     
+#inan{
+     
+     
+         margin-left: 160px;
+         border: #0000 solid 1px;
+     
+}
+     
+.btn-light {
+     
+         
+         border-radius: 6px;
+         height: 33px;
+         width: 240px;
+         background-color: #EC6D12!important;
+         border: solid 1px rgb(0, 0, 0);
+         
+     
+     
+     
+}
+     
+     
+#descp{
+     
+     font-size: 19px;
+     
+     
+}
+     
+     
+.bloque-cons{
+     
+     border: solid 2px rgb(0, 0, 0);
+     height:187px;
+     
+     
+     
+}
+     
+     
+#menu{
+     
+     margin-left:160px;
+     
+     width:330px;
+     
+     
+}
+     
+     
+.nav-link {
+     
+     background-color:#EFEDED  !important;
+          
+     color: #000000 !important;
+     margin-top: 4px;
+     border-radius: 0px !important;
+     font-style: italic;
+          
+}
+     
+#v-pills-home-tab{
+
+     background-color:#6A7384 !important;
+     color: #ffffff !important;
+     
+     
+}
+     
+#departamentoMiPerfil{
+     width: 300px;
+}
+
+#IngresarImagen{
+     width: 50%;
+          
+}
+
+#btnActualizar{
+     width: 140px;
+     height: 40px;
+     font-size: large;
+}
