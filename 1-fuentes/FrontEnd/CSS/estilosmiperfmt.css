@@ -32,15 +32,7 @@
 
 }
 
-#imagen-tienda{
 
-
-
-
-
-
-
-}
 
 #descp{
 
@@ -53,24 +45,17 @@ font-size: 19px;
 .bloque-cons{
 
 border: solid 2px rgb(0, 0, 0);
-height:200px;
 
 
 
-
-}
-
-
-
-
-#menu{
-
-
-
-width:330px;
 
 
 }
+
+
+
+
+
 
 
 .nav-link {
@@ -94,17 +79,11 @@ font-style: italic;
 
 }
 
-#img1{
 
-
-
-
-
-}
 
 .titlib{
 
-font-size: 25px;
+font-size: 15px;
 font-weight: bold;
 
 
@@ -117,7 +96,7 @@ font-weight: bold;
 
 
 border: 1px solid #ff0000;
-width : 155px ;
+
 
 }
 
@@ -213,15 +192,7 @@ height: 32px;
  }
 
 
- .botonagregar{
-
-
-
-
-
-
-
- }
+ 
 
  .botonedt{
 
@@ -237,14 +208,7 @@ position: absolute;
 
  }
 
- #img1{
-
-
-position: relative;
-
-
-
- }
+ 
 
 
  .informativox{
