@@ -39,8 +39,12 @@
     padding-bottom: 0 !important;
 }
 
+.h-80 {
+    height: 80% !important
+}
+
 .alto {
-    height: 60px !important;
+    height: 85% !important;
 }
 
 .priori {
