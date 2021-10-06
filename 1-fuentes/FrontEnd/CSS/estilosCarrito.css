@@ -9,14 +9,17 @@
  .bloque-cons {
      border: solid 2px rgb(0, 0, 0);
  }
- 
- .nav-link {
-     background-color: #EFEDED !important;
-     color: #000000 !important;
-     border-radius: 0px !important;
-     font-style: italic;
- }
- 
+ .dropdown-white {
+    background-color: white !important;
+}
+
+.alto {
+    height: 85% !important;
+}
+
+.priori {
+    z-index: 9999999999999 !important;
+}
  #v-pills-profile-tab {
      background-color: #6A7384 !important;
      color: #ffffff !important;
@@ -32,6 +35,9 @@
      font-weight: bold;
      color: #ffffff !important;
  }
+ .fondoGris {
+    background-color: #E5E5E5;
+}
  
  .tit {
      border: 1px solid #ff0000;
