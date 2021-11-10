@@ -25,9 +25,8 @@ app.set('view engine', 'ejs');
 
 
 
-
 // Publicamos la carpeta Public  configurar path
-app.use(express.static('./1-fuentes/FrontEnd'));
+app.use(express.static('public'));
 
 
 //Variables globales

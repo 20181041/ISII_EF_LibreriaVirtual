@@ -1,6 +1,6 @@
 .fondoInicio {
     filter: brightness(115%);
-    background-image: url("/1-fuentes/FrontEnd/Images/ImagenInicio.jpg");
+    background-image: url("/Images/ImagenInicio.jpg");
     width: 100% !important;
     opacity: 85%;
     background-repeat: no-repeat !important;

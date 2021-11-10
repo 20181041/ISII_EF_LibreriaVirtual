@@ -20,6 +20,6 @@
   },
   "scripts": {
     "start": "node ./server/app.js",
-    "start:dev": "npx nodemon ./1-fuentes/BackEnd/server/app.js"
+    "start:dev": "npx nodemon ./server/app.js"
   }
 }
