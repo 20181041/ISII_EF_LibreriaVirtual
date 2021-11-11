@@ -1,4 +1,4 @@
- .btn-light {
+ /*.btn-light {
      border-radius: 6px;
      height: 33px;
      width: 240px;
@@ -80,4 +80,56 @@
  .verZona{
     vertical-align: middle; 
     margin-top: 35%;
+ }*/
+
+ .tabla{
+    border: 2px solid black;
+    padding: 30px;
  }
+
+ .titulo{
+     font-size: medium;
+     font-weight: bold;
+ }
+
+ .tituloLibro{
+     font-weight: bold;
+     font-size: larger;
+     margin-top: 5%;
+     margin-right: 25%;
+     text-align: center;
+ }
+ .Seccion{
+     padding: 5%;
+     border: 1px solid black;
+     border-radius: 5px; 
+ }
+
+ .btn-warning{
+     background-color: rgb(243, 116, 31);
+     width: 100%;
+     height: 50%;
+     font-weight: bolder;
+ }
+
+
+
+.botonsup{
+    color:black;
+    text-decoration: none;
+
+}
+
+.navImagen{
+    width: 50%;
+    margin-left: 20%;
+}
+
+#TablaCarrito{
+    width: 100%;
+   
+}
+
+#OrgCarrito{
+    padding: 50%;
+}
