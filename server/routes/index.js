@@ -15,15 +15,15 @@ router.get('/carrito', async (req, res) => {
 });
 
 router.get('/MiPerfil-Resumen', async (req, res) => {
-    res.send('MiperfilResumen');
+    res.render('MiperfilResumen');
 });
 
 router.get('/MiPerfil-Transaccion', async (req, res) => {
-    res.send('MiPerfilTrans');
+    res.render('MiPerfilTrans');
 });
 
 router.get('/MiPerfil-Editar', async (req, res) => {
-    res.send('Miperfilmtr');
+    res.render('Miperfilmtr');
 });
 
 module.exports = router;
