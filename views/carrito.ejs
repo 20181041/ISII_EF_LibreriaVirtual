@@ -30,13 +30,18 @@
                                    <div class="col mt-2">
                                         <div class="container">
                                              <div class="row">
+                                                 
+                                                 <div class="col-sm-1">
+                                                  <button type="button" onclick="Filtro1()" class="btn btn-outline-secondary">Buscar</button>
+                                                 </div>
+
                                                   <div class="col">
-                                                       <input id="Input" onkeydown='Filtro1()' class="form-control me-2"
+                                                       <input id="Input" class="form-control me-2"
                                                             type="text" placeholder="Nombre del libro"
                                                             aria-label="Search">
                                                   </div>
                                                   <div class="col">
-                                                       <select id="Select" onchange='Filtro2()' class="form-select"
+                                                       <select id="Select" class="form-select"
                                                             aria-label=" selecciona transaccion">
                                                             <option selected disabled>Tipo de transacción</option>
                                                             <option value="Venta">Venta</option>
@@ -46,11 +51,11 @@
                                                        </select>
                                                   </div>
                                                   <div class="col">
-                                                       <select id="Select2" onchange='Filtro3()' class="form-select"
+                                                       <select id="Select2" class="form-select"
                                                             aria-label=" select transaccion">
                                                             <option selected disabled>Estado</option>
-                                                            <option value="1">Pendiente</option>
-                                                            <option value="2">Completado</option>
+                                                            <option value="Pendiente">Pendiente</option>
+                                                            <option value="Completado">Completado</option>
                                                        </select>
                                                   </div>
                                              </div>
@@ -61,7 +66,7 @@
                                         <div class="container">
                                              <div class="row">
                                                   <div class="col-sm">
-                                                       <a class=" botonsup" href="">
+                                                       <a class=" botonsup" href="/MiPerfil-Resumen">
                                                             <div> <img class="navImagen " src="/Images/MiProfile.png">
                                                             </div>
                                                             <div> Mi Perfil </div>
@@ -69,7 +74,7 @@
                                                   </div>
                                                   <div class="col-sm">
 
-                                                       <a class=" botonsup" href="">
+                                                       <a class=" botonsup" href="/catalogo">
                                                             <div> <img class="navImagen " src="/Images/MiCatalogo.png">
                                                             </div>
                                                             <div> Catálogo </div>
@@ -85,8 +90,8 @@
           </header>
 
           <nav>
-               <div class="container col-10">
-                    <table id="TablaCarrito" class="table-sm">
+               <div class="container col-10 TablaPrincipal">
+                    <table class="table" id="TablaCarrito">
                          <tbody id="OrgCarrito">
                               <% LibrosCarrito.forEach((tn)=> { %>
                                    <tr class="tabla ">
@@ -167,6 +172,7 @@
                     </table>
                </div>
           </nav>
+          <%- include('templates/footer') %>
 </body>
 
 <script src='/JS/carritoejs.js' type='text/javascript'></script>

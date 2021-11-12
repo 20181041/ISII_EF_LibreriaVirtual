@@ -84,7 +84,6 @@
 
  .tabla{
     border: 2px solid black;
-    padding: 30px;
  }
 
  .titulo{
@@ -125,11 +124,13 @@
     margin-left: 20%;
 }
 
-#TablaCarrito{
-    width: 100%;
-   
-}
 
 #OrgCarrito{
     padding: 50%;
+}
+
+.TablaPrincipal{
+    height: 500px;
+    overflow: scroll;
+    
 }

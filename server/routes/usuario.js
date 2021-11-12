@@ -9,13 +9,42 @@ router.get('/add', (req, res) => {
 
 });
 
-router.get('/mostrar', async (req, res) => {
-    const usuario = await pool.query('SELECT * FROM usuario');
-    console.log('el sistema ha recibido los datos', usuario);
+router.get("/mostrar", async (req, res) => {
+    const usuario = await pool.query("SELECT * FROM usuario");
+    console.log("el sistema ha recibido los datos", usuario);
     const legible = JSON.stringify(usuario);
     console.log(legible, undefined, 2);
     res.render('IngresarLibro')
 });
+
+router.get('/registro', async (req, res) => {
+    res.render('registro');
+});
+router.post('/registro', async(req, res)=>{
+    /*const nuevoUsuario = req.params.body;
+    const id = nuevoUsuario.ID_Usuario;
+    const username = nuevoUsuario.Username;
+    const password = nuevoUsuario.Password;
+    const correo = nuevoUsuario.Correo;
+    const NombreComp = nuevoUsuario.Nombre_completo;
+    const Telefono = nuevoUsuario.Telefono;
+    const Departamento = nuevoUsuario.Departamento;
+    const Calificacion = nuevoUsuario.Calificacion;
+    */
+    var username = req.body.usuario;
+    var correo = req.body.email;
+    var password = req.body.psw;
+    pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion)
+    VALUES('${username}', '${password}','${correo}', 'Clau  ', '1234567','Cajamarca', '0' );`)
+    console.log("yey");
+});
+
+
+
+
+
+
+
 
 
 
