@@ -54,4 +54,13 @@ router.get('/Ejemplo', async (req, res) => {
     res.render('ejemplo');
 });
 
+
+
+router.get('/Iniciarsesion', async (req, res) => {
+    res.render('Iniciarsesion');
+});
+
+
+
+
 module.exports = router;
