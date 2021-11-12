@@ -42,7 +42,7 @@ router.get('/MiPerfil-Editar/:id', async (req, res) => {
     var telefono = req.body.telefono;
     var departamento = req.body.departamento;
 
-    pool.query(`UPDATE usuario SET Nombre_completo='${nuevoNombre}', Telefono='${telefono}, Departamento=''${departamento}' WHERE ID_Usuario=${id}`)
+    pool.query(`UPDATE usuario SET Nombre_completo='${nuevoNombre}', Telefono='${telefono}, Departamento=''${departamento}' WHERE ID_Usuario=0${id}`)
     res.redirect('MiperfilResumen')
  });
 
