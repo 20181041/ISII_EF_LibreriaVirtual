@@ -30,7 +30,7 @@
                         <label for="">
                             <strong class="display-6"> <em>Actualiza la información del libro</em></strong>
                         </label>
-                        <div class="btn-group w-50 mb-5">
+                        <div class="btn-group w-50 mb-3 mt-3">
                             <select class="form-control" name="Tipo_Transaccion">
                                 <% tipo_transaccion.forEach((trans)=> { %>
                                     <option value="<%= trans.Descripcion %>">
@@ -44,7 +44,7 @@
                 <div class="row">
                     <div class="col-sm-5">
                         <% libro.forEach((mascot)=> { %>
-                            <% if (mascot.ID_Usuario==1) { %>
+                            <% if (mascot.ID_Libro==1) { %>
                                 <div class="form-group mb-5">
                                     <label class="form-control-label">Título</label>
                                     <input type="text" class="form-control w-100 text-dark"
@@ -93,7 +93,7 @@
                         </div>
                         <div class="form-group">
                             <% libro.forEach((mascot)=> { %>
-                                <% if (mascot.ID_Usuario==1) { %>
+                                <% if (mascot.ID_Libro==1) { %>
                                     <textarea class="w-100" name="imperfectos" id="imp" cols="40"
                                         rows="4"><%= mascot.Imperfectos %></textarea>
                                     <% }; %>
@@ -108,7 +108,7 @@
                         </div>
                         <div class="form-group">
                             <% libro.forEach((mascot)=> { %>
-                                <% if (mascot.ID_Usuario==1) { %>
+                                <% if (mascot.ID_Libro==1) { %>
                                     <textarea class="w-100" name="descripcion" id="imp" cols="157"
                                         rows="4"><%= mascot.Imperfectos %></textarea>
                                     <% }; %>
