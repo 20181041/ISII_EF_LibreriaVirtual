@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../database');
-router.get('/actualizar', async (req, res) => {
-    const libro = await pool.query('SELECT * from Libro');
+router.get('/actualizar/:idLibro', async (req, res) => {
+    const libro = await pool.query(`SELECT * from Libro where ID_Libro = ${req.params.idLibro}`);
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
     const tipo_transaccion = await pool.query('SELECT * from tipo_transaccion');
-    console.log('el sistema ha recibido los datos', libro);
     res.render('GuardarLibro', {
         libro: libro,
         categorias: categorias,
@@ -19,7 +18,6 @@ router.get('/ingresar', async (req, res) => {
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
     const tipo_transaccion = await pool.query('SELECT * from tipo_transaccion');
-    console.log('el sistema ha recibido los datos', libro);
     res.render('IngresarLibro', {
         libro: libro,
         categorias: categorias,
@@ -38,14 +36,13 @@ router.post('/ingresoLibro/:id', async (req, res) => {
     const Categoria = req.body.categoria;
     const Estado = req.body.estado;
     const ID_Usuario = req.params.id;
-    console.log(tipoTrans);
+    console.log('Este es el usuario', user.ID_Usuario);
     pool.query(`INSERT INTO libro VALUES('${ID_Libro}', '${Titulo}','${Precio}', '${Autor}', '${tipoTrans}','${Imperfectos}', '${Categoria}', '${Estado}','${ID_Usuario}');`)
-    console.log("yey");
+
     res.redirect('/ingresar');
 });
-router.post('/actualizoLibro/:id', async (req, res) => {
-    const libro = await pool.query('SELECT * from Libro');
-    const ID_Libro = libro.length + 1;
+router.post('/actualizoLibro/:id/:idLibro', async (req, res) => {
+    const ID_Libro = req.params.idLibro;
     const Titulo = req.body.titulo;
     const Precio = req.body.precio;
     const Autor = req.body.autor;
@@ -54,9 +51,10 @@ router.post('/actualizoLibro/:id', async (req, res) => {
     const Categoria = req.body.categoria;
     const Estado = req.body.estado;
     const ID_Usuario = req.params.id;
-    console.log(tipoTrans);
-    pool.query(`INSERT INTO libro VALUES('${ID_Libro}', '${Titulo}','${Precio}', '${Autor}', '${tipoTrans}','${Imperfectos}', '${Categoria}', '${Estado}','${ID_Usuario}');`)
-    console.log("yey");
+
+    pool.query(`UPDATE usuario SET Nombre='${Titulo}', Precio='${Precio}', Autor='${Autor}', Tipo_Transaccion='${tipoTrans}',  Imperfectos='${Imperfectos}', Categoria='${Categoria}', Estado='${Estado}', ID_Usuario=${ID_Usuario} WHERE ID_Libro= ${ID_Libro}`)
+
+
     res.redirect('/ingresar');
 });
 module.exports = router;

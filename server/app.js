@@ -17,20 +17,13 @@ require('./lib/passport');
 
 //Configuraciones 
 app.set('port', process.env.PORT || 4000);
-
-
-
-
-
-
+ 
 //Middlewares
 app.use(session({
     secret: 'Hipatia',
     resave: false,
     saveUninitialized : false,
-    store: new MySQLStore(database)
-
-
+    store: new MySQLStore(database)  
 }))
 
 //app.use(validator());

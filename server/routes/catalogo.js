@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
  
+<<<<<<< Updated upstream
 function buscar_id(a, b){
     var us1;
     
@@ -20,6 +21,10 @@ router.get('/catalogo/', async (req, res) => {
 
 
     console.log('el sistema ha recibido los datos', libro);
+=======
+router.get('/catalogo', async (req, res) => {
+    const libro = await pool.query('SELECT * from libro'); 
+>>>>>>> Stashed changes
  
     res.render('catalogo', {
         libro: libro,

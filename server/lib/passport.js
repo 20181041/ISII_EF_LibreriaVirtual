@@ -9,9 +9,9 @@ passport.use('local.signin', new LocalStrategy({
   passwordField: 'password',
   passReqToCallback: true
 }, async (req, username, password, done) => {
-    console.log(username);
-    console.log(password);
-  const rows = await pool.query('SELECT * from usuario WHERE Correo = ?',  [username]);
+  console.log(username);
+  console.log(password);
+  const rows = await pool.query('SELECT * from usuario WHERE Correo = ?', [username]);
   console.log("el sistema ha recibido los datos", rows);
   if (rows.length > 0) {
     const user = rows[0];
@@ -50,9 +50,7 @@ passport.use('local.signup', new LocalStrategy({
 }));
 
 */
-
-
-
+ 
 passport.serializeUser((user, done) => {
   done(null, user.ID_Usuario);
 });

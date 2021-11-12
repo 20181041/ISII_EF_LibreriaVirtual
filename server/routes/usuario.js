@@ -20,7 +20,7 @@ router.get("/mostrar", async (req, res) => {
 router.get('/registro', async (req, res) => {
     res.render('registro');
 });
-router.post('/registro', async(req, res)=>{
+router.post('/registro', async (req, res) => {
     /*const nuevoUsuario = req.params.body;
     const id = nuevoUsuario.ID_Usuario;
     const username = nuevoUsuario.Username;
@@ -35,14 +35,14 @@ router.post('/registro', async(req, res)=>{
     var correo = req.body.email;
     var password = req.body.psw;
     pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
-    
-//     if(req.body.checkbox.checked=true){
-//         pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
-//     }else{
-//         console.log("No se creó el usuario")
-//    }
-   console.log("yey");
-   res.redirect('Iniciarsesion')
+
+    //     if(req.body.checkbox.checked=true){
+    //         pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
+    //     }else{
+    //         console.log("No se creó el usuario")
+    //    }
+    console.log("yey");
+    res.redirect('Iniciarsesion')
 
 });
 
