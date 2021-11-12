@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="btn-group w-50 mb-5">
-                    <select class="form-control" name="Tipo_Transaccion">
+                    <select class="form-control" name="tipoTrans">
                         <% tipo_transaccion.forEach((trans)=> { %>
                             <option value="<%= trans.Descripcion %>">
                                 <%= trans.Descripcion %>
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-2 mt-3">
-                                <select class="form-control mt-3" name="estado">
+                                <select class="form-control mt-3" name="divisa">
                                     <option value=" USD">
                                         USD
                                     </option>
@@ -119,7 +119,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-sm-9">
                     </div>

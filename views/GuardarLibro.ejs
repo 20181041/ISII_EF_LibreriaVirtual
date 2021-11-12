@@ -30,20 +30,14 @@
                         <label for="">
                             <strong class="display-6"> <em>Actualiza la información del libro</em></strong>
                         </label>
-                        <div class="btn-group  mt-5">
-                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
-                                data-bs-display="static" aria-expanded="false" id="botprin" style="color:rgb(0, 0, 0)">
-                                Tipo de transacción
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <div class="btn-group w-50 mb-5">
+                            <select class="form-control" name="Tipo_Transaccion">
                                 <% tipo_transaccion.forEach((trans)=> { %>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <%= trans.Descripcion %>
-                                        </a>
-                                    </li>
+                                    <option value="<%= trans.Descripcion %>">
+                                        <%= trans.Descripcion %>
+                                    </option>
                                     <% }); %>
-                            </ul>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -61,8 +55,8 @@
                                     <input type="text" class="form-control w-100 text-dark"
                                         value="<%= mascot.Autor %>" />
                                 </div>
-                            <% }; %> 
-                        <% }); %>
+                                <% }; %>
+                                    <% }); %>
                     </div>
                     <div class="col-sm-2">
                     </div>
@@ -74,47 +68,25 @@
                                     style="color:rgb(0, 0, 0)"><u>Examinar</u></button>
                             </div>
                         </div>
-                        <div class="form-group mb-5">
+                        <div class="form-group mb-3">
                             <label class="form-control-label">Categoria</label>
-                            <div class="menudrop2">
-                                <div class="dropdown">
-                                    <button id="botoncate" class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-                                        style="color:rgb(0, 0, 0)">
-                                        Categoría
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <% categorias.forEach((cat)=> { %>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <%= cat.Descripcion %>
-                                                </a>
-                                            </li>
-                                            <% }); %>
-                                    </ul>
-                                </div>
-                            </div>
+                            <select class="form-control mt-3" name="categoria">
+                                <% categorias.forEach((cat)=> { %>
+                                    <option value="<%= cat.Descripcion %>">
+                                        <%= cat.Descripcion %>
+                                    </option>
+                                    <% }); %>
+                            </select>
                         </div>
-                        <div class="form-group mb-5">
+                        <div class="form-group mb-3">
                             <label class="form-control-label ">Estado</label>
-                            <div class="menudrop2">
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
-                                        style="color:rgb(0, 0, 0)">
-                                        Estado
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <% estados.forEach((cat)=> { %>
-                                            <li>
-                                                <a class="dropdown-item" href="#">
-                                                    <%= cat.Descripcion %>
-                                                </a>
-                                            </li>
-                                            <% }); %>
-                                    </ul>
-                                </div>
-                            </div>
+                            <select class="form-control mt-3" name="estado">
+                                <% estados.forEach((cat)=> { %>
+                                    <option value=" <%= cat.Descripcion %>">
+                                        <%= cat.Descripcion %>
+                                    </option>
+                                    <% }); %>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Imperfectos</label>
