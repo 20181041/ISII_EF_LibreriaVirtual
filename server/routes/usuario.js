@@ -18,4 +18,19 @@ router.get('/mostrar', async (req, res) => {
 });
 
 
+router.get('/registro', async(req, res)=>{
+    const usuario = await pool.query('SELECT * FROM usuario');
+    console.log('Webadas subieron',usuario); 
+    res.render('registro')
+
+});
+
+
+
+
+
+
+
+
+
 module.exports = router;
