@@ -37,10 +37,10 @@
                 <div>
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">Resumen</a>
-                        <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="/HTML/Miperfilmt.html" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mi tienda</a>
-                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/HTML/MiPerfilTrans.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mis transacciones</a>
-                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/HTML/IniciarSesion.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cerrar Sesión</a>
-                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/HTML/Catalogo.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Volver al catálogo</a>
+                        <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="/Miperfilmt.html" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mi tienda</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/MiPerfil-Transaccion" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mis transacciones</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/registro" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cerrar Sesión</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/catalogo" role="tab" aria-controls="v-pills-settings" aria-selected="false">Volver al catálogo</a>
                     </div>
 
                 </div>
@@ -53,11 +53,11 @@
                 <form>
                     <div class="row">
                         <div class="col">
-                            Nombres y Apellidos:
+                            Nombres de Usuario
                         </div>
 
                         <div class="col">
-                         <%= usuario.Nombre_completo %>
+                         <%= usuario.Username %>
                         </div>
                     </div>
                     <hr>
@@ -73,11 +73,11 @@
                     <hr>
                     <div class="row">
                         <div class="col">
-                            Departamento:
+                            Area:
                         </div>
 
                         <div class="col">
-                         <%= usuario.Departamento %>
+                         <%= usuario.area %>
                         </div>
                     </div>
                     <hr>
@@ -87,7 +87,7 @@
                         </div>
 
                         <div class="col">
-                            <img src="/Images/Calificacion-4.png" class="w-50">
+                            <img src="/Images/Calificacion-<%=usuario.Calificacion%>.png" class="w-50">
                         </div>
                     </div>
                     <div class="row">

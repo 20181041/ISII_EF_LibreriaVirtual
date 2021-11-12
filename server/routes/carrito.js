@@ -10,10 +10,11 @@ const libro7 = ["10 historias de amor","20", "Autor7", "Pendiente", "pág5 sucia
 const libro8 = ["zombies","0", "Autor8", "Venta", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Transaccion"  ];
 var listalibros = [libro1, libro2, libro3, libro4, libro5, libro6, libro7, libro8];
 
-router.get('/carrito', async (req, res) => {
+router.get('/carrito/:id', async (req, res) => {
      var listadelibros = listalibros;
      res.render('carrito', {
-         LibrosCarrito : listadelibros
+         LibrosCarrito : listadelibros,
+         Id : req.params.id
      })
  });
 

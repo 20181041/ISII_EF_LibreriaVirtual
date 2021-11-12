@@ -18,9 +18,28 @@ router.get('/MiPerfil-Editar/:id', async (req, res) => {
      const id = req.params.id;
      const listaUsuarios = await pool.query('SELECT * FROM usuario');
      var us1 = buscar_id(listaUsuarios, id);
-     
-     res.render('Miperfilmt', {
-          usuario : us1
+     const listaAreas = await pool.query('SELECT Descripcion FROM areas');
+
+     const ListaAreasArray= [];
+
+     for(let x = 0; x < listaAreas.length; x++){
+          ListaAreasArray.push(listaAreas[x].Descripcion)
+     }
+
+     for (let x= 0; x < ListaAreasArray.length; x++){
+          
+          if(ListaAreasArray[x]==us1.area){
+               ListaAreasArray.splice(x, 1);
+          }
+     }
+
+     for(let x= 0; x < listaUsuarios.length; x++){
+          console.log(listaUsuarios[x].area)
+     }
+
+     res.render('MiPerfilEditar', {
+          usuario : us1,
+          ListaAreas: ListaAreasArray 
      });
  });
 
@@ -38,12 +57,15 @@ router.get('/MiPerfil-Editar/:id', async (req, res) => {
  router.post('/MiPerfil-Resumen/:id', async (req, res)=>{
     const id = req.params.id;
 
-    var nuevoNombre = req.body.usuario_nombres;
+    var nuevoUsername = req.body.usuario_nombres;
     var telefono = req.body.telefono;
-    var departamento = req.body.departamento;
+    var area = req.body.area;
 
-    pool.query(`UPDATE usuario SET Nombre_completo='${nuevoNombre}', Telefono='${telefono}, Departamento=''${departamento}' WHERE ID_Usuario=0${id}`)
-    res.redirect('MiperfilResumen')
+    if(area!="Escoge un area"){
+     pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}' WHERE ID_Usuario= ${id}`)
+     const actualizar = await pool.query('SELECT * FROM usuario');
+    }
+    res.redirect(`${id}`)
  });
 
  module.exports = router;
