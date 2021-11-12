@@ -10,8 +10,8 @@
      <link rel="preconnect" href="https://fonts.googleapis.com" />
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
      <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet" />
-     <link rel="stylesheet" href="./css/estilosCarrito.css">
-     <link rel="stylesheet" href="./css/estilos.css" />
+     <link rel="stylesheet" href="/css/estilosCarrito.css">
+     <link rel="stylesheet" href="/css/estilos.css" />
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -30,33 +30,10 @@
                                    <div class="col mt-2">
                                         <div class="container">
                                              <div class="row">
-                                                 
-                                                 <div class="col-sm-1">
-                                                  <button type="button" onclick="Filtro1()" class="btn btn-outline-secondary">Buscar</button>
-                                                 </div>
-
-                                                  <div class="col">
+                                                  <div class="col-sm-3">
                                                        <input id="Input" class="form-control me-2"
                                                             type="text" placeholder="Nombre del libro"
-                                                            aria-label="Search">
-                                                  </div>
-                                                  <div class="col">
-                                                       <select id="Select" class="form-select"
-                                                            aria-label=" selecciona transaccion">
-                                                            <option selected disabled>Tipo de transacción</option>
-                                                            <option value="Venta">Venta</option>
-                                                            <option value="Intercambio">Intercambio</option>
-                                                            <option value="Prestamo">Prestamo</option>
-                                                            <option value="Pendiente">Pendiente</option>
-                                                       </select>
-                                                  </div>
-                                                  <div class="col">
-                                                       <select id="Select2" class="form-select"
-                                                            aria-label=" select transaccion">
-                                                            <option selected disabled>Estado</option>
-                                                            <option value="Pendiente">Pendiente</option>
-                                                            <option value="Completado">Completado</option>
-                                                       </select>
+                                                            aria-label="Search" onchange="Filtro1()">
                                                   </div>
                                              </div>
                                         </div>
@@ -66,7 +43,7 @@
                                         <div class="container">
                                              <div class="row">
                                                   <div class="col-sm">
-                                                       <a class=" botonsup" href="/MiPerfil-Resumen">
+                                                       <a class=" botonsup" href="/MiPerfil-Resumen/<%= Id %>">
                                                             <div> <img class="navImagen " src="/Images/MiProfile.png">
                                                             </div>
                                                             <div> Mi Perfil </div>
@@ -160,10 +137,10 @@
                                         <td>
                                              <% if (tn[8]!="Completado" && tn[6]!="Completado" ){ %>
 
-                                                  <a href="" id="zona" type="button" class="btn btn-warning"> Ver
+                                                  <a href="/Zona<%= tn[8] %>" id="zona" type="button" class="btn btn-warning"> Ver
                                                        Zona</a>
 
-                                                  <% } %>
+                                             <% } %>
                                         </td>
                                    </tr>
 
