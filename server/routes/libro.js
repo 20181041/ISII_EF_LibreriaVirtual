@@ -38,7 +38,7 @@ router.post('/ingresoLibro/:id', async (req, res) => {
     const Categoria = req.body.categoria;
     const Estado = req.body.estado;
     const ID_Usuario = req.params.id;
-    console.log(Tipo_transaccion);
+    console.log(tipoTrans);
     pool.query(`INSERT INTO libro VALUES('${ID_Libro}', '${Titulo}','${Precio}', '${Autor}', '${tipoTrans}','${Imperfectos}', '${Categoria}', '${Estado}','${ID_Usuario}');`)
     console.log("yey");
     res.redirect('/ingresar');
