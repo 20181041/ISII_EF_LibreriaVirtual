@@ -50,6 +50,8 @@ app.use(require('./routes/catalogo'));
 app.use(require('./routes/libro'));
 app.use(require('./routes/transaccion'));
 app.use(require('./routes/carrito'));
+app.use(require('./routes/Perfil'));
+
 
 
 

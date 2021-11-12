@@ -1,1 +1,121 @@
-mi perfil - resumen
+<!DOCTYPE html>
+<html lang="es">
+<title>
+    Mi Perfil - Resumen
+</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/estilosResumen.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+
+<div class="body">
+    <div class="header">
+        <div class="col-sm-2 fondoNegro">
+            <a href="/HTML/Catalogo.html" style="text-decoration: none;">
+                <h1 class="font-35 text-center">Hipatia</h1>
+            </a>
+        </div>
+        <div class="col-sm-10"></div>
+    </div>
+    <div class="container p-5">
+        <div class="row mb-5">
+            <div class="col-sm-3 mb-3">
+                <div class="mb-4">
+                    <p id="descp"> <span><strong> Inicio  /  Perfil </strong></span></p>
+                </div>
+                <div class="mb-4">
+                    <img class="rounded mx-auto d-block" id="ImagenMP" src="/Images/MiProfile.png">
+                </div>
+                <div>
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">Resumen</a>
+                        <a class="nav-link active" id="v-pills-profile-tab" data-toggle="pill" href="/HTML/Miperfilmt.html" role="tab" aria-controls="v-pills-profile" aria-selected="false">Mi tienda</a>
+                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="/HTML/MiPerfilTrans.html" role="tab" aria-controls="v-pills-messages" aria-selected="false">Mis transacciones</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/HTML/IniciarSesion.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Cerrar Sesión</a>
+                        <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="/HTML/Catalogo.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Volver al catálogo</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="font-40">
+                    Mi información
+                </div>
+                <hr>
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            Nombres y Apellidos:
+                        </div>
+
+                        <div class="col">
+                         <%= usuario.Nombre_completo %>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            Teléfono:
+                        </div>
+
+                        <div class="col">
+                         <%= usuario.Telefono %>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            Departamento:
+                        </div>
+
+                        <div class="col">
+                         <%= usuario.Departamento %>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row mb-5">
+                        <div class="col">
+                            Calificación:
+                        </div>
+
+                        <div class="col">
+                            <img src="/Images/Calificacion-4.png" class="w-50">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+
+                        </div>
+                        <div class="col-sm-2">
+                            <a href="/MiPerfil-Editar/<%=usuario.ID_Usuario%>" id="btnEditar" type="button" class="btn btn-info mt-5.5">Editar</a>
+                        </div>
+                    </div> 
+                </form> 
+            </div>
+        </div> 
+    </div>
+    <div class="footer p-3">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-end text-white"> Condiciones de uso </p>
+            </div>
+            <div class="col-sm-6">
+                <p class="text-white"> Aviso de Privacidad </p>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <p class="text-center text-white mb-0"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
+        </div>
+    </div>
+
+</div>
+
+</html>
