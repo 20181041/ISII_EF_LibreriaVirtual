@@ -35,10 +35,10 @@
                             Tipo de transacción
                         </button>
                         <ul class="dropdown-menu dropdown-menu-lg-end">
-                            <% libro.forEach((trans)=> { %>
+                            <% tipo_transaccion.forEach((trans)=> { %>
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                        <%= trans.Tipo_Transaccion %>
+                                        <%= trans.Descripcion %>
                                     </a>
                                 </li>
                                 <% }); %>
@@ -54,14 +54,16 @@
                             <form>
                                 <div class="form-group mb-5">
                                     <label class="form-control-label">Título</label>
-                                    <input type="text" class="form-control w-100" placeholder="<%= mascot.Nombre %>" />
+                                    <input type="text" class="form-control w-100 text-dark"
+                                        value="<%= mascot.Nombre %>" />
                                 </div>
                             </form>
 
                             <form>
                                 <div class="form-group mb-5">
                                     <label class="form-control-label">Autor</label>
-                                    <input type="text" class="form-control w-100" placeholder="<%= mascot.Autor %>" />
+                                    <input type="text" class="form-control w-100 text-dark"
+                                        value="<%= mascot.Autor %>" />
                                 </div>
                             </form>
                             <% }; %>
@@ -93,7 +95,6 @@
                 </div>
                 <div class="col-sm-2">
                 </div>
-
                 <div class="col-sm-5">
                     <form>
                         <div class="form-group mb-5">
@@ -115,10 +116,10 @@
                                         Categoría
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <% libro.forEach((cat)=> { %>
+                                        <% categorias.forEach((cat)=> { %>
                                             <li>
                                                 <a class="dropdown-item" href="#">
-                                                    <%= cat.Categoria %>
+                                                    <%= cat.Descripcion %>
                                                 </a>
                                             </li>
                                             <% }); %>
@@ -138,11 +139,13 @@
                                         Estado
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <% libro.forEach((estado)=> { %>
-                                            <li><a class="dropdown-item" href="#">
-                                                    <%= estado.Estado %>
-                                                </a></li>
-                                            <% }); %>
+                                        <% estados.forEach((cat)=> { %>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <%= cat.Descripcion %>
+                                                </a>
+                                            </li>
+                                        <% }); %>
                                     </ul>
                                 </div>
                             </div>
