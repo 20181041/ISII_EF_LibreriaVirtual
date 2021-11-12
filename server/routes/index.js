@@ -1,7 +1,11 @@
 const express = require('express');
 const { cloudasset } = require('googleapis/build/src/apis/cloudasset');
 const router = express.Router();
+const passport = require('../lib/passport');
+const pool = require('../database');
+const helpers = require('../lib/helpers');
 
+  
 
 
 const Usuario1 =

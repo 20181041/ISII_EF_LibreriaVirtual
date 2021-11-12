@@ -25,30 +25,78 @@
         </div>
         <div class="col-sm-10"></div>
     </div>
+    <%if(message) { %>  
+
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+      <% } %>
+
+
+
+      <%if(success) { %>  
+
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{succes}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+      <% } %>
+
+
 
     <div class="container">
         <!-- INICIO DE CONTENIDO -->
-        <form action="">
+       
+        <form action="/Iniciarsesion" method="POST"> 
             <div class="mt-5 mb-4" id="TituloIS">
                 Bienvenid@
             </div>
 
             <div class="CuerpoIniciarSesion">
                 <div class="row mb-4">
+                    <!-- Primer form-->
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre@ejemplo.com">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre@ejemplo.com"
+                        name="email">
+                        
                     </div>
                 </div>
                 <div class="row mb-4">
+                     <!-- Segundo form-->
                     <div class="form-group">
                         <label for="exampleInputPassword1">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Ingresa tu contraseña" name="password">
                     </div>
                 </div>
 
                 <div class="row mb-4">
-                    <a href="/1-fuentes/FrontEnd/HTML/Catalogo.html" type="button" id="botonIS" class="btn btn-primary"> Iniciar Sesión</a>
+                  <button class="btn btn-primary btn-block">
+                    Inciar Sesion
+                </button>
                 </div>
             </div>
 
