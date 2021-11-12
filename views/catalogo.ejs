@@ -73,10 +73,17 @@
             <div class="row mt-5 mb-5">
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro1.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro1.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-4.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">La Naranja Mecánica</h5>
+
+                            <img src="/Images/Calificacion-4.png" class="w-100">
+
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==1) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
+
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -94,10 +101,15 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro2.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro2.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-2.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">Inferno </h5>
+                            <img src="/Images/Calificacion-2.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==2) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
+
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -115,10 +127,15 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro3.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro3.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-1.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">El Necronomicón</h5>
+                            <img src="/Images/Calificacion-1.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==5) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
+
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -136,10 +153,14 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro4.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro4.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-5.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">Le Petit Prince</h5>
+                            <img src="/Images/Calificacion-5.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==1) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -160,10 +181,15 @@
             <div class="row mb-5">
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro5.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro5.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-4.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">No Se Lo Digas A Nadie</h5>
+                            <img src="/Images/Calificacion-4.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==2) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
+
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -181,10 +207,14 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro6.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro6.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-2.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">La Tía Julia Y El Escribidor</h5>
+                            <img src="/Images/Calificacion-2.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==5) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -202,10 +232,15 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro7.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro7.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-1.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">El Último Héroe Del Olímpo</h5>
+                            <img src="/Images/Calificacion-1.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==1) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
+
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -223,10 +258,15 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro8.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro8.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-2.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">El Libro Rojo de Mao Zedong </h5>
+                            <img src="/Images/Calificacion-2.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==2) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
+
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -247,10 +287,14 @@
             <div class="row mb-5">
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro9.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro9.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-4.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">World of Warcraft: Crónicas vol. 1</h5>
+                            <img src="/Images/Calificacion-4.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==5) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -268,10 +312,15 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro10.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro10.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-2.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">World of Warcraft: Arthas</h5>
+                            <img src="/Images/Calificacion-2.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==1) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
+
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -289,10 +338,14 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro11.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro11.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-1.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">IT (ESO) <br><br></h5>
+                            <img src="/Images/Calificacion-1.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==5) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%><br><br></h5>
+                            <% }; %>
+                            <% }); %>
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
@@ -310,10 +363,14 @@
                 </div>
                 <div class="col-sm-3">
                     <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/1-fuentes/FrontEnd/Images/Libro12.png" class="card-img-top p-3 pb-0">
+                        <img src="/Images/Libro12.png" class="card-img-top p-3 pb-0">
                         <div class="card-body">
-                            <img src="/1-fuentes/FrontEnd/Images/Calificacion-2.png" class="w-100">
-                            <h5 class="card-title font-18 mt-3">Das Kommunistische Manifest</h5>
+                            <img src="/Images/Calificacion-2.png" class="w-100">
+                            <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==1) { %>
+                            <h5 class="card-title font-18 mt-3"><%= libro.Nombre%></h5>
+                            <% }; %>
+                            <% }); %>
                             <div class="row mt-3">
                                 <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                     Tipo:
