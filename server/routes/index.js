@@ -1,7 +1,11 @@
 const express = require('express');
 const { cloudasset } = require('googleapis/build/src/apis/cloudasset');
 const router = express.Router();
+const passport = require('../lib/passport');
+const pool = require('../database');
+const helpers = require('../lib/helpers');
 
+  
 
 
 const Usuario1 =
@@ -53,5 +57,14 @@ router.get('/MiPerfil-Transaccion', async (req, res) => {
 router.get('/Ejemplo', async (req, res) => {
     res.render('ejemplo');
 });
+
+
+
+router.get('/Iniciarsesion', async (req, res) => {
+    res.render('Iniciarsesion');
+});
+
+
+
 
 module.exports = router;
