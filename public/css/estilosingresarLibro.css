@@ -126,15 +126,7 @@ input[type=texto] {
     padding-left: 0px;
     width: 287px;
     color: #ECF0F5;
-}
-
-.menudrop2 {
-    display: inline-block;
-    margin-left: 20px;
-    border-radius: 12px;
-    padding: 5px;
-}
-
+} 
 #botonfoto {
     border-radius: 12px;
     padding: 5px;
