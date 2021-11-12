@@ -32,27 +32,17 @@
                     <div class="btn-group  mt-5">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
                             data-bs-display="static" aria-expanded="false" id="botprin" style="color:rgb(0, 0, 0)">
-                            Préstamo
+                            Tipo de transacción
                         </button>
-                        <% libro.forEach((mascot)=> { %>
-                            <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <ul class="dropdown-menu dropdown-menu-lg-end">
+                            <% libro.forEach((trans)=> { %>
                                 <li>
                                     <a class="dropdown-item" href="#">
-                                        Título: <%= libro.Nombre %> | Precio: S/. <%=mascot.Precio %>
+                                        <%= trans.Tipo_Transaccion %>
                                     </a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        Título: <%= libro.Nombre %> | Precio: S/. <%=mascot.Precio %>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        Título: <%= libro.Nombre %> | Precio: S/. <%=mascot.Precio %>
-                                    </a>
-                                </li>
-                            </ul>
-                            <% }); %>
+                                <% }); %>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -60,22 +50,25 @@
             <div class="row">
                 <div class="col-sm-5">
                     <% libro.forEach((mascot)=> { %>
-                        <form>
-                            <div class="form-group mb-5">
-                                <label class="form-control-label">Título</label>
-                                <input type="text" class="form-control w-100" placeholder="<%= mascot.Nombre %>" />
-                            </div>
-                        </form>
+                        <% if (mascot.ID_Usuario==1) { %>
+                            <form>
+                                <div class="form-group mb-5">
+                                    <label class="form-control-label">Título</label>
+                                    <input type="text" class="form-control w-100" placeholder="<%= mascot.Nombre %>" />
+                                </div>
+                            </form>
 
-                        <form>
-                            <div class="form-group mb-5">
-                                <label class="form-control-label">Autor</label>
-                                <input type="text" class="form-control w-100" placeholder="<%= mascot.Autor %>" />
-                            </div>
-                        </form>
-                        <% }); %>
+                            <form>
+                                <div class="form-group mb-5">
+                                    <label class="form-control-label">Autor</label>
+                                    <input type="text" class="form-control w-100" placeholder="<%= mascot.Autor %>" />
+                                </div>
+                            </form>
+                            <% }; %>
 
-                            <!-- <div class="row">
+                                <% }); %>
+
+                                    <!-- <div class="row">
                     <div class="col-sm-10">
                         <form>
                             <div class="form-group mb-5">
@@ -122,17 +115,13 @@
                                         Categoría
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Tragedia</a></li>
-                                        <li><a class="dropdown-item" href="#">Romance</a></li>
-                                        <li><a class="dropdown-item" href="#">Fantasía</a></li>
-                                        <li><a class="dropdown-item" href="#">Literatura clásica</a></li>
-                                        <li><a class="dropdown-item" href="#">Filosofia</a></li>
-                                        <li><a class="dropdown-item" href="#">Educativo</a></li>
-                                        <li><a class="dropdown-item" href="#">Cuentos para niños</a></li>
-                                        <li><a class="dropdown-item" href="#">Terror</a></li>
-                                        <li><a class="dropdown-item" href="#">Policiales</a></li>
-                                        <li><a class="dropdown-item" href="#">Biografías</a></li>
-                                        <li><a class="dropdown-item" href="#">Literatura peruana</a></li>
+                                        <% libro.forEach((cat)=> { %>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <%= cat.Categoria %>
+                                                </a>
+                                            </li>
+                                            <% }); %>
                                     </ul>
                                 </div>
                             </div>
@@ -149,10 +138,11 @@
                                         Estado
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a class="dropdown-item" href="#">Nuevo</a></li>
-                                        <li><a class="dropdown-item" href="#">Casi nuevo</a></li>
-                                        <li><a class="dropdown-item" href="#">Usado</a></li>
-                                        <li><a class="dropdown-item" href="#">Desgastado</a></li>
+                                        <% libro.forEach((estado)=> { %>
+                                            <li><a class="dropdown-item" href="#">
+                                                    <%= estado.Estado %>
+                                                </a></li>
+                                            <% }); %>
                                     </ul>
                                 </div>
                             </div>
@@ -166,7 +156,12 @@
 
                     <form>
                         <div class="form-group">
-                            <textarea class="w-100" name="imperfectos" id="imp" cols="40" rows="4"></textarea>
+                            <% libro.forEach((mascot)=> { %>
+                                <% if (mascot.ID_Usuario==1) { %>
+                                    <textarea class="w-100" name="imperfectos" id="imp" cols="40"
+                                        rows="4"><%= mascot.Imperfectos %></textarea>
+                                    <% }; %>
+                                        <% }); %>
                         </div>
                     </form>
                 </div>
@@ -180,7 +175,12 @@
                     </form>
                     <form>
                         <div class="form-group">
-                            <textarea class="w-100" name="imperfectos" id="imp" cols="157" rows="4"></textarea>
+                            <% libro.forEach((mascot)=> { %>
+                                <% if (mascot.ID_Usuario==1) { %>
+                                    <textarea class="w-100" name="descripcion" id="imp" cols="157"
+                                        rows="4"><%= mascot.Imperfectos %></textarea>
+                                    <% }; %>
+                                        <% }); %>
                         </div>
                     </form>
                 </div>
