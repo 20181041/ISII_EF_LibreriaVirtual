@@ -48,6 +48,11 @@ router.post('/registro', async(req, res)=>{
 
 
 
+router.get('/recuperarpassword', (req, res) => {
+    res.render('password')
+
+});
+
 
 
 

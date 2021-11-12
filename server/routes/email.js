@@ -2,14 +2,23 @@
 const { Router } = require("express");
 const nodemailer = require('nodemailer');
 const router = Router();
-const { google  } = require('googleapis')
+const { google  } = require('googleapis');
+const pool = require('../database');
 
 
 
-router.post('/send-email',  (req, res) => {
+router.post('/send-emailx', async (req, res) => {
 
     console.log(req.body);
     const {email} = req.body;
+
+
+    
+
+
+    const usuario = await pool.query('SELECT * FROM usuario where Correo = ?',[email]);
+    console.log("el sistema ha recibido los datos", usuario);
+    const message = usuario.Password;
         
     //Aquí es donde armamos el cuerpo del mensaje
        const contentHTML = `
@@ -23,14 +32,16 @@ router.post('/send-email',  (req, res) => {
                     
                     
                 </ul>
-                <p>${message}</p>
-        
+                <p> ${message}</p>
+
+                <p>RECUPERE SU CONTRASEÑA</p>
+               <p> ${usuario}</p>
                 `;
 
         const CLIENT_ID = "1043126957420-d39aqgccva9i1rh7n26sea1asn9uokii.apps.googleusercontent.com" ;
         const CLIENT_SECRET="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";
         const REDIRECT_URI="https://developers.google.com/oauthplayground";
-        const REFRESH_TOKEN="1//040AdDN2LRC4aCgYIARAAGAQSNwF-L9IrbAbCrJZqS6Er3NtBRT4FRP3POMrkfgY2DD8vwl6ehIcnlmsKOosxPEeCE5H56ZzA28A";
+        const REFRESH_TOKEN="1//041wdYNFrTWmkCgYIARAAGAQSNwF-L9Ir3LatdBmaboqILQvUsM4rIfXdWOqTNuKJ8REU36FDyzFQuuRQgmmh-QzI_BK_RXK1fiU";
         //seteamos los valores declarados anteriormente para establecer conexión con la api de google
         const oAuth2Client = new google.auth.OAuth2(
             CLIENT_ID, 
