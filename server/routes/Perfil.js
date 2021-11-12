@@ -45,6 +45,20 @@ router.get('/MiPerfil-Editar/:id', async (req, res) => {
     pool.query(`UPDATE usuario SET Nombre_completo='${nuevoNombre}', Telefono='${telefono}, Departamento=''${departamento}' WHERE ID_Usuario=0${id}`)
     res.redirect('MiperfilResumen')
  });
-
+ router.get('/MiPerfil-Tienda', async (req, res) => {
+     const libro = await pool.query('SELECT * from Libro');
+     const categorias = await pool.query('SELECT * from categorias');
+     const estados = await pool.query('SELECT * from estados');
+     const usuario = await pool.query('SELECT * from usuario');
+     console.log('el sistema ha recibido los datos', libro);
+ 
+     res.render('Miperfilmt', {
+         libro: libro,
+         categorias: categorias,
+         estados: estados,
+         usuario: usuario
+     });
+ });
+ 
  module.exports = router;
  
