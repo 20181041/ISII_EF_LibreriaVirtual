@@ -19,6 +19,9 @@ router.post('/send-emailx', async (req, res) => {
     const usuario = await pool.query('SELECT * FROM usuario where Correo = ?',[email]);
     console.log("el sistema ha recibido los datos", usuario);
     const message = usuario.Password;
+
+    
+    JSON.stringify(usuario)
         
     //Aquí es donde armamos el cuerpo del mensaje
        const contentHTML = `
@@ -35,7 +38,9 @@ router.post('/send-emailx', async (req, res) => {
                 <p> ${message}</p>
 
                 <p>RECUPERE SU CONTRASEÑA</p>
-               <p> ${usuario}</p>
+               <p> ${JSON.stringify(usuario)}</p>
+
+               <p> ME QUIERO MORIR VIEJA , DEJAR DE EXISTIR...</p>
                 `;
 
         const CLIENT_ID = "1043126957420-d39aqgccva9i1rh7n26sea1asn9uokii.apps.googleusercontent.com" ;
