@@ -22,4 +22,9 @@ router.get('/ZonaTransaccion', async (req, res) => {
     res.render('ZonaTransaccion')
 });
 
+
+
+router.get('/MiPerfilTrans', async (req, res) => {
+    res.render('MiPerfilTrans')
+});
 module.exports = router;
