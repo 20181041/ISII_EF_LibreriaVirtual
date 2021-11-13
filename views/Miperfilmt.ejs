@@ -73,202 +73,193 @@
                             style="color: rgb(0, 0, 0)">
                             <strong>Agregar nuevo libro</strong>
                         </a>
-                        <% libro.forEach((mascot)=> { %>
-                            <div class="row border border-2 border-dark">
-
-                                <% if (mascot.ID_Libro==1) { %>
-                                    <div class="col-sm-2 ">
-                                        <img src="./Images/Libro12.png" alt="img1" />
-                                    </div>
-                                    <div class="col-sm-2 mt-5 mb-5  p-1">
-                                        <label class="titlib mt-3">
-                                            <% mascot.Nombre %>
-                                        </label>
-                                        <a class="btn btn-light mb-3 w-100" href="/actualizar">Editar</a>
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="row p-0">
-                                            <div class="col-sm-4 p-1">
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Precio</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion">
-                                                        <% mascot.Precio %>
-                                                    </label>
-                                                </div>
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Imperfectos</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion" style="font-size:14px">
-                                                        <% mascot.Imperfectos %>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 p-">
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Autor</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion" style="font-size:12px">
-                                                        <% mascot.Autor %>
-                                                    </label>
-                                                </div>
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Categoría</label>
-                                                </div>
-                                                <div class="informativo">
-
-                                                    <label id="anotacion">reflexion politica</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 p-1">
-                                                <div class="etiquetax" id="xddd">
-                                                    <label class="titlib mt-3">Tipo transacción</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion">Venta</label>
-                                                </div>
-                                                <div class="etiquetax" id="xddd">
-                                                    <label class="titlib mt-3">Estado</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion">Pendiente</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <% }; %>
+                        <div class="row border border-2 border-dark">
+                            <div class="col-sm-2 ">
+                                <img src="./Images/Libro1.png" alt="img1" />
                             </div>
-                            <% }); %>
-                                <div class="row border border-2 border-dark mt-2 mb-2">
-                                    <div class="col-sm-2 ">
-                                        <img src="./Images/Libro12.png" alt="img1" />
+                            <div class="col-sm-2 mt-5 mb-5  p-1">
+                                <label class="titlib mt-3">
+                                </label>
+                                <a class="btn btn-light mb-3 w-100" href="/actualizar">Editar</a>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="row p-0">
+                                    <div class="col-sm-4 p-1">
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Precio</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion"> 60
+                                            </label>
+                                        </div>
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Imperfectos</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:14px">
+                                            </label>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-2 mt-5 mb-5  p-1">
-                                        <label class="titlib mt-3">El manifiesto</label>
-                                        <br />
-                                        <label class="titlib mt-3">comunista</label>
+                                    <div class="col-sm-4 p-">
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Autor</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:12px">
+                                            </label>
+                                        </div>
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Categoría</label>
+                                        </div>
+                                        <div class="informativo">
+
+                                            <label id="anotacion">reflexion politica</label>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-8">
-                                        <div class="row p-0">
-                                            <div class="col-sm-4 p-0">
-                                                <div class="etiqueta">
-                                                    <label class="titlibb mt-3">Precio</label>
-                                                </div>
-                                                <div class="informativov">
-                                                    <label id="anotacion"></label>
-                                                </div>
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Imperfectos</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion" style="font-size:14px">Pag 5,manchas de
-                                                        cafe</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 p-0">
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Autor</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion" style="font-size:12px">Friedrich Engels y Karl
-                                                        Marx</label>
-                                                </div>
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Categoría</label>
-                                                </div>
-                                                <div class="informativo">
-
-                                                    <label id="anotacion">reflexion politica</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 p-0">
-                                                <div class="etiquetax" id="xddd">
-                                                    <label class="titlib mt-3">Tipo transacción</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion">Venta</label>
-                                                </div>
-                                                <div class="etiquetax" id="xddd">
-                                                    <label class="titlib mt-3">Estado</label>
-                                                </div>
-
-                                                <div class="informativo">
-
-                                                    <label id="anotacion">Pendiente</label>
-                                                </div>
-                                            </div>
+                                    <div class="col-sm-4 p-1">
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Tipo transacción</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion">Venta</label>
+                                        </div>
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Estado</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion">Pendiente</label>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="row border border-2 border-dark mt-2 mb-2">
-                                    <div class="col-sm-2 ">
-                                        <img src="./Images/Libro12.png" alt="img1" />
+                            </div>
+                        </div>
+                        <div class="row border border-2 border-dark mt-2 mb-2">
+                            <div class="col-sm-2 ">
+                                <img src="./Images/Libro10.png" alt="img1" />
+                            </div>
+                            <div class="col-sm-2 mt-5 mb-5  p-1">
+                                <label class="titlib mt-3">El manifiesto</label>
+                                <br />
+                                <label class="titlib mt-3">comunista</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="row p-0">
+                                    <div class="col-sm-4 p-0">
+                                        <div class="etiqueta">
+                                            <label class="titlibb mt-3">Precio</label>
+                                        </div>
+                                        <div class="informativov">
+                                            <label id="anotacion"></label>
+                                        </div>
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Imperfectos</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:14px">Pag 5,manchas de
+                                                cafe</label>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-2 mt-5 mb-5  p-1">
-                                        <label class="titlib mt-3">El manifiesto</label>
-                                        <br />
-                                        <label class="titlib mt-3">comunista</label>
+                                    <div class="col-sm-4 p-0">
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Autor</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:12px">Friedrich Engels y Karl
+                                                Marx</label>
+                                        </div>
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Categoría</label>
+                                        </div>
+                                        <div class="informativo">
+
+                                            <label id="anotacion">reflexion politica</label>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-8">
-                                        <div class="row p-0">
-                                            <div class="col-sm-4 p-0">
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Precio</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion">60</label>
-                                                </div>
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Imperfectos</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion" style="font-size:14px">Pag 5,manchas de
-                                                        cafe</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 p-0">
+                                    <div class="col-sm-4 p-0">
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Tipo transacción</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion">Venta</label>
+                                        </div>
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Estado</label>
+                                        </div>
 
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Autor</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion" style="font-size:12px">Friedrich Engels y Karl
-                                                        Marx</label>
-                                                </div>
+                                        <div class="informativo">
 
-                                                <div class="etiqueta">
-                                                    <label class="titlib mt-3">Categoría</label>
-
-                                                </div>
-
-                                                <div class="informativo">
-
-                                                    <label id="anotacion">reflexion politica</label>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4 p-0">
-                                                <div class="etiquetax" id="xddd">
-                                                    <label class="titlib mt-3">Tipo transacción</label>
-                                                </div>
-                                                <div class="informativo">
-                                                    <label id="anotacion">Venta</label>
-                                                </div>
-                                                <div class="etiquetax" id="xddd">
-                                                    <label class="titlib mt-3">Estado</label>
-                                                </div>
-
-                                                <div class="informativo">
-
-                                                    <label id="anotacion">Pendiente</label>
-                                                </div>
-                                            </div>
+                                            <label id="anotacion">Pendiente</label>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row border border-2 border-dark mt-2 mb-2">
+                            <div class="col-sm-2 ">
+                                <img src="./Images/Libro10.png" alt="img1" />
+                            </div>
+                            <div class="col-sm-2 mt-5 mb-5  p-1">
+                                <label class="titlib mt-3">El manifiesto</label>
+                                <br />
+                                <label class="titlib mt-3">comunista</label>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="row p-0">
+                                    <div class="col-sm-4 p-0">
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Precio</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion">60</label>
+                                        </div>
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Imperfectos</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:14px">Pag 5,manchas de
+                                                cafe</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 p-0">
+
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Autor</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:12px">Friedrich Engels y Karl
+                                                Marx</label>
+                                        </div>
+
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Categoría</label>
+
+                                        </div>
+
+                                        <div class="informativo">
+
+                                            <label id="anotacion">reflexion politica</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 p-0">
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Tipo transacción</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion">Venta</label>
+                                        </div>
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Estado</label>
+                                        </div>
+
+                                        <div class="informativo">
+
+                                            <label id="anotacion">Pendiente</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

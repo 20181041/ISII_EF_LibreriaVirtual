@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../database');
-router.get('/actualizar/:idLibro', async (req, res) => {
-    const libro = await pool.query(`SELECT * from Libro where ID_Libro = ${req.params.idLibro}`);
+router.get('/actualizar', async (req, res) => {
+    const libro = await pool.query(`SELECT * from Libro where ID_Libro =1`);
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
     const tipo_transaccion = await pool.query('SELECT * from tipo_transaccion');
