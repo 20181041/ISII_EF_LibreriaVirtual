@@ -55,6 +55,6 @@ router.post('/actualizoLibro/:id/:idLibro', async (req, res) => {
     pool.query(`UPDATE usuario SET Nombre='${Titulo}', Precio='${Precio}', Autor='${Autor}', Tipo_Transaccion='${tipoTrans}',  Imperfectos='${Imperfectos}', Categoria='${Categoria}', Estado='${Estado}', ID_Usuario=${ID_Usuario} WHERE ID_Libro= ${ID_Libro}`)
 
 
-    res.redirect('/ingresar');
+    res.redirect(`/actualizar/${ID_Libro}`);
 });
 module.exports = router;
