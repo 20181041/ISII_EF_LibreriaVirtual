@@ -40,7 +40,7 @@ router.post('/send-emailx', async (req, res) => {
                     
                 </ul>
                 <p>SU CONTRASEÑA ES :</p>
-                <p> ${JSON.stringify(usuario.Password)}</p>
+                <p> ${JSON.stringify(usuario)}</p>
 
                 <p> QUE TENGA UNA BUENA COMPRA!</p>
            
