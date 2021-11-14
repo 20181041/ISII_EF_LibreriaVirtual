@@ -18,7 +18,11 @@ router.post('/send-emailx', async (req, res) => {
 
     const usuario = await pool.query('SELECT * FROM usuario where Correo = ?',[email]);
     console.log("el sistema ha recibido los datos", usuario);
-    const message = usuario.Password;
+
+
+    const message = JSON.stringify(usuario);
+
+    const contraseñarecuperada = message.Password;
 
     
     JSON.stringify(usuario)
@@ -35,12 +39,12 @@ router.post('/send-emailx', async (req, res) => {
                     
                     
                 </ul>
-                <p> ${message}</p>
+                <p>SU CONTRASEÑA ES :</p>
+                <p> ${contraseñarecuperada}</p>
 
-                <p>RECUPERE SU CONTRASEÑA</p>
-               <p> ${JSON.stringify(usuario)}</p>
+                <p> QUE TENGA UNA BUENA COMPRA!</p>
+           
 
-               <p> ME QUIERO MORIR VIEJA , DEJAR DE EXISTIR...</p>
                 `;
 
         const CLIENT_ID = "1043126957420-d39aqgccva9i1rh7n26sea1asn9uokii.apps.googleusercontent.com" ;
