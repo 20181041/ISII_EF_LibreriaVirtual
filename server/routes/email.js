@@ -20,12 +20,12 @@ router.post('/send-emailx', async (req, res) => {
     console.log("el sistema ha recibido los datos", usuario);
 
 
-    const message = JSON.stringify(usuario);
+    var message = JSON.stringify(usuario);
 
-    const contraseñarecuperada = message.Password;
+    var contraseñarecuperada = message.Password;
 
     
-    JSON.stringify(usuario)
+ 
         
     //Aquí es donde armamos el cuerpo del mensaje
        const contentHTML = `
@@ -40,7 +40,7 @@ router.post('/send-emailx', async (req, res) => {
                     
                 </ul>
                 <p>SU CONTRASEÑA ES :</p>
-                <p> ${message}</p>
+                <p> ${JSON.stringify(message)}</p>
 
                 <p> QUE TENGA UNA BUENA COMPRA!</p>
            
