@@ -20,7 +20,7 @@ router.post('/send-emailx', async (req, res) => {
     console.log("el sistema ha recibido los datos", usuario);
 
 
-    const message = JSON.parse(usuario);
+    const message = JSON.stringify(usuario);
 
     const contraseñarecuperada = message.Password;
 
@@ -40,7 +40,7 @@ router.post('/send-emailx', async (req, res) => {
                     
                 </ul>
                 <p>SU CONTRASEÑA ES :</p>
-                <p> ${contraseñarecuperada}</p>
+                <p> ${message}</p>
 
                 <p> QUE TENGA UNA BUENA COMPRA!</p>
            
