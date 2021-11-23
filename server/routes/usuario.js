@@ -40,8 +40,7 @@ router.post('/registro', async (req, res) => {
     //         pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
     //     }else{
     //         console.log("No se creó el usuario")
-    //    }
-    console.log("yey");
+    //    } 
     res.redirect('Iniciarsesion')
 
 });
