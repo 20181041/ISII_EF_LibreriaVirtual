@@ -45,6 +45,11 @@ router.get('/Iniciarsesion', async (req, res) => {
 });
 
 
+router.get('/logout', (req, res) => {
+    req.logOut();
+    res.render('Iniciarsesion');
+  });
+
 
 
 module.exports = router;

@@ -15,24 +15,13 @@ router.post('/send-emailx', async (req, res) => {
     const usuario = await pool.query('SELECT * FROM usuario where Correo = ?', [email]);
     console.log("el sistema ha recibido los datos", usuario);
 
-<<<<<<< HEAD
-
-    var message = JSON.stringify(usuario);
-=======
     const message = JSON.stringify(usuario);
->>>>>>> 163b857e48fff4110a0156aba0f2358cc47e7f0d
 
     var contraseñarecuperada = message.Password;
 
-<<<<<<< HEAD
     
  
         
-=======
-
-    JSON.stringify(usuario)
-
->>>>>>> 163b857e48fff4110a0156aba0f2358cc47e7f0d
     //Aquí es donde armamos el cuerpo del mensaje
     const contentHTML = `
         

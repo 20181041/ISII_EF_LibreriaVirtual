@@ -19,7 +19,7 @@ router.get('/MiPerfil-Transaccion', async (req, res) => {
 });
 router.get('/MiPerfil-Editar/:id', async (req, res) => {
 
-     const id = req.params.id;
+     const id = req.user.ID_Usuario;
      const listaUsuarios = await pool.query('SELECT * FROM usuario');
      var us1 = buscar_id(listaUsuarios, id);
      const listaAreas = await pool.query('SELECT Descripcion FROM areas');
@@ -54,7 +54,7 @@ router.get('/MiPerfil-Resumen/:id', async (req, res) => {
      var us2 = buscar_id(listaUsuarios, id);
 
      res.render('MiperfilResumen', {
-          usuario: us2
+          usuario: req.user
      });
 });
 
