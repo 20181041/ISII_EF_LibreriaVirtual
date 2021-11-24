@@ -34,14 +34,13 @@ router.post('/registro', async (req, res) => {
     var username = req.body.usuario;
     var correo = req.body.email;
     var password = req.body.psw;
-    pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
+    pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, area, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','ESTE', '0' );`)
 
     //     if(req.body.checkbox.checked=true){
     //         pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
     //     }else{
     //         console.log("No se creó el usuario")
-    //    }
-    console.log("yey");
+    //    } 
     res.redirect('Iniciarsesion')
 
 });

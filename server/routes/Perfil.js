@@ -13,6 +13,10 @@ function buscar_id(a, b) {
      return us1
 }
 
+
+router.get('/MiPerfil-Transaccion', async (req, res) => {
+     res.render('MiPerfilTrans');
+});
 router.get('/MiPerfil-Editar/:id', async (req, res) => {
 
      const id = req.params.id;
