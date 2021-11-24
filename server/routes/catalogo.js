@@ -13,7 +13,7 @@ router.get('/catalogo', isLoggedIn, async (req, res) => {
 
     res.render('catalogo', {
         libro: libro,
-        id_usuario: id
+        id_usuario: req.user
     });
 });
 

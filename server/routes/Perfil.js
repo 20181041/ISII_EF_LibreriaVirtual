@@ -17,7 +17,7 @@ function buscar_id(a, b) {
 router.get('/MiPerfil-Transaccion', async (req, res) => {
      res.render('MiPerfilTrans');
 });
-router.get('/MiPerfil-Editar/:id', async (req, res) => {
+router.get('/MiPerfil-Editar', async (req, res) => {
 
      const id = req.user.ID_Usuario;
      const listaUsuarios = await pool.query('SELECT * FROM usuario');
@@ -42,12 +42,12 @@ router.get('/MiPerfil-Editar/:id', async (req, res) => {
      }
 
      res.render('MiPerfilEditar', {
-          usuario: us1,
+          usuario: req.user,
           ListaAreas: ListaAreasArray
      });
 });
 
-router.get('/MiPerfil-Resumen/:id', async (req, res) => {
+router.get('/MiPerfil-Resumen', async (req, res) => {
 
      const id = req.params.id;
      const listaUsuarios = await pool.query('SELECT * FROM usuario');
@@ -58,8 +58,8 @@ router.get('/MiPerfil-Resumen/:id', async (req, res) => {
      });
 });
 
-router.post('/MiPerfil-Resumen/:id', async (req, res) => {
-     const id = req.params.id;
+router.post('/MiPerfil-Resumen', async (req, res) => {
+     const id = req.user.ID_Usuario;
 
      var nuevoUsername = req.body.usuario_nombres;
      var telefono = req.body.telefono;
@@ -69,7 +69,7 @@ router.post('/MiPerfil-Resumen/:id', async (req, res) => {
           pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}' WHERE ID_Usuario= ${id}`)
           const actualizar = await pool.query('SELECT * FROM usuario');
      }
-     res.redirect(`${id}`)
+     res.redirect('/MiPerfil-Resumen')
 });
 router.get('/MiPerfil-Tienda', async (req, res) => {
      const libro = await pool.query('SELECT * from Libro');

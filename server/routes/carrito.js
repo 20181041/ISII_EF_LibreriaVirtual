@@ -12,6 +12,9 @@ const libro7 = ["10 historias de amor","20", "Autor7", "Pendiente", "pág5 sucia
 const libro8 = ["zombies","0", "Autor8", "Venta", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Transaccion"  ];
 var libroscarrito = [];
 var librosID = [];
+
+
+
 function buscar_id(a, b) {
     var us1;
 
@@ -31,53 +34,40 @@ function BuscarId(a){
     }
 }
 
-router.post('/carrito/:id/:id_libro', async(req, res) => {
+router.post('/carrito/:id', async(req, res) => {
     const id = req.params.id;
-    const id_libro = req.params.id_libro;
     const listadelibros = await pool.query('SELECT * FROM libro');
-    var us1 = buscar_id(listadelibros, id_libro);
-    const nuevoLibro = [us1.Nombre, us1.Precio, us1.Autor, us1.Tipo_Transaccion, us1.Imperfectos, us1.Categoria, us1.Estado, `Libro${id_libro}.png` , "Pendiente", id_libro]
+    var us1 = buscar_id(listadelibros, id);
+    const nuevoLibro = [us1.Nombre, us1.Precio, us1.Autor, us1.Tipo_Transaccion, us1.Imperfectos, us1.Categoria, us1.Estado, `Libro${id}.png` , "Pendiente", id]
     const encontrado = BuscarId(us1.ID_Libro)
     if(!encontrado){
         libroscarrito.push(nuevoLibro);
     }
     librosID.push(us1.ID_Libro)
 
-   res.redirect(`/catalogo/${id}`)
-
-    
-
+   res.redirect('/carrito')
 });
 
-router.post('/carrito/:id/borrar/:id2', async(req,res) =>{
-    const id = req.params.id;
-    const id_libro = req.body.idLibro;
 
-    console.log(id_libro)
-    console.log(libroscarrito)
+router.post('/carrito-borrar', async(req,res) =>{
+    const id = req.body.idLibro;
+        
     for (let x = 0; x < libroscarrito.length; x++) {
-        console.log("Posición carrito"+libroscarrito[x])
-        console.log("Libro1 sin for: " + libroscarrito[x][9])
-        if (libroscarrito[x][9]== id_libro) {
-
-            console.log("Libro1: " + libroscarrito[x][9])
-            console.log("Libro1: " + libroscarrito[x])
-            console.log("Libro2: " + id_libro)
-
-           /*libroscarrito.splice(libroscarrito[x],1)
-            librosID.splice(librosID[x],1)*/
+        if (libroscarrito[x][9]== id) {
+            libroscarrito.splice(x,1)
+            librosID.splice(x,1)
         } 
-   }
-  
-   res.redirect(`/carrito/${id}`)
-
+    }
+    
+    res.redirect('carrito')
 });
 
-router.get('/carrito/:id', async (req, res) => {
+
+router.get('/carrito', async (req, res) => {
      var listadelibros = libroscarrito;
      res.render('carrito', {
          LibrosCarrito : listadelibros,
-         Id : req.params.id,
+         Id : req.user.ID_Usuario,
          TotalLibros: listadelibros.length
      })
      

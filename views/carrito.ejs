@@ -43,7 +43,7 @@
                                         <div class="container">
                                              <div class="row">
                                                   <div class="col-sm">
-                                                       <a class=" botonsup" href="/MiPerfil-Resumen/<%= Id %>">
+                                                       <a class=" botonsup" href="/MiPerfil-Resumen>">
                                                             <div> <img class="navImagen " src="/Images/MiProfile.png">
                                                             </div>
                                                             <div> Mi Perfil </div>
@@ -51,7 +51,7 @@
                                                   </div>
                                                   <div class="col-sm">
 
-                                                       <a class=" botonsup" href="/catalogo/<%=Id%>">
+                                                       <a class=" botonsup" href="/catalogo">
                                                             <div> <img class="navImagen " src="/Images/MiCatalogo.png">
                                                             </div>
                                                             <div> Catálogo </div>
@@ -69,7 +69,7 @@
           <%if (TotalLibros == 0) {%>
                <div class= "TextoCentral">
                     <div> Parece que no tienes libros... </div>
-                    <div> <a href="/catalogo/<%=Id%>"> Ingresa al catálogo para conseguir libros </div>
+                    <div> <a href="/catalogo"> Ingresa al catálogo para conseguir libros </div>
                </div>
           <% }else{%>
           <nav>
@@ -77,11 +77,9 @@
                     <table class="table" id="TablaCarrito">
                          <tbody id="OrgCarrito">
                               <% LibrosCarrito.forEach((tn)=> { %>
-                                   <form method="POST" id="formborra" action="/carrito/<%=Id%>/borrar/<%=tn[9]%>">
+                                   
                                    <tr class="tabla ">
-                                        <td>
-                                              <span name="idLibro"> <%=tn[9]%></span>
-                                        </td>
+                                        
                                         <td>
                                              <div class="col-sm">                                                  
                                                   <img src= "/Images/<%=tn[7]%>" > 
@@ -144,8 +142,6 @@
                                                   <div class="titulo mb-2"> Zona </div>
                                                   <div class="Seccion">
                                                        <%= tn[8] %>
-                                                       <%= tn[9] %>
-                                                       <%= tn[7] %>
                                                   </div>
                                              </div>
                                         </td>
@@ -157,11 +153,17 @@
                                                        Zona</a>
 
                                              <% } %>
-                                             </form>
-                                             <button id="borrar" type="submit" form="formborra" class="btn btn-danger">
-                                                  Eliminar
-                                             </button>
                                         </td>
+                                             <form method="POST" id="formborra" action="/carrito-borrar">
+                                                  <td>
+                                                       <input type="hidden" name="idLibro" value= "<%=tn[9]%>">
+                                                       <button id="borrar" type="submit" class="btn btn-danger">
+                                                            Eliminar
+                                                       </button>
+                                                 </td>
+                                             </form>
+                                             
+                                       
                                    </tr>
 
                                    <% }) %>
