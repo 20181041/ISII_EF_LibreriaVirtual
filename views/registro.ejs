@@ -17,7 +17,7 @@
     <%- include('templates/header-IS') %>
         <!-- INICIO DE CONTENIDO -->
         <!-- FORMULARIO DE REGISTRO           -->
-        <form id="boton" method="post" action="/registro">
+        <form id="boton" method="POST" action="/registro">
             <div class="container">
                 <br>
                 <div class="row">
@@ -28,17 +28,17 @@
                     </div>
                     <div class=" col-sm-4 card-body border border-dark rounded ">
                         <div class="form-floating mb-3 ">
-                            <input type="text " placeholder="Escribe tu nombre aquí! " name="usuario " id="name " required class="form-control ">
+                            <input type="text " placeholder="Escribe tu nombre aquí! " name="usuario" id="name " required class="form-control ">
                             <label for="floatingInput p-3">Nombre de usuario</label>
                         </div>
 
                         <div class="form-floating mb-3 ">
-                            <input type="email " placeholder="name@example.com " name="email " id="email " required class="form-control ">
+                            <input type="email " placeholder="name@example.com " name="email" id="email " required class="form-control ">
                             <label for="floatingInput p-3">Correo electrónico</label>
                         </div>
 
                         <div class="form-floating mb-3 ">
-                            <input type="password " placeholder="Ingresa Contraseña " name="psw " id="psw " required class="form-control ">
+                            <input type="password " placeholder="Ingresa Contraseña " name="psw" id="psw " required class="form-control ">
                             <label for="floatingInput p-3">Contraseña</label>
                         </div>
 
@@ -46,15 +46,12 @@
                             <input type="password " placeholder="Repetir Contraseña " name="psw-repeat " id="psw-repeat " required class="form-control ">
                             <label for="floatingInput p-3">Repetir Contraseña</label>
                             <hr>
-                            <div class="form-check ">
-                                <input class="form-check-input " name="checkbox " type="checkbox " value=" " id="flexCheckIndeterminate ">
-                                <label class="form-check-label " for="flexCheckIndeterminate ">
-                                    Acepto términos y condiciones
-                                </label>
-                            </div>
+                            
                         </div>
-                        <button type="submit " form="boton " class="btn btn-info w-100 ">
-                            <div class=" "> Confirmar </div>
+                        </div>
+                    </form>
+                        <button type="submit" form="boton" class="btn btn-info w-100 ">
+                             Confirmar 
                         </button>
                         <!-- <button type="submit " form="boton " class="btn btn-info w-100 " data-bs-toggle="modal " data-bs-target="#staticBackdrop ">
                     <div class=" "> Confirmar </div>
@@ -106,7 +103,7 @@
                 </div>
             </div>
 
-        </form>
+        
         <!-- FIN DE CONTENIDO -->
         <br>
 

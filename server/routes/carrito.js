@@ -11,7 +11,7 @@ const libro6 = ["mulan","5", "Autor6", "Venta", "pág5 sucia", "comedia", "Compl
 const libro7 = ["10 historias de amor","20", "Autor7", "Pendiente", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Comunicacion"  ];*/
 const libro8 = ["zombies","0", "Autor8", "Venta", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Transaccion"  ];
 var libroscarrito = [];
-var librosID = [];
+var librosID = [];  
 function buscar_id(a, b) {
     var us1;
 
@@ -43,7 +43,7 @@ router.post('/carrito/:id/:id_libro', async(req, res) => {
     }
     librosID.push(us1.ID_Libro)
 
-   res.redirect(`/catalogo/${id}`)
+   res.redirect('/catalogo')
 
     
 
@@ -77,7 +77,7 @@ router.get('/carrito/:id', async (req, res) => {
      var listadelibros = libroscarrito;
      res.render('carrito', {
          LibrosCarrito : listadelibros,
-         Id : req.params.id,
+         Id : req.user.ID_Usuario,
          TotalLibros: listadelibros.length
      })
      
