@@ -19,9 +19,9 @@ router.post('/send-emailx', async (req, res) => {
 
     var contraseñarecuperada = message.Password;
 
-
-    JSON.stringify(usuario)
-
+    
+ 
+        
     //Aquí es donde armamos el cuerpo del mensaje
     const contentHTML = `
         
