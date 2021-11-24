@@ -77,10 +77,10 @@
                     <table class="table" id="TablaCarrito">
                          <tbody id="OrgCarrito">
                               <% LibrosCarrito.forEach((tn)=> { %>
-                                  
+                                   <form method="POST" id="formborra" action="/carrito/<%=Id%>/borrar/<%=tn[9]%>">
                                    <tr class="tabla ">
                                         <td>
-                                             <div name="idLibro"> <%=tn[9]%> </div> 
+                                              <span name="idLibro"> <%=tn[9]%></span>
                                         </td>
                                         <td>
                                              <div class="col-sm">                                                  
@@ -157,7 +157,7 @@
                                                        Zona</a>
 
                                              <% } %>
-                                             <form method="POST" id="formborra" action="/carrito/<%=Id%>/borrar/"></form>
+                                             </form>
                                              <button id="borrar" type="submit" form="formborra" class="btn btn-danger">
                                                   Eliminar
                                              </button>

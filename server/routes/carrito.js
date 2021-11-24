@@ -49,7 +49,7 @@ router.post('/carrito/:id/:id_libro', async(req, res) => {
 
 });
 
-router.post('/carrito/:id/borrar/', async(req,res) =>{
+router.post('/carrito/:id/borrar/:id2', async(req,res) =>{
     const id = req.params.id;
     const id_libro = req.body.idLibro;
 
