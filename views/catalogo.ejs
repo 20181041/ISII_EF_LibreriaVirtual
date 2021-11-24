@@ -54,26 +54,15 @@
             </div>
             <div class="col-sm-6"> </div>
             <div class="col-sm-1 text-end">
-                <a href="/MiPerfil-Resumen/1" class="btn">
+                <a href="/MiPerfil-Resumen" class="btn">
                     <img src="/Images/MiProfile.png" style="width:40%"> <br> Mi Perfil
                 </a>
             </div>
             <div class="col-sm-1">
-                <a href="/carrito/1" class="btn">
+                <a href="/carrito" class="btn">
                     <img src="/Images/MiCarrito.png" style="width:40%"> <br> Carrito
                 </a>
             </div>
-        </div>
-        <div class="col-sm-6"> </div>
-        <div class="col-sm-1 text-end">
-            <a href="/MiPerfil-Resumen/<%=id_usuario%>" class="btn">
-                <img src="/Images/MiProfile.png" style="width:40%"> <br> Mi Perfil
-            </a>
-        </div>
-        <div class="col-sm-1">
-            <a href="/carrito/<%=id_usuario%>" class="btn">
-                <img src="/Images/MiCarrito.png" style="width:40%"> <br> Carrito
-            </a>
         </div>
     </div>
     <div class="catalogo">
@@ -548,7 +537,7 @@
         <div class="modal-content">
             <div class="modal-header">
                     <% libro.forEach((libro)=> { %>
-                        <form method="POST" id="form1" action="/carrito/<%=id_usuario%>/1"></form>
+                        <form method="POST" id="form1" action="/carrito/1"></form>
                         <% if (libro.ID_Libro==1) { %>
                             <h5 class="modal-title" id="Libro1Label">
                                 <%= libro.Nombre%>
@@ -653,7 +642,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form2" action="/carrito/<%=id_usuario%>/2"></form>
+                    <form method="POST" id="form2" action="/carrito/2"></form>
                         <% if (libro.ID_Libro==2) { %>
                             <h5 class="modal-title" id="Libro2Label">
                                 <%= libro.Nombre%>
@@ -754,7 +743,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form3" action="/carrito/<%=id_usuario%>/3"></form>
+                    <form method="POST" id="form3" action="/carrito/3"></form>
                     <% if (libro.ID_Libro==3) { %>
                         <h5 class="modal-title" id="Libro3Label">
                             <%= libro.Nombre%>
@@ -854,7 +843,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form4" action="/carrito/<%=id_usuario%>/4"></form>
+                    <form method="POST" id="form4" action="/carrito/4"></form>
                     <% if (libro.ID_Libro==4) { %>
                         <h5 class="modal-title" id="Libro4Label">
                             <%= libro.Nombre%>
@@ -955,7 +944,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form5" action="/carrito/<%=id_usuario%>/5"></form>
+                    <form method="POST" id="form5" action="/carrito/5"></form>
                     <% if (libro.ID_Libro==5) { %>
                         <h5 class="modal-title" id="Libro5Label">
                             <%= libro.Nombre%>
@@ -1057,7 +1046,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form6" action="/carrito/<%=id_usuario%>/6"></form>
+                    <form method="POST" id="form6" action="/carrito/6"></form>
                     <% if (libro.ID_Libro==6) { %>
                         <h5 class="modal-title" id="Libro6Label">
                             <%= libro.Nombre%>
@@ -1158,7 +1147,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form7" action="/carrito/<%=id_usuario%>/7"></form>
+                    <form method="POST" id="form7" action="/carrito/7"></form>
                     <% if (libro.ID_Libro==7) { %>
                         <h5 class="modal-title" id="Libro7Label">
                             <%= libro.Nombre%>
@@ -1258,7 +1247,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form8" action="/carrito/<%=id_usuario%>/8"></form>
+                    <form method="POST" id="form8" action="/carrito/8"></form>
                     <% if (libro.ID_Libro==8) { %>
                         <h5 class="modal-title" id="Libro8Label">
                             <%= libro.Nombre%>
@@ -1360,7 +1349,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form9" action="/carrito/<%=id_usuario%>/9"></form>
+                    <form method="POST" id="form9" action="/carrito/9"></form>
                     <% if (libro.ID_Libro==9) { %>
                         <h5 class="modal-title" id="Libro9Label">
                             <%= libro.Nombre%>
@@ -1462,7 +1451,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form10" action="/carrito/<%=id_usuario%>/10"></form>
+                    <form method="POST" id="form10" action="/carrito/10"></form>
                     <% if (libro.ID_Libro==10) { %>
                         <h5 class="modal-title" id="Libro10Label">
                             <%= libro.Nombre%>
@@ -1562,7 +1551,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form11" action="/carrito/<%=id_usuario%>/11"></form>
+                    <form method="POST" id="form11" action="/carrito/11"></form>
                     <% if (libro.ID_Libro==11) { %>
                         <h5 class="modal-title" id="Libro11Label">
                             <%= libro.Nombre%>
@@ -1664,7 +1653,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
-                    <form method="POST" id="form12" action="/carrito/<%=id_usuario%>/12"></form>
+                    <form method="POST" id="form12" action="/carrito/12"></form>
                     <% if (libro.ID_Libro==12) { %>
                         <h5 class="modal-title" id="Libro12Label">
                             <%= libro.Nombre%>
