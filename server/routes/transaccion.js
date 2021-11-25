@@ -18,6 +18,24 @@ router.get('/ZonaConfirmacion', async (req, res) => {
     });
 });
 
+router.post('/actualizar-calificacion', async (req, res) => {
+    const Nueva_Calificacion = req.body.estrella;
+    var Calificacion =parseInt( req.body.caliV);
+    const ID_Vendedor = req.body.IDVendedor;
+    
+  
+
+    if(typeof(Nueva_Calificacion)!="undefined"  ){
+        Calificacion= Math.round((Calificacion + parseInt(Nueva_Calificacion))/2,1);
+        console.log(Calificacion)
+        pool.query (`UPDATE usuario SET Calificacion='${Calificacion}' WHERE ID_Usuario='${ID_Vendedor}'`);
+    }
+    
+
+    res.redirect('/catalogo')
+});
+ 
+
 router.get('/ZonaTransaccion', async (req, res) => {
     res.render('ZonaTransaccion')
 });

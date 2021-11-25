@@ -1,0 +1,37 @@
+
+
+.rating {
+  
+     position: relative;
+     left: -139px;
+     right: 0;
+     transform: translate(0,0,0);
+
+}
+.rating label{
+    
+     bottom: 100px;
+     font-size: 45px;
+     color: rgb(223, 223, 223);
+     float: right;
+     transition: all 0.1s ease;
+    
+}
+
+.rating input{
+     display: none;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label
+{
+     color: rgb(255, 231, 16)
+}
+
+
+input:checked ~ label{
+     color: rgb(255, 219, 15)
+}
+
+
+
+

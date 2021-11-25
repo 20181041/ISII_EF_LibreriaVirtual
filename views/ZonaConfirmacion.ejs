@@ -10,11 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilosPassword.css">
     <link rel="stylesheet" href="./css/estilos.css">
+  
+
+    <link rel="stylesheet" href="./css/estilosEncuesta.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
 </head>
 
 <body class="body">
@@ -43,6 +49,8 @@
 
             </div>
         </div>
+
+
 
 
         <!-- FIN DE CONTENIDO -->
@@ -75,15 +83,35 @@
                             </h3>
                             <h5 class="text-center mt-2">Satisfacción del servicio</h5>
                             <p class="text-center">
-                                <img src="./Images/Calificacion-4.png" class="clafica" style="width: 40%;">
+                                <div class="rating">
+                                    <form method="POST" id="formencuesta" action="/actualizar-calificacion">
+                                        <input type="hidden" name="IDVendedor" value="<%= user.ID_Usuario %>">
+                                        <input type="hidden" name="caliV" value="<%= user.Calificacion %>">
+
+                                        <input type= "radio"  name="estrella" id="Puntuacion5" value="5"> <label for= "Puntuacion5" class="fa fa-star "> 
+                                            
+                                        </label>
+                                        <input type= "radio" name="estrella" id="Puntuacion4"  value="4"> <label for= "Puntuacion4" class="fa fa-star" >
+                                    
+                                        </label>
+                                        <input type= "radio" name="estrella" id="Puntuacion3"  value="3"> <label for= "Puntuacion3" class="fa fa-star" >
+                                    
+                                        </label>
+                                        <input type= "radio"  name="estrella" id="Puntuacion2" value="2"> <label for= "Puntuacion2" class="fa fa-star" >
+                                        
+                                        </label>
+                                        <input type= "radio"  name="estrella" id="Puntuacion1" value="1"> <label for= "Puntuacion1" class="fa fa-star" >
+                                        
+                                        </label>
+                                    
+                                    </form>
+                                </div>
                             </p>
                             <% }; %>
 
                                 <% }); %>
                 </div>
                 <div class="row">
-
-
                     <div class="row">
                         <div class="col-sm-2">
                             <img src="./Images/PerfilMujer.jpg" class="card-img-top">
@@ -115,15 +143,19 @@
                     </div>
                     <div class="col-sm-2"></div>
                     <div class="col-sm-3">
-                        <a href="/catalogo" class="btn btn-primary text-center mt-3">Finalizar</a>
+                        <button type= "submit" form= "formencuesta" class="btn btn-primary text-center mt-3">Finalizar</button>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
+
+    
 </div>
+
+
+
 </div>
+
 
 </html>

@@ -13,7 +13,15 @@ const libro8 = ["zombies","0", "Autor8", "Venta", "pág5 sucia", "comedia", "Pen
 var libroscarrito = [];
 var librosID = [];
 
+function getCarrito(){
+    var libroscarrito = [];
+    return libroscarrito
+}
 
+function getLibrosID(){
+    var librosID = [];
+    return librosID
+}
 
 function buscar_id(a, b) {
     var us1;
@@ -27,6 +35,7 @@ function buscar_id(a, b) {
 }
 
 function BuscarId(a){
+    var librosID = getLibrosID();
     for (let x = 0; x < librosID.length; x++){
         if(a==librosID[x]){
             return true
@@ -35,23 +44,28 @@ function BuscarId(a){
 }
 
 router.post('/carrito/:id', async(req, res) => {
+    //var libroscarrito = getCarrito();
+    //var librosID = getLibrosID();
     const id = req.params.id;
     const listadelibros = await pool.query('SELECT * FROM libro');
     var us1 = buscar_id(listadelibros, id);
-    const nuevoLibro = [us1.Nombre, us1.Precio, us1.Autor, us1.Tipo_Transaccion, us1.Imperfectos, us1.Categoria, us1.Estado, `Libro${id}.png` , "Pendiente", id]
+    const nuevoLibro = [us1.Nombre, us1.Precio, us1.Autor, us1.Tipo_Transaccion, us1.Imperfectos, us1.Categoria, us1.Estado, `Libro${id}.png` , "Comunicacion", id]
     const encontrado = BuscarId(us1.ID_Libro)
     if(!encontrado){
         libroscarrito.push(nuevoLibro);
     }
     librosID.push(us1.ID_Libro)
 
+   console.log(libroscarrito)
    res.redirect('/carrito')
 });
 
 
 router.post('/carrito-borrar', async(req,res) =>{
     const id = req.body.idLibro;
-        
+    //var libroscarrito = getCarrito();
+    //var librosID = getLibrosID();
+
     for (let x = 0; x < libroscarrito.length; x++) {
         if (libroscarrito[x][9]== id) {
             libroscarrito.splice(x,1)

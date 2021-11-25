@@ -146,24 +146,34 @@
                                              </div>
                                         </td>
 
-                                        <td>
-                                             <% if (tn[8]!="Completado" && tn[8]!="Pendiente" ){ %>
 
-                                                  <a href="/Zona<%= tn[8] %>" id="zona" type="button" class="btn btn-warning"> Ver
-                                                       Zona</a>
+          
+                                        <form method="POST" id="formborra" action="/carrito-borrar">
+                                             <td>
+                                                  <div class="col">
+                                                       <div class="Seccion-Boton ">
+                                                            <input type="hidden" name="idLibro" value= "<%=tn[9]%>">
+                                                            <button id="borrar" type="submit" class="btn btn-danger">
+                                                                 Eliminar
+                                                            </button>
+                                                       </div>
+                                                       <div class="Seccion-Boton">
+                                                            <% if (tn[8]!="Completado" && tn[8]!="Pendiente" ){ %>
 
-                                             <% } %>
-                                        </td>
-                                             <form method="POST" id="formborra" action="/carrito-borrar">
-                                                  <td>
-                                                       <input type="hidden" name="idLibro" value= "<%=tn[9]%>">
-                                                       <button id="borrar" type="submit" class="btn btn-danger">
-                                                            Eliminar
-                                                       </button>
-                                                 </td>
-                                             </form>
+                                                                 <a href="/Zona<%= tn[8] %>" id="zona" type="button" class="btn btn-warning"> Ver
+                                                                      Zona</a>
+                    
+                                                            <% } %>
+                                                       </div>
+
+                                                       <div class="Seccion-Boton">
+                                                            <button id="enviarcorreo" type="button" class="btn btn-info">Pedir libro</button>
+                                                       </div>
+                                                  </div>    
+                                             </td>
+                                                
+                                        </form>
                                              
-                                       
                                    </tr>
 
                                    <% }) %>
