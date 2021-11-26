@@ -17,21 +17,21 @@ require('./lib/passport');
 
 //Configuraciones 
 app.set('port', process.env.PORT || 4000);
- 
+
 //Middlewares
 app.use(session({
     secret: 'Hipatia',
     resave: false,
-    saveUninitialized : false,
-    store: new MySQLStore(database)  
+    saveUninitialized: false,
+    store: new MySQLStore(database)
 }))
 
 //app.use(validator());
 app.use(flash());
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
@@ -79,4 +79,3 @@ app.use(require('./routes/Perfil'));
 app.listen(app.get('port'), () => {
     console.log('Server is in port', app.get('port'));
 });
-

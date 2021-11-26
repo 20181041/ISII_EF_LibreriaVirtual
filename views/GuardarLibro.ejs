@@ -8,13 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/estilosingresarLibro.css" />
-    <link rel="stylesheet" href="./css/estilos.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/estilosingresarLibro.css" />
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./JS/ingresar_libro.js">
     </script>
 </head>
@@ -60,8 +57,7 @@
                         <div class="form-group mb-5">
                             <label class="form-control-label">Foto</label>
                             <div class="menudrop2">
-                                <button id="botonfoto" type="button" class="btn btn-light"
-                                    style="color:rgb(0, 0, 0)"><u>Examinar</u></button>
+                                <button id="botonfoto" type="button" class="btn btn-light" style="color:rgb(0, 0, 0)"><u>Examinar</u></button>
                             </div>
                         </div>
                         <div class="form-group mb-3">
@@ -89,8 +85,7 @@
                         </div>
                         <div class="form-group">
                             <% libro.forEach((mascot)=> { %>
-                                <textarea class="w-100" name="imperfectos" id="imp" cols="40"
-                                    rows="4"><%= mascot.Imperfectos %></textarea>
+                                <textarea class="w-100" name="imperfectos" id="imp" cols="40" rows="4"><%= mascot.Imperfectos %></textarea>
                                 <% }); %>
                         </div>
                     </div>
@@ -102,8 +97,7 @@
                         </div>
                         <div class="form-group">
                             <% libro.forEach((mascot)=> { %>
-                                <textarea class="w-100" name="descripcion" id="imp" cols="157"
-                                    rows="4"><%= mascot.descripcion%></textarea>
+                                <textarea class="w-100" name="descripcion" id="imp" cols="157" rows="4"><%= mascot.descripcion%></textarea>
                                 <% }); %>
                         </div>
                     </div>
@@ -117,8 +111,7 @@
                     <div class="col-sm-3">
                     </div>
                     <div class="col-sm-3">
-                        <button id="botoncomfirmar" type="submit" class="btn btn-light w-100"
-                            style="color:rgb(0, 0, 0)">
+                        <button id="botoncomfirmar" type="submit" class="btn btn-light w-100" style="color:rgb(0, 0, 0)">
                             <strong>
                                 Añadir a mi Tienda
                             </strong>

@@ -8,70 +8,70 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/estilosRegistro.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./css/estilosRegistro.css">
+    <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC " crossorigin="anonymous ">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
 </head>
 
-<div class="body">
+<div class="body ">
     <%- include('templates/header') %>
         <!-- INICIO DE CONTENIDO -->
         <!-- FORMULARIO DE REGISTRO           -->
-        <form id="boton" method="POST" action="/registro">
-            <div class="container">
-                <div class="row Carta">
+        <form id="boton " method="POST " action="/registro ">
+            <div class="container ">
+                <div class="row Carta ">
                     <div class="col-sm-6 card-header mt-2 ">
-                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="./Images/LibrosRegistro.jpg" class="d-block w-100 ImgRegistro">
+                        <div id="carouselExampleControls " class="carousel slide " data-bs-ride="carousel ">
+                            <div class="carousel-inner ">
+                                <div class="carousel-item active ">
+                                    <img src="./Images/LibrosRegistro.jpg " class="d-block w-100 ImgRegistro ">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="./Images/LibrosRegistro2.jpg" class="d-block w-100 ImgRegistro">
+                                <div class="carousel-item ">
+                                    <img src="./Images/LibrosRegistro2.jpg " class="d-block w-100 ImgRegistro ">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="./Images/LibrosRegistro3.jpg" class="d-block w-100 ImgRegistro">
+                                <div class="carousel-item ">
+                                    <img src="./Images/LibrosRegistro3.jpg " class="d-block w-100 ImgRegistro ">
                                 </div>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
+                            <button class="carousel-control-prev " type="button " data-bs-target="#carouselExampleControls " data-bs-slide="prev ">
+                              <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+                              <span class="visually-hidden ">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
+                            <button class="carousel-control-next " type="button " data-bs-target="#carouselExampleControls " data-bs-slide="next ">
+                              <span class="carousel-control-next-icon " aria-hidden="true "></span>
+                              <span class="visually-hidden ">Next</span>
                             </button>
                         </div>
                     </div>
 
                     <div class="col-sm-2 card-body border border-dark rounded mt-2 ">
-                        <div id="CartaCuerpo" class="form-floating ">
-                            <p class="text-end Titulo"> Regístrate </p>
-                            <p class="font-16">¿Ya tienes una cuenta? <a href="/IniciarSesion " id="Titulo2">Inicia Sesión</a></p>
+                        <div id="CartaCuerpo " class="form-floating ">
+                            <p class="text-end Titulo "> Regístrate </p>
+                            <p class="font-16 ">¿Ya tienes una cuenta? <a href="/IniciarSesion " id="Titulo2 ">Inicia Sesión</a></p>
                         </div>
 
                         <div class="form-floating mt-4 Secciones ">
-                            <input type="text " placeholder="Escribe tu nombre aquí! " name="usuario" id="name " required class="form-control ">
-                            <label class="form-label" for="floatingInput p-3">Nombre de usuario</label>
+                            <input type="text " placeholder="Escribe tu nombre aquí! " name="usuario " id="name " required class="form-control ">
+                            <label class="form-label " for="floatingInput p-3 ">Nombre de usuario</label>
                         </div>
 
                         <div class="form-floating Secciones ">
-                            <input type="email " placeholder="name@example.com " name="email" id="email " required class="form-control ">
-                            <label class="form-label" for="floatingInput p-3">Correo electrónico</label>
-                        </div>
-
-                        <div class="form-floating Secciones  ">
-                            <input type="password" placeholder="Ingresa Contraseña " name="psw" id="psw " required class="form-control ">
-                            <label class="form-label" for="floatingInput p-3">Contraseña</label>
+                            <input type="email " placeholder="name@example.com " name="email " id="email " required class="form-control ">
+                            <label class="form-label " for="floatingInput p-3 ">Correo electrónico</label>
                         </div>
 
                         <div class="form-floating Secciones ">
-                            <input type="password" placeholder="Repetir Contraseña " name="psw-repeat " id="psw-repeat " required class="form-control ">
-                            <label class="form-label" for="floatingInput p-3">Repetir Contraseña</label>
+                            <input type="password " placeholder="Ingresa Contraseña " name="psw " id="psw " required class="form-control ">
+                            <label class="form-label " for="floatingInput p-3 ">Contraseña</label>
+                        </div>
+
+                        <div class="form-floating Secciones ">
+                            <input type="password " placeholder="Repetir Contraseña " name="psw-repeat " id="psw-repeat " required class="form-control ">
+                            <label class="form-label " for="floatingInput p-3 ">Repetir Contraseña</label>
                         </div>
         </form>
-        <div id="BotonRegistrar" class="form-floating">
-            <button type="submit" form="boton" class="btn btn-info">
+        <div id="BotonRegistrar " class="form-floating ">
+            <button type="submit " form="boton " class="btn btn-info ">
                                 Confirmar
                             </button>
         </div>
