@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 
-router.get('/ingresar', async (req, res) => {
+router.get('/ingresar', async(req, res) => {
     const libro = await pool.query('SELECT * from Libro');
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
@@ -14,7 +14,7 @@ router.get('/ingresar', async (req, res) => {
         tipo_transaccion: tipo_transaccion,
     });
 });
-router.post('/ingresoLibro/:id', async (req, res) => {
+router.post('/ingresoLibro/:id', async(req, res) => {
     const libro = await pool.query('SELECT * from Libro');
     const ID_Libro = libro.length + 1;
     const Titulo = req.body.titulo;
@@ -31,7 +31,7 @@ router.post('/ingresoLibro/:id', async (req, res) => {
 
     res.redirect('/ingresar');
 });
-router.get('/actualizar/:idLibro', async (req, res) => {
+router.get('/actualizar/:idLibro', async(req, res) => {
     const libro = await pool.query(`SELECT * from Libro where ID_Libro = ${req.params.idLibro}`);
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
@@ -43,7 +43,7 @@ router.get('/actualizar/:idLibro', async (req, res) => {
         tipo_transaccion: tipo_transaccion,
     });
 });
-router.post('/actualizoLibro/:id/:idLibro', async (req, res) => {
+router.post('/actualizoLibro/:id/:idLibro', async(req, res) => {
     const ID_Libro = req.params.idLibro;
     const Titulo = req.body.titulo;
     const Precio = req.body.precio;
