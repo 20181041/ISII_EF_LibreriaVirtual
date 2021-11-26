@@ -14,100 +14,78 @@
 </head>
 
 <div class="body">
-    <%- include('templates/header-IS') %>
+    <%- include('templates/header') %>
         <!-- INICIO DE CONTENIDO -->
         <!-- FORMULARIO DE REGISTRO           -->
         <form id="boton" method="POST" action="/registro">
             <div class="container">
-                <br>
-                <div class="row">
-                    <div class="col-sm-6 card-header">
-                        <p class="text-end font-60" style="padding-top:35% !important">
-                            REGÍSTRATE
-                        </p>
-                    </div>
-                    <div class=" col-sm-4 card-body border border-dark rounded ">
-                        <div class="form-floating mb-3 ">
-                            <input type="text " placeholder="Escribe tu nombre aquí! " name="usuario" id="name " required class="form-control ">
-                            <label for="floatingInput p-3">Nombre de usuario</label>
-                        </div>
-
-                        <div class="form-floating mb-3 ">
-                            <input type="email " placeholder="name@example.com " name="email" id="email " required class="form-control ">
-                            <label for="floatingInput p-3">Correo electrónico</label>
-                        </div>
-
-                        <div class="form-floating mb-3 ">
-                            <input type="password " placeholder="Ingresa Contraseña " name="psw" id="psw " required class="form-control ">
-                            <label for="floatingInput p-3">Contraseña</label>
-                        </div>
-
-                        <div class="form-floating mb-3 ">
-                            <input type="password " placeholder="Repetir Contraseña " name="psw-repeat " id="psw-repeat " required class="form-control ">
-                            <label for="floatingInput p-3">Repetir Contraseña</label>
-                            <hr>
-
-                        </div>
-                    </div>
-        </form>
-        <button type="submit" form="boton" class="btn btn-info w-100 ">
-            Confirmar
-        </button>
-        <!-- <button type="submit " form="boton " class="btn btn-info w-100 " data-bs-toggle="modal " data-bs-target="#staticBackdrop ">
-                    <div class=" "> Confirmar </div>
-                    </button> -->
-
-        <!-- Modal -->
-        <!-- <div class="modal fade priori " id="staticBackdrop " data-bs-backdrop="static " data-bs-keyboard="false " tabindex="-1 " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
-                    <div class="modal-dialog ">
-                        <div class="modal-content ">
-                            <div class="modal-header ">
-                                <h5 class="modal-title " id="staticBackdropLabel ">Verificación en dos pasos</h5>
-                                <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
-                            </div>
-                            
-                            <div class="modal-body fondoModalRegistro ">
-                                <div class="row ">
-                                    <div class="col-sm-5 ">
-                                        <img id="candado " src="./Images/Candado.png ">
-                                    </div>
-    
-                                    <div class="col-sm-6 p-3 ">
-    
-                                        <div>
-                                            <div class="row mb-4 Margenes ">
-                                                Introduce el código de verificación enviado a tu correo para poder ingresar
-                                            </div>
-    
-                                            <div class="row mb-4 ">
-                                                <input class="form-control " type="text " placeholder="Introduce el Código " aria-label="default input example ">
-                                            </div>
-    
-                                            <div class="row ">
-                                                <button type="button " class=" rosado " data-bs-dismiss="modal ">Verificar</button>
-                                            </div>
-                                        </div>
-    
-                                    </div>
+                <div class="row Carta">
+                    <div class="col-sm-6 card-header mt-2 ">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./Images/LibrosRegistro.jpg" class="d-block w-100 ImgRegistro">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./Images/LibrosRegistro2.jpg" class="d-block w-100 ImgRegistro">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./Images/LibrosRegistro3.jpg" class="d-block w-100 ImgRegistro">
                                 </div>
                             </div>
-                            
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
                         </div>
                     </div>
-                </div>-->
-        <div class="container ">
-            <br>
-            <p>Ya tienes una cuenta? <a href="/IniciarSesion ">Inciar Sesión</a>.</p>
+
+                    <div class="col-sm-2 card-body border border-dark rounded mt-2 ">
+                        <div id="CartaCuerpo" class="form-floating ">
+                            <p class="text-end Titulo"> Regístrate </p>
+                            <p class="font-16">¿Ya tienes una cuenta? <a href="/IniciarSesion " id="Titulo2">Inicia Sesión</a></p>
+                        </div>
+
+                        <div class="form-floating mt-4 Secciones ">
+                            <input type="text " placeholder="Escribe tu nombre aquí! " name="usuario" id="name " required class="form-control ">
+                            <label class="form-label" for="floatingInput p-3">Nombre de usuario</label>
+                        </div>
+
+                        <div class="form-floating Secciones ">
+                            <input type="email " placeholder="name@example.com " name="email" id="email " required class="form-control ">
+                            <label class="form-label" for="floatingInput p-3">Correo electrónico</label>
+                        </div>
+
+                        <div class="form-floating Secciones  ">
+                            <input type="password" placeholder="Ingresa Contraseña " name="psw" id="psw " required class="form-control ">
+                            <label class="form-label" for="floatingInput p-3">Contraseña</label>
+                        </div>
+
+                        <div class="form-floating Secciones ">
+                            <input type="password" placeholder="Repetir Contraseña " name="psw-repeat " id="psw-repeat " required class="form-control ">
+                            <label class="form-label" for="floatingInput p-3">Repetir Contraseña</label>
+                        </div>
+        </form>
+        <div id="BotonRegistrar" class="form-floating">
+            <button type="submit" form="boton" class="btn btn-info">
+                                Confirmar
+                            </button>
         </div>
         </div>
         </div>
+        </div>
+
+
+        <!-- FIN DE CONTENIDO -->
+
+
+
+        <%- include('templates/footer') %>
+
 </div>
-
-
-<!-- FIN DE CONTENIDO -->
-<br>
-
-<%- include('templates/footer') %>
-    </div>
 
 </html>
