@@ -36,7 +36,6 @@ app.use(express.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 //Definimos el motor de plantillas
 app.set('view engine', 'ejs');
 

@@ -1,8 +1,15 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../database');
+const Vonage = require('@vonage/server-sdk')
+
+const vonage = new Vonage({
+  apiKey: "97c4a7e0",
+  apiSecret: "vfouBNKkgkrO1wR2"
+})
 //const { isLoggedIn } = require('../lib/auth'); 
 //Escribimos las rutas que van a interactuar con la  tabla usuarios 
+
 
 router.get('/add', (req, res) => {
     res.render('ejemplo')
@@ -31,27 +38,81 @@ router.post('/registro', async (req, res) => {
     const Departamento = nuevoUsuario.Departamento;
     const Calificacion = nuevoUsuario.Calificacion;
     */
+
+    
     var username = req.body.usuario;
     var correo = req.body.email;
     var password = req.body.psw;
-    pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, area, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','ESTE', '0' );`)
+    pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, area, Calificacion) VALUES('${username}123', '${password}','${correo}', '${username}', '1','ESTE', '1' );`)
 
     //     if(req.body.checkbox.checked=true){
     //         pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
     //     }else{
-    //         console.log("No se creó el usuario")
+    //         console.log("No se creó el usuario"where Correo = '${correo}'`)
     //    } 
-    res.redirect('Iniciarsesion')
+
+   
+    res.redirect('Verificacion')
+});
+
+router.get('/IngreseCodigo', (req,res)=> {
+    res.render('IngreseCodigo')
+    
 
 });
 
+router.get('/Verificacion', (req,res) => {
+    res.render('Verificacion')
 
+   
+    
+});
+
+router.post('/AnadirNumero', (req,res) => {
+    
+    NumeroTef = req.body.telefono;
+    codigo = 12345;
+   
+    //pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}' WHERE ID_Usuario= ${id}`)
+
+    res.render('IngreseCodigo', {
+        telefono : NumeroTef,
+        codigo: codigo
+    })
+
+    const from = "Vonage APIs"
+    const to = "51" + NumeroTef
+    const text = 'Tu codigo es: ' + codigo
+    /*
+    vonage.message.sendSms(from, to, text, (err, responseData) => {
+        if (err) {
+            console.log(err);
+        } else {
+            if(responseData.messages[0]['status'] === "0") {
+                console.log("Message sent successfully.");
+            } else {
+                console.log(`Message failed with error: ${responseData.messages[0]['error-text']}`);
+            }
+        }
+    })
+*/
+
+    
+});
 
 router.get('/recuperarpassword', (req, res) => {
     res.render('password')
 
 });
 
+router.post('/Validar',(req,res) => {
+    codigo = req.body.codigoc
+    codigo2= req.body.codigonuevo 
+    if(codigo == codigo2){
+        console.log("GAAAAAAAAA")
+        res.redirect('/IniciarSesion')
+    }
+});
 
 
 

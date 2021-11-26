@@ -138,3 +138,38 @@ h1 {
     .priori{
         z-index: 999999999 !important;
     }
+
+    .ImgRegistro{
+        height: 590px;
+    }
+
+    .Titulo{
+        font-size: 40px;
+        margin-right: 200px;
+        font-weight: 600;
+    }
+
+    #Titulo2{
+        text-decoration: none;
+    }
+
+    #Titulo2:hover{
+        text-decoration: underline;
+        color: rgb(13, 3, 43);     
+    }
+
+
+  
+    #CartaCuerpo{
+        top: -20px;
+        height: 99px;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .Secciones{
+        top: -20px;
+        height: 70px;
+    }
