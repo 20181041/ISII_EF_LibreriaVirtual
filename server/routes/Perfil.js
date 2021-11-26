@@ -68,7 +68,8 @@ router.post('/MiPerfil-Resumen', async(req, res) => {
     res.redirect('/MiPerfil-Resumen')
 });
 router.get('/MiPerfil-Tienda', async(req, res) => {
-    const libro = await pool.query('SELECT * from Libro');
+    const id = req.user.ID_Usuario;
+    const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${req.params.ID_Usuario}`);
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
     const usuario = await pool.query('SELECT * from usuario');
