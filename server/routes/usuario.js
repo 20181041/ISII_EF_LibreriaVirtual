@@ -83,7 +83,7 @@ router.post('/AnadirNumero', (req,res) => {
     const from = "Vonage APIs"
     const to = "51" + NumeroTef
     const text = 'Tu codigo es: ' + codigo
-    /*
+    
     vonage.message.sendSms(from, to, text, (err, responseData) => {
         if (err) {
             console.log(err);
@@ -95,7 +95,6 @@ router.post('/AnadirNumero', (req,res) => {
             }
         }
     })
-*/
 
     
 });

@@ -124,7 +124,7 @@
 }
 
 .navImagen{
-    width: 30%;
+    width: 40%;
     margin-left: 25%;
 }
 
@@ -137,7 +137,7 @@
     height: 500px;
     width: 90%;
     overflow: scroll;
-    
+    margin-bottom: 50px;
 }
 
 .TextoCentral{
@@ -145,7 +145,8 @@
     font-weight: 500;
     margin-top: auto;
     text-align: center;
-    padding: 13%
+    padding: 15%;
+    margin-bottom: 5%;
 }
 
 .Seccion-Boton{

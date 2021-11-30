@@ -22,18 +22,18 @@
 
 <body>
      <%- include('templates/header') %>
-          <header class="mb-3">
+          <header class="mb-6">
                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
+                    <div class="container-fluid mb-6">
                          <div class="container">
                               <div class="row">
                                    <div class="col mt-2">
                                         <div class="container">
                                              <div class="row">
                                                   <div class="col-sm-3">
-                                                       <input id="Input" class="form-control me-2"
+                                                       <input id="Buscador" class="form-control me-2"
                                                             type="text" placeholder="Nombre del libro"
-                                                            aria-label="Search" onchange="Filtro1()">
+                                                            aria-label="Search">
                                                   </div>
                                              </div>
                                         </div>
@@ -87,7 +87,7 @@
                                         </td>
 
                                         <td>
-                                             <div class="tituloLibro col-sm">
+                                             <div  class="tituloLibro col-sm">
                                                   <%= tn[0] %>
                                              </div>
                                         </td>
@@ -182,9 +182,9 @@
                </div>
           </nav>
           <%}%>
-          <%- include('templates/footer') %>
+         
 </body>
-
-<script src='/JS/carritoejs.js' type='text/javascript'></script>
+<%- include('templates/footer') %>
+<script src='./JS/carritoejs.js' type='text/javascript'></script>
 
 </html>
