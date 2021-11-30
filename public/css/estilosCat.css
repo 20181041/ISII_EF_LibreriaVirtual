@@ -50,3 +50,20 @@
 .priori {
     z-index: 9999999999999 !important;
 }
+
+#carritoimg{
+    position: relative;
+    display: flex;
+    width: 40%;
+}
+
+#librosencarritoimg{
+    position: absolute;
+    right: 5%;
+    top: 9%;
+}
+
+#tituloCarrito{
+    position: absolute;
+    right: 6px;
+}

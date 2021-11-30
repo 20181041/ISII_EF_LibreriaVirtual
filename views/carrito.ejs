@@ -43,16 +43,16 @@
                                         <div class="container">
                                              <div class="row">
                                                   <div class="col-sm">
-                                                       <a class=" botonsup" href="/MiPerfil-Resumen>">
+                                                       <a class=" botonsup" href="/MiPerfil-Resumen">
                                                             <div> <img class="navImagen " src="/Images/MiProfile.png">
                                                             </div>
-                                                            <div> Mi Perfil </div>
+                                                            <div>  <%= nombre %> </div>
                                                        </a>
                                                   </div>
                                                   <div class="col-sm">
 
                                                        <a class=" botonsup" href="/catalogo">
-                                                            <div> <img class="navImagen " src="/Images/MiCatalogo.png">
+                                                            <div> <img class="navImagen " src="/Images/MiCatalogo.png" >
                                                             </div>
                                                             <div> Catálogo </div>
                                                        </a>
@@ -82,26 +82,26 @@
                                         
                                         <td>
                                              <div class="col-sm">                                                  
-                                                  <img src= "/Images/<%=tn[7]%>" > 
+                                                  <img src= "/Images/<%=tn.Imagen%>" > 
                                              </div>
                                         </td>
 
                                         <td>
                                              <div  class="tituloLibro col-sm">
-                                                  <%= tn[0] %>
+                                                  <%= tn.Nombre %>
                                              </div>
                                         </td>
 
                                         <td>
                                              <div class="col-sm-11">
-                                                  <% if (tn[3]=="Venta" ){ %>
+                                                  <% if (tn.T_Transaccion=="Venta" ){ %>
                                                        <div class="titulo mb-2"> Precio </div>
-                                                       <div class="Seccion mb-2"> S/. <%= tn[1] %>
+                                                       <div class="Seccion mb-2"> S/. <%= tn.Precio %>
                                                        </div>
                                                        <% } %>
                                                             <div class="titulo mb-2"> Imperfectos </div>
                                                             <div class="Seccion">
-                                                                 <%= tn[4] %>
+                                                                 <%= tn.Imperfectos %>
                                                             </div>
                                              </div>
                                         </td>
@@ -110,11 +110,11 @@
                                              <div class="col-sm">
                                                   <div class="titulo mb-2"> Autor </div>
                                                   <div class="Seccion  mb-2">
-                                                       <%= tn[2] %>
+                                                       <%= tn.Autor %>
                                                   </div>
                                                   <div class="titulo mb-2"> Categoría </div>
                                                   <div class="Seccion">
-                                                       <%= tn[5] %>
+                                                       <%= tn.Categoria %>
                                                   </div>
                                              </div>
                                         </td>
@@ -123,7 +123,7 @@
                                              <div class="col-sm">
                                                   <div class="titulo mb-2"> Tipo de Transacción </div>
                                                   <div class="Seccion  mb-2 TipoT">
-                                                       <%= tn[3] %>
+                                                       <%= tn.T_Transaccion %>
                                                   </div>
                                              </div>
                                         </td>
@@ -132,7 +132,7 @@
                                              <div class="col-sm">
                                                   <div class="titulo mb-2"> Estado </div>
                                                   <div class="Seccion">
-                                                       <%= tn[6] %>
+                                                       <%= tn.Estado %>
                                                   </div>
                                              </div>
                                         </td>
@@ -141,7 +141,7 @@
                                              <div class="col-sm">
                                                   <div class="titulo mb-2"> Zona </div>
                                                   <div class="Seccion">
-                                                       <%= tn[8] %>
+                                                       <%= tn.Zona %>
                                                   </div>
                                              </div>
                                         </td>
@@ -152,15 +152,15 @@
                                              <td>
                                                   <div class="col">
                                                        <div class="Seccion-Boton ">
-                                                            <input type="hidden" name="idLibro" value= "<%=tn[9]%>">
+                                                            <input type="hidden" name="idLibro" value= "<%=tn.ID%>">
                                                             <button id="borrar" type="submit" class="btn btn-danger">
                                                                  Eliminar
                                                             </button>
                                                        </div>
                                                        <div class="Seccion-Boton">
-                                                            <% if (tn[8]!="Completado" && tn[8]!="Pendiente" ){ %>
+                                                            <% if (tn.Zona!="Completado" && tn.Zona!="Pendiente" ){ %>
 
-                                                                 <a href="/Zona<%= tn[8] %>" id="zona" type="button" class="btn btn-warning"> Ver
+                                                                 <a href="/Zona<%= tn.Zona %>" id="zona" type="button" class="btn btn-warning"> Ver
                                                                       Zona</a>
                     
                                                             <% } %>

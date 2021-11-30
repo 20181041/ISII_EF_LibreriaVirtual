@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const Vonage = require('@vonage/server-sdk')
-
+const {arreglogeneral, añadirnuevo, añadircarrito, vercarrito, BuscarUsuario} = require('../arreglo')
 const vonage = new Vonage({
   apiKey: "97c4a7e0",
   apiSecret: "vfouBNKkgkrO1wR2"
@@ -50,8 +50,17 @@ router.post('/registro', async (req, res) => {
     //     }else{
     //         console.log("No se creó el usuario"where Correo = '${correo}'`)
     //    } 
-
-   
+    
+    var id;
+    const lista_usuarios = await pool.query('SELECT * FROM usuario');
+    for(p in lista_usuarios){
+        if(lista_usuarios[p].Correo == correo){
+            id = lista_usuarios[p].ID_Usuario
+        }
+    }
+    console.log(id)
+    añadirnuevo(id)
+    
     res.redirect('Verificacion')
 });
 
@@ -108,18 +117,8 @@ router.post('/Validar',(req,res) => {
     codigo = req.body.codigoc
     codigo2= req.body.codigonuevo 
     if(codigo == codigo2){
-        console.log("GAAAAAAAAA")
         res.redirect('/IniciarSesion')
     }
 });
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
