@@ -3,86 +3,83 @@ const router = express.Router();
 const pool = require('../database');
 
 function buscar_id(a, b) {
-     var us1;
+    var us1;
 
-     for (let x = 0; x < a.length; x++) {
-          if (a[x].ID_Usuario == b) {
-               us1 = a[x];
-          }
-     }
-     return us1
+    for (let x = 0; x < a.length; x++) {
+        if (a[x].ID_Usuario == b) {
+            us1 = a[x];
+        }
+    }
+    return us1
 }
 
+router.get('/MiPerfil-Editar', async(req, res) => {
 
-router.get('/MiPerfil-Transaccion', async (req, res) => {
-     res.render('MiPerfilTrans');
-});
-router.get('/MiPerfil-Editar', async (req, res) => {
+    const id = req.user.ID_Usuario;
+    const listaUsuarios = await pool.query('SELECT * FROM usuario');
+    var us1 = buscar_id(listaUsuarios, id);
+    const listaAreas = await pool.query('SELECT Descripcion FROM areas');
 
-     const id = req.user.ID_Usuario;
-     const listaUsuarios = await pool.query('SELECT * FROM usuario');
-     var us1 = buscar_id(listaUsuarios, id);
-     const listaAreas = await pool.query('SELECT Descripcion FROM areas');
+    const ListaAreasArray = [];
 
-     const ListaAreasArray = [];
+    for (let x = 0; x < listaAreas.length; x++) {
+        ListaAreasArray.push(listaAreas[x].Descripcion)
+    }
 
-     for (let x = 0; x < listaAreas.length; x++) {
-          ListaAreasArray.push(listaAreas[x].Descripcion)
-     }
+    for (let x = 0; x < ListaAreasArray.length; x++) {
 
-     for (let x = 0; x < ListaAreasArray.length; x++) {
+        if (ListaAreasArray[x] == us1.area) {
+            ListaAreasArray.splice(x, 1);
+        }
+    }
 
-          if (ListaAreasArray[x] == us1.area) {
-               ListaAreasArray.splice(x, 1);
-          }
-     }
+    for (let x = 0; x < listaUsuarios.length; x++) {
+        console.log(listaUsuarios[x].area)
+    }
 
-     for (let x = 0; x < listaUsuarios.length; x++) {
-          console.log(listaUsuarios[x].area)
-     }
-
-     res.render('MiPerfilEditar', {
-          usuario: req.user,
-          ListaAreas: ListaAreasArray
-     });
+    res.render('MiPerfilEditar', {
+        usuario: req.user,
+        ListaAreas: ListaAreasArray
+    });
 });
 
-router.get('/MiPerfil-Resumen', async (req, res) => {
+router.get('/MiPerfil-Resumen', async(req, res) => {
 
-     const id = req.params.id;
-     const listaUsuarios = await pool.query('SELECT * FROM usuario');
-     var us2 = buscar_id(listaUsuarios, id);
+    const id = req.params.id;
+    const listaUsuarios = await pool.query('SELECT * FROM usuario');
+    var us2 = buscar_id(listaUsuarios, id);
 
-     res.render('MiperfilResumen', {
-          usuario: req.user
-     });
+    res.render('MiperfilResumen', {
+        usuario: req.user
+    });
 });
 
-router.post('/MiPerfil-Resumen', async (req, res) => {
-     const id = req.user.ID_Usuario;
+router.post('/MiPerfil-Resumen', async(req, res) => {
+    const id = req.user.ID_Usuario;
 
-     var nuevoUsername = req.body.usuario_nombres;
-     var telefono = req.body.telefono;
-     var area = req.body.area;
+    var nuevoUsername = req.body.usuario_nombres;
+    var telefono = req.body.telefono;
+    var area = req.body.area;
 
-     if (area != "Escoge un area") {
-          pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}' WHERE ID_Usuario= ${id}`)
-          const actualizar = await pool.query('SELECT * FROM usuario');
-     }
-     res.redirect('/MiPerfil-Resumen')
+    if (area != "Escoge un area") {
+        pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}' WHERE ID_Usuario= ${id}`)
+        const actualizar = await pool.query('SELECT * FROM usuario');
+    }
+    res.redirect('/MiPerfil-Resumen')
 });
-router.get('/MiPerfil-Tienda', async (req, res) => {
-     const libro = await pool.query('SELECT * from Libro');
-     const categorias = await pool.query('SELECT * from categorias');
-     const estados = await pool.query('SELECT * from estados');
-     const usuario = await pool.query('SELECT * from usuario');
+router.get('/MiPerfil-Tienda', async(req, res) => {
+    const id = req.user.ID_Usuario;
+    const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${req.params.ID_Usuario}`);
+    const categorias = await pool.query('SELECT * from categorias');
+    const estados = await pool.query('SELECT * from estados');
+    const usuario = await pool.query('SELECT * from usuario');
 
-     res.render('Miperfilmt', {
-          libro: libro,
-          categorias: categorias,
-          estados: estados,
-          usuario: usuario
-     });
+    res.render('Miperfilmt', {
+        libro: libro,
+        categorias: categorias,
+        estados: estados,
+        usuario: usuario
+    });
 });
 
 

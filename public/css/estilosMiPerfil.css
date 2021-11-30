@@ -1,111 +1,74 @@
+  .mb-0 {
+      margin-bottom: 0 !important;
+  }
+  /* ----------------- */
   
- .mb-0 {
-     margin-bottom: 0 !important;
- } 
- /* ----------------- */
-
- #ImagenMP{
-    width: 40%;
-}
-
- #BotonFile{
+  #ImagenMP {
+      width: 40%;
+  }
+  
+  #BotonFile {
       text-align: center;
- }
-
- 
-#inpr{
-
-     margin-left: 250px;
-     
-     
-     
-     
-     
-     }
-     
-     #inan{
-     
-     
-         margin-left: 160px;
-         border: #0000 solid 1px;
-     
-     }
-     
-     .btn-light {
-     
-         
-         border-radius: 6px;
-         height: 33px;
-         width: 240px;
-         background-color: #EC6D12!important;
-         border: solid 1px rgb(0, 0, 0);
-         
-     
-     
-     
-     }
-     
-     
-     #descp{
-     
-     font-size: 19px;
-     
-     
-     }
-     
-     
-     .bloque-cons{
-     
-     border: solid 2px rgb(0, 0, 0);
-     height:187px;
-     
-     
-     
-     }
-     
-     
-     #menu{
-     
-     margin-left:160px;
-     
-     width:330px;
-     
-     
-     }
-     
-     
-     .nav-link {
-     
-     background-color:#EFEDED  !important;
-     
-     color: #000000 !important;
-     margin-top: 4px;
-     border-radius: 0px !important;
-     font-style: italic;
-     
-     }
-     
-     #v-pills-home-tab{
-     
-     
-     
-         background-color:#6A7384 !important;
-         color: #ffffff !important;
-     
-     
-     }
-     
-     #departamentoMiPerfil{
-          width: 300px;
-     }
-
-     #IngresarImagen{
-          width: 50%;
-          
-     }
-
-     #btnActualizar{
-          width: 140px;
-          height: 40px;
-          font-size: large;
-     }
+  }
+  
+  #inpr {
+      margin-left: 250px;
+  }
+  
+  #inan {
+      margin-left: 160px;
+      border: #0000 solid 1px;
+  }
+  
+  .btn-light {
+      border-radius: 6px;
+      height: 33px;
+      width: 240px;
+      background-color: #EC6D12!important;
+      border: solid 1px rgb(0, 0, 0);
+  }
+  
+  #descp {
+      font-size: 19px;
+  }
+  
+  .bloque-cons {
+      border: solid 2px rgb(0, 0, 0);
+      height: 187px;
+  }
+  
+  #menu {
+      margin-left: 160px;
+      width: 330px;
+  }
+  
+  .nav-link {
+      background-color: #EFEDED !important;
+      color: #000000 !important;
+      margin-top: 4px;
+      border-radius: 0px !important;
+      font-style: italic;
+  }
+  
+  #v-pills-home-tab {
+      background-color: #6A7384 !important;
+      color: #ffffff !important;
+  }
+  
+  #departamentoMiPerfil {
+      width: 300px;
+  }
+  
+  #IngresarImagen {
+      width: 50%;
+  }
+  
+  .alto {
+      height: 85% !important;
+  }
+  
+  #btnActualizar {
+      width: 140px;
+      height: 40px;
+      font-size: large;
+  }

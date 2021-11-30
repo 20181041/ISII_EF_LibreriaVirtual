@@ -10,6 +10,10 @@
      background-color: #E5E5E5;
  }
  
+ .fondoBlanco {
+     background-color: #ffffff;
+ }
+ 
  .nav-link {
      background-color: #EFEDED !important;
      color: #000000 !important;
@@ -20,4 +24,8 @@
  #v-pills-messages-tab {
      background-color: #6A7384 !important;
      color: #ffffff !important;
+ }
+ 
+ .alto {
+     height: 50% !important;
  }
