@@ -43,7 +43,7 @@ router.get('/actualizar/:idLibro', async(req, res) => {
         tipo_transaccion: tipo_transaccion,
     });
 });
-router.post('/actualizoLibro/:id/:idLibro', async(req, res) => {
+router.post('/actualizoLibro/:idLibro', async(req, res) => {
     const ID_Libro = req.params.idLibro;
     const Titulo = req.body.titulo;
     const Precio = req.body.precio;
@@ -53,7 +53,7 @@ router.post('/actualizoLibro/:id/:idLibro', async(req, res) => {
     const descripcion = req.body.descripcion;
     const Categoria = req.body.categoria;
     const Estado = req.body.estado;
-    const ID_Usuario = req.params.id;
+    const ID_Usuario = req.user.ID_Usuario;
 
     pool.query(`UPDATE usuario SET Nombre='${Titulo}', Precio='${Precio}', Autor='${Autor}', Tipo_Transaccion='${tipoTrans}',  Imperfectos='${Imperfectos}', Categoria='${Categoria}', Estado='${Estado}', ID_Usuario='${ID_Usuario}', descripcion='${descripcion}' WHERE ID_Libro= '${ID_Libro}'`)
 
