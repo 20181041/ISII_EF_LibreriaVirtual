@@ -11,11 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="stylesheet" href="/css/estilosCat.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!--<script type="text/javascript" src="./public/JS/Catalogo.js"></script>-->
 </head>
 
@@ -25,24 +22,14 @@
         <div class="row p-3 w-100 fondoGris ml-0">
             <div class="col-sm-2">
                 <div class="form-floating mb-3">
-                    <input type="search" class="w-100 form-control alto" id="floatingInput"
-                        placeholder="name@example.com">
+                    <input type="search" class="w-100 form-control alto" id="floatingInput" placeholder="name@example.com">
                     <label class="font-14 floatingInput">Nombre libro...
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span class="text-end m-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-x-circle-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z" />
-                            </svg>
-                        </span>
                     </label>
                 </div>
             </div>
             <div class="col-sm-2">
                 <div class="dropdown w-100 alto">
-                    <button class="btn dropdown-white dropdown-toggle w-100 alto font-14 " type="button"
-                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn dropdown-white dropdown-toggle w-100 alto font-14 " type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                         Tipo de transaccion
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -55,33 +42,31 @@
             <div class="col-sm-6"> </div>
             <div class="col-sm-1 text-end">
                 <a href="/MiPerfil-Resumen" class="btn">
-                    <img src="/Images/MiProfile.png" style="width:40%"> <br> <%= nombre %>
+                    <img src="/Images/MiProfile.png" style="width:40%"> <br>
+                    <%= nombre %>
                 </a>
             </div>
             <div class="col-sm-1">
                 <a href="/carrito" class="btn">
                     <% if (LibrosEnCarrito!=0) { %>
-                        <span id="librosencarritoimg"> <%= LibrosEnCarrito%>  </span>
-                    <% }; %>
-                    <span><img id = "carritoimg"src="/Images/MiCarrito.png"></span>
-                   <br>
-                   <span id="tituloCarrito">Carrito</span>
-                  
-                   
+                        <span id="librosencarritoimg">
+                            <%= LibrosEnCarrito%>
+                        </span>
+                        <% }; %>
+                            <span><img id="carritoimg" src="/Images/MiCarrito.png"></span>
+                            <br>
+                            <span id="tituloCarrito">Carrito</span>
                 </a>
             </div>
         </div>
-    </div>
-    <div class="catalogo">
-        <div class="container">
-            <div class="row mt-5 mb-5">
-                <div class="col-sm-3">
-                    <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/Images/Libro1.png" class="card-img-top p-3 pb-0">
-                        <div class="card-body">
-
+        <div class="catalogo">
+            <div class="container">
+                <div class="row mt-5 mb-5">
+                    <div class="col-sm-3">
+                        <div class="card border border-dark" style="width: 14rem;left: 3rem">
+                            <img src="/Images/Libro1.png" class="card-img-top p-3 pb-0">
+                            <div class="card-body">
                                 <img src="/Images/Calificacion-4.png" class="w-100">
-
                                 <% libro.forEach((libro)=> { %>
                                     <% if (libro.ID_Libro==1) { %>
                                         <h5 class="card-title font-18 mt-3">
@@ -91,14 +76,12 @@
                                             <% }); %>
 
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==1) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion %>
                                                             </div>
                                                             <% }; %>
@@ -106,9 +89,7 @@
 
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro1">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro1">
                                                     Detalles del libro
                                                 </button>
                             </div>
@@ -128,14 +109,12 @@
                                             <% }); %>
 
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==2) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
@@ -144,9 +123,7 @@
 
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro2">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro2">
                                                     Detalles del libro
                                                 </button>
                             </div>
@@ -166,23 +143,19 @@
                                             <% }); %>
 
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==3) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
                                                                 <% }); %>
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro3">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro3">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -201,23 +174,19 @@
                                         <% }; %>
                                             <% }); %>
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==4) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
                                                                 <% }); %>
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro4">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro4">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -240,23 +209,19 @@
                                             <% }); %>
 
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==5) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
                                                                 <% }); %>
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro5">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro5">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -275,14 +240,12 @@
                                         <% }; %>
                                             <% }); %>
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==9) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
@@ -290,9 +253,7 @@
 
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro6">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro6">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -312,23 +273,19 @@
                                             <% }); %>
 
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==7) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
                                                                 <% }); %>
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro7">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro7">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -348,14 +305,12 @@
                                             <% }); %>
 
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==8) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
@@ -363,9 +318,7 @@
 
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro8">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro8">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -387,23 +340,19 @@
                                         <% }; %>
                                             <% }); %>
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==9) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
                                                                 <% }); %>
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro9">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro9">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -423,14 +372,12 @@
                                             <% }); %>
 
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==10) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
@@ -438,9 +385,7 @@
 
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro10">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro10">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -459,14 +404,12 @@
                                         <% }; %>
                                             <% }); %>
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==11) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
@@ -474,9 +417,7 @@
 
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro11">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro11">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -495,14 +436,12 @@
                                         <% }; %>
                                             <% }); %>
                                                 <div class="row mt-3">
-                                                    <div
-                                                        class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
+                                                    <div class="col-sm-3 border-dark border-bottom border-1 font-13 ml-3 mr-3">
                                                         Tipo:
                                                     </div>
                                                     <% libro.forEach((libro)=> { %>
                                                         <% if (libro.ID_Libro==12) { %>
-                                                            <div
-                                                                class="col-sm-6 border border-dark border-1 font-14 text-center">
+                                                            <div class="col-sm-6 border border-dark border-1 font-14 text-center">
                                                                 <%= libro.Tipo_Transaccion%>
                                                             </div>
                                                             <% }; %>
@@ -510,9 +449,7 @@
 
                                                 </div>
                                                 <!-- Button trigger modal -->
-                                                <button type="button"
-                                                    class="btn btn-light w-100 mt-3 btn border border-1"
-                                                    data-bs-toggle="modal" data-bs-target="#Libro12">
+                                                <button type="button" class="btn btn-light w-100 mt-3 btn border border-1" data-bs-toggle="modal" data-bs-target="#Libro12">
                                                     <a>Detalles del libro </a>
                                                 </button>
                             </div>
@@ -523,36 +460,22 @@
             </div>
         </div>
         <!-- FIN DE CONTENIDO -->
-
-        <div class="footer p-3">
-            <div class="row">
-                <div class="col-sm-6">
-                    <p class="text-end text-white"> Condiciones de uso </p>
-                </div>
-                <div class="col-sm-6">
-                    <p class="text-white"> Aviso de Privacidad </p>
-                </div>
-            </div>
-            <div class="col-sm-12">
-                <p class="text-center text-white mb-0"> <strong>© 2020-2021 Hipatia-Perú</strong> </p>
-            </div>
-        </div>
+        <%- include('templates/footer') %>
 </body>
 <!-- Modal 1 -->
 <div class="modal fade priori" id="Libro1" tabindex="-1" aria-labelledby="Libro1Label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                    <% libro.forEach((libro)=> { %>
-                        <form method="POST" id="form1" action="/carrito/1"></form>
-                        <% if (libro.ID_Libro==1) { %>
-                            <h5 class="modal-title" id="Libro1Label">
-                                <%= libro.Nombre%>
-                            </h5>
-                            <% }; %>
-                                <% }); %>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+                <% libro.forEach((libro)=> { %>
+                    <form method="POST" id="form1" action="/carrito/1"></form>
+                    <% if (libro.ID_Libro==1) { %>
+                        <h5 class="modal-title" id="Libro1Label">
+                            <%= libro.Nombre%>
+                        </h5>
+                        <% }; %>
+                            <% }); %>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -650,92 +573,91 @@
             <div class="modal-header">
                 <% libro.forEach((libro)=> { %>
                     <form method="POST" id="form2" action="/carrito/2"></form>
+                    <% if (libro.ID_Libro==2) { %>
+                        <h5 class="modal-title" id="Libro2Label">
+                            <%= libro.Nombre%>
+                        </h5>
+                        <% }; %>
+                            <% }); %>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-5">
+                    <div class="col-sm-6">
+                        <img src="/Images/Libro2.png" class="card-img-top p-3 pb-0">
+                    </div>
+                    <div class="col-sm-6 mt-5">
+                        <p class="text-center mb-5"> Confianza </p>
+                        <img src="/Images/Calificacion-2.png" class="w-100">
+                        <% libro.forEach((libro)=> { %>
+                            <% if (libro.ID_Libro==2) { %>
+                                <p class="text-center mt-5"> <strong>
+                                        <%= libro.Tipo_Transaccion%>
+                                    </strong> </p>
+                                <% }; %>
+                                    <% }); %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 text-end">
+                        Precio S/.
+                    </div>
+                    <div class="col-sm-2 text-end"> </div>
+                    <% libro.forEach((libro)=> { %>
                         <% if (libro.ID_Libro==2) { %>
-                            <h5 class="modal-title" id="Libro2Label">
-                                <%= libro.Nombre%>
-                            </h5>
+                            <div class="col-sm-6 border bordered-dark text-center">
+                                <%= libro.Precio%>
+                            </div>
                             <% }; %>
                                 <% }); %>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="row mb-5">
-                        <div class="col-sm-6">
-                            <img src="/Images/Libro2.png" class="card-img-top p-3 pb-0">
-                        </div>
-                        <div class="col-sm-6 mt-5">
-                            <p class="text-center mb-5"> Confianza </p>
-                            <img src="/Images/Calificacion-2.png" class="w-100">
-                            <% libro.forEach((libro)=> { %>
-                                <% if (libro.ID_Libro==2) { %>
-                                    <p class="text-center mt-5"> <strong>
-                                            <%= libro.Tipo_Transaccion%>
-                                        </strong> </p>
-                                    <% }; %>
-                                        <% }); %>
-                        </div>
+                <div class="row mt-3">
+                    <div class="col-sm-3 text-end">
+                        Autor
                     </div>
-                    <div class="row">
-                        <div class="col-sm-3 text-end">
-                            Precio S/.
-                        </div>
-                        <div class="col-sm-2 text-end"> </div>
-                        <% libro.forEach((libro)=> { %>
-                            <% if (libro.ID_Libro==2) { %>
-                                <div class="col-sm-6 border bordered-dark text-center">
-                                    <%= libro.Precio%>
-                                </div>
-                                <% }; %>
-                                    <% }); %>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-3 text-end">
-                            Autor
-                        </div>
-                        <div class="col-sm-2 text-end"> </div>
-                        <% libro.forEach((libro)=> { %>
-                            <% if (libro.ID_Libro==2) { %>
-                                <div class="col-sm-6 border bordered-dark text-center">
-                                    <%= libro.Autor%>
-                                </div>
-                                <% }; %>
-                                    <% }); %>
+                    <div class="col-sm-2 text-end"> </div>
+                    <% libro.forEach((libro)=> { %>
+                        <% if (libro.ID_Libro==2) { %>
+                            <div class="col-sm-6 border bordered-dark text-center">
+                                <%= libro.Autor%>
+                            </div>
+                            <% }; %>
+                                <% }); %>
 
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-3 text-end">
-                            Imperfecciones
-                        </div>
-                        <div class="col-sm-2 text-end"> </div>
-                        <% libro.forEach((libro)=> { %>
-                            <% if (libro.ID_Libro==2) { %>
-                                <div class="col-sm-6 border bordered-dark text-center">
-                                    <%= libro.Imperfectos%>
-                                </div>
-                                <% }; %>
-                                    <% }); %>
-                    </div>
-                    <div class="row mt-3">
-                        <div class="col-sm-3 text-end">
-                            Categoria
-                        </div>
-                        <div class="col-sm-2 text-end"> </div>
-                        <% libro.forEach((libro)=> { %>
-                            <% if (libro.ID_Libro==2) { %>
-                                <div class="col-sm-6 border bordered-dark text-center">
-                                    <%= libro.Categoria%>
-                                </div>
-                                <% }; %>
-                                    <% }); %>
-                    </div>
                 </div>
-                <div class="modal-footer">
-                    <div class="col-sm-6">
+                <div class="row mt-3">
+                    <div class="col-sm-3 text-end">
+                        Imperfecciones
                     </div>
-            
+                    <div class="col-sm-2 text-end"> </div>
+                    <% libro.forEach((libro)=> { %>
+                        <% if (libro.ID_Libro==2) { %>
+                            <div class="col-sm-6 border bordered-dark text-center">
+                                <%= libro.Imperfectos%>
+                            </div>
+                            <% }; %>
+                                <% }); %>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-3 text-end">
+                        Categoria
+                    </div>
+                    <div class="col-sm-2 text-end"> </div>
+                    <% libro.forEach((libro)=> { %>
+                        <% if (libro.ID_Libro==2) { %>
+                            <div class="col-sm-6 border bordered-dark text-center">
+                                <%= libro.Categoria%>
+                            </div>
+                            <% }; %>
+                                <% }); %>
+                </div>
+            </div>
+            <div class="modal-footer">
                 <div class="col-sm-6">
-                    <button type="submit" form="form2"  class="btn border bordered-dark" data-bs-dismiss="modal">
+                </div>
+
+                <div class="col-sm-6">
+                    <button type="submit" form="form2" class="btn border bordered-dark" data-bs-dismiss="modal">
                         <img src="/Images/MiCarrito.png" style="width:20%"> <br>
                         Agregar al carrito
                     </button>
@@ -757,8 +679,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -835,7 +756,7 @@
                 <div class="col-sm-6">
                 </div>
                 <div class="col-sm-6">
-                    <button type="submit" form="form3"  class="btn border bordered-dark" data-bs-dismiss="modal">
+                    <button type="submit" form="form3" class="btn border bordered-dark" data-bs-dismiss="modal">
                         <img src="/Images/MiCarrito.png" style="width:20%"> <br>
                         Agregar al carrito
                     </button>
@@ -857,8 +778,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -958,8 +878,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1060,8 +979,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1161,8 +1079,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1261,8 +1178,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1363,8 +1279,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1465,8 +1380,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1565,8 +1479,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1667,8 +1580,7 @@
                         </h5>
                         <% }; %>
                             <% }); %>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row mb-5">
@@ -1752,7 +1664,6 @@
                     </button>
                 </div>
             </div>
-            <%- include('templates/footer') %>
 
         </div>
     </div>
