@@ -59,11 +59,21 @@
 
 #librosencarritoimg{
     position: absolute;
-    right: 5%;
+    right: 4.5%;
     top: 9%;
+    background-color: rgb(187, 14, 14);
+    padding: 0.1%;
+    z-index: 999999;
+    border-radius: 60%;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+    font-size: 15px;
+    color: white;
 }
 
 #tituloCarrito{
     position: absolute;
-    right: 6px;
+    right: 4.5%;
+    top: 15.5%
 }

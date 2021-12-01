@@ -60,7 +60,9 @@
             </div>
             <div class="col-sm-1">
                 <a href="/carrito" class="btn">
-                    <span id="librosencarritoimg"> <%= LibrosEnCarrito%>  </span>
+                    <% if (LibrosEnCarrito!=0) { %>
+                        <span id="librosencarritoimg"> <%= LibrosEnCarrito%>  </span>
+                    <% }; %>
                     <span><img id = "carritoimg"src="/Images/MiCarrito.png"></span>
                    <br>
                    <span id="tituloCarrito">Carrito</span>
