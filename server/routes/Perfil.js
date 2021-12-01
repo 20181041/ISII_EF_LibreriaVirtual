@@ -69,7 +69,7 @@ router.post('/MiPerfil-Resumen', async(req, res) => {
 });
 router.get('/MiPerfil-Tienda', async(req, res) => {
     const id = req.user.ID_Usuario;
-    const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${req.params.ID_Usuario}`);
+    const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${id}`);
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
     const usuario = await pool.query('SELECT * from usuario');
