@@ -40,7 +40,7 @@ router.post('/carrito/:id', async(req, res) => {
          Categoria: us1.Categoria, 
          Estado : us1.Estado, 
          Imagen: `Libro${id}.png` , 
-         Zona: "Comunicacion",
+         Zona: "Transaccion",
          ID: id};
 
     añadircarrito(req.user.ID_Usuario, nuevoLibro)
