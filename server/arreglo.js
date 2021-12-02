@@ -1,16 +1,4 @@
 var arreglogeneral = [];
-arreglogeneral.push({
-    id: 1,
-    carrito: [],
-    tienda: [],
-    transaccion: []
-})
-arreglogeneral.push({
-    id: 2,
-    carrito: [],
-    tienda: [],
-    transaccion: []
-})
 
 const GetCarrito = async(id) => {
     const usuario = await BuscarUsuarioxID(id)
@@ -63,6 +51,9 @@ const VerCarrito = async(id) => {
     console.log(carrito)
 }
 
+const VerUsuarios = async(id) => {
+    console.log(arreglogeneral)
+}
 module.exports = {
     arreglogeneral: arreglogeneral,
     BorrarDelCarrito: BorrarDelCarrito,
@@ -70,5 +61,6 @@ module.exports = {
     añadirnuevo: Añadirnuevo,
     vercarrito: VerCarrito,
     añadircarrito: AñadirAlCarrito,
-    GetCarrito: GetCarrito
+    GetCarrito: GetCarrito,
+    VerUsuarios: VerUsuarios
 };
