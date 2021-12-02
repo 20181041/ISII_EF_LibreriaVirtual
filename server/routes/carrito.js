@@ -2,36 +2,12 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
-const { arreglogeneral, añadircarrito, GetCarrito, BorrarDelCarrito } = require('../arreglo')
+const { arreglogeneral, añadircarrito, GetCarrito, BorrarDelCarrito, BuscarLibroxID } = require('../arreglo')
 
-/*const libro1 = ["matilda","30", "Autor1", "Venta", "pág5 sucia", "comedia", "Pendiente", "matilda.png", "Comunicacion"];
-const libro2 = ["coquito" ,"10", "Autor2", "Pendiente", "pág5 sucia", "comedia", "Compleato", "coquito.png", "Completado" ];
-const libro3 = ["cenicienta","20", "Autor3", "Intercambio", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Comunicacion"  ];
-const libro4 = ["floricienta","60", "Autor4", "Pendiente", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Transaccion"  ];
-const libro5 = ["5 recetas de pan","10", "Autor5", "Intercambio", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Transaccion"  ];
-const libro6 = ["mulan","5", "Autor6", "Venta", "pág5 sucia", "comedia", "Completado", "cenicienta.png", "Completado"  ];
-const libro7 = ["10 historias de amor","20", "Autor7", "Pendiente", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Comunicacion"  ];*/
-const libro8 = ["zombies", "0", "Autor8", "Venta", "pág5 sucia", "comedia", "Pendiente", "cenicienta.png", "Transaccion"];
-
-//console.log(arreglogeneral)
-
-function buscar_id(a, b) {
-    var us1;
-
-    for (let x = 0; x < a.length; x++) {
-        if (a[x].ID_Libro == b) {
-            us1 = a[x];
-        }
-    }
-    return us1
-}
 
 router.post('/carrito/:id', isLoggedIn,  async(req, res) => {
-    //var libroscarrito = getCarrito();
-    //var librosID = getLibrosID();
     const id = req.params.id;
-    const listadelibros = await pool.query('SELECT * FROM libro');
-    var us1 = buscar_id(listadelibros, id);
+    var us1 = await BuscarLibroxID(id)
     const nuevoLibro = {
          Nombre: us1.Nombre,
          Precio: us1.Precio, 
@@ -40,9 +16,11 @@ router.post('/carrito/:id', isLoggedIn,  async(req, res) => {
          Imperfectos: us1.Imperfectos, 
          Categoria: us1.Categoria, 
          Estado : us1.Estado, 
-         Imagen: `Libro${id}.png` , 
+         Imagen: `Libro${id}.png`, 
          Zona: "Transaccion",
-         ID: id};
+         ID: id,
+         ID_Usuario: us1.ID_Usuario 
+        };
 
     añadircarrito(req.user.ID_Usuario, nuevoLibro)
 

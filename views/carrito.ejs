@@ -140,8 +140,6 @@
                                              </div>
                                         </td>
 
-
-          
                                         <form method="POST" id="formborra" action="/carrito-borrar">
                                              <td>
                                                   <div class="col">
@@ -151,6 +149,7 @@
                                                                  Eliminar
                                                             </button>
                                                        </div>
+                                        </form>
                                                        <div class="Seccion-Boton">
                                                             <% if (tn.Zona!="Completado" && tn.Zona!="Pendiente" ){ %>
 
@@ -159,14 +158,16 @@
                     
                                                             <% } %>
                                                        </div>
-
+                                        <form method="POST" id="PedirLibro" action="/EnviarTransaccion">
                                                        <div class="Seccion-Boton">
-                                                            <button id="enviarcorreo" type="button" class="btn btn-info">Pedir libro</button>
+                                                            <input type="hidden" name="IdUsuario" value="<%=tn.ID_Usuario%>"> 
+                                                            <input type="hidden" name="IdLibro" value="<%=tn.ID%>"> 
+                                                            <button id="enviarcorreo" type="submit" class="btn btn-info">Pedir libro</button>
                                                        </div>
                                                   </div>    
                                              </td>
-                                                
                                         </form>
+                                       
                                              
                                    </tr>
 

@@ -72,8 +72,6 @@ app.use(require('./routes/carrito'));
 app.use(require('./routes/Perfil'));
 
 
-
-
 // Starting the server 
 
 app.listen(app.get('port'), () => {

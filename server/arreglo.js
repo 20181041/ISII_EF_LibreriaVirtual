@@ -1,12 +1,11 @@
+const pool = require('./database');
+
+
 var arreglogeneral = [];
 
-const GetCarrito = async(id) => {
-    const usuario = await BuscarUsuarioxID(id)
-    const carrito = usuario.carrito;
-    return carrito;
-}
+
+/*FUNCIONES GENERALES*/
 const BuscarUsuarioxID = async(id) => {
-    //console.log(arreglogeneral)
     for (let p in arreglogeneral) {
         if (arreglogeneral[p].id == id) {
             return (arreglogeneral[p])
@@ -19,9 +18,53 @@ const Añadirnuevo = async(id) => {
         id: id,
         carrito: [],
         tienda: [],
-        transaccion: []
+        transaccion: [],
+        transaccion2:[]
     })
 
+}
+
+const VerUsuarios = async(id) => {
+    console.log(arreglogeneral)
+}
+
+const AñadirUsuarios = async () =>{
+    const Usuarios = await pool.query('SELECT * from usuario');
+    for (let p in Usuarios){
+      Añadirnuevo(Usuarios[p].ID_Usuario)
+    }
+}
+
+/* FUNCIONES GET*/
+const GetCarrito = async(id) => {
+    const usuario = await BuscarUsuarioxID(id)
+    const carrito = usuario.carrito;
+    return carrito;
+}
+
+const GetTransaccion1 = async(id) => {
+    const usuario = await BuscarUsuarioxID(id)
+    console.log(usuario)
+    const listaTransaccion = usuario.transaccion;
+    return listaTransaccion;
+}
+
+const GetTransaccion2 = async(id) => {
+    const usuario = await BuscarUsuarioxID(id)
+    const listaTransaccion = usuario.transaccion2;
+    return listaTransaccion;
+}
+
+
+
+/* FUNCIONES CARRITO*/
+const BorrarDelCarrito = async(id, idLibro) => {
+    const libroscarrito = await GetCarrito(id);
+    for (let x in libroscarrito) {
+        if (libroscarrito[x].ID == idLibro) {
+            libroscarrito.splice(x, 1)
+        }
+    }
 }
 
 const AñadirAlCarrito = async(id, libro) => {
@@ -36,24 +79,40 @@ const AñadirAlCarrito = async(id, libro) => {
         carrito.push(libro)
     }
 }
-
-const BorrarDelCarrito = async(id, idLibro) => {
-    const libroscarrito = await GetCarrito(id);
-    for (let x in libroscarrito) {
-        if (libroscarrito[x].ID == idLibro) {
-            libroscarrito.splice(x, 1)
-        }
-    }
-}
-
 const VerCarrito = async(id) => {
     const carrito = await GetCarrito(id);
     console.log(carrito)
 }
 
-const VerUsuarios = async(id) => {
-    console.log(arreglogeneral)
+/*FUNCIONES TRANSACCION*/
+const BuscarLibroxID = async(id) => {
+    var us1
+    const a = await pool.query('SELECT * FROM libro')
+    for (let x = 0; x < a.length; x++) {
+        if (a[x].ID_Libro == id) {
+            us1 = a[x];
+        }
+    }
+    return us1
 }
+const AñadirTransaccion = async(Libro, id) => {
+    const listaTransaccion = await GetTransaccion1(id)
+    
+    var encontrado = false;
+    for (let i in listaTransaccion) {
+        if (listaTransaccion[i].ID_Libro == Libro.ID_Libro) {
+            console.log(listaTransaccion[i].ID_Libro)
+            console.log(Libro.ID_Libro)
+            encontrado = true;
+        }
+    }
+
+    if (!encontrado) {
+        listaTransaccion.push(Libro)
+    }
+}
+
+AñadirUsuarios();
 module.exports = {
     arreglogeneral: arreglogeneral,
     BorrarDelCarrito: BorrarDelCarrito,
@@ -62,5 +121,9 @@ module.exports = {
     vercarrito: VerCarrito,
     añadircarrito: AñadirAlCarrito,
     GetCarrito: GetCarrito,
-    VerUsuarios: VerUsuarios
+    GetTransaccion1:GetTransaccion1,
+    GetTransaccion2:GetTransaccion2,
+    VerUsuarios: VerUsuarios,
+    AñadirTransaccion: AñadirTransaccion,
+    BuscarLibroxID:BuscarLibroxID
 };
