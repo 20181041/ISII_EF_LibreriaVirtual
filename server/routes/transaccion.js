@@ -24,7 +24,7 @@ router.post('/EnviarTransaccion' ,async(req,res)=> {
     const idU= req.body.IdUsuario
     const idL= req.body.IdLibro 
     const libro = await BuscarLibroxID(idL)
-    AñadirTransaccion(libro, req.user.ID_Usuario)
+    AñadirTransaccion(libro, req.user.ID_Usuario, idU)
     res.redirect('MiPerfil-Transaccion')
 });
 router.post('/actualizar-calificacion', async(req, res) => {

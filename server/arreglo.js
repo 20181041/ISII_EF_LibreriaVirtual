@@ -95,9 +95,9 @@ const BuscarLibroxID = async(id) => {
     }
     return us1
 }
-const AñadirTransaccion = async(Libro, id) => {
+const AñadirTransaccion = async(Libro, id, idUsuario) => {
     const listaTransaccion = await GetTransaccion1(id)
-    
+    const listaTransaccion2 = await GetTransaccion1(idUsuario)
     var encontrado = false;
     for (let i in listaTransaccion) {
         if (listaTransaccion[i].ID_Libro == Libro.ID_Libro) {
@@ -109,9 +109,9 @@ const AñadirTransaccion = async(Libro, id) => {
 
     if (!encontrado) {
         listaTransaccion.push(Libro)
+        listaTransaccion2.push(Libro)
     }
 }
-
 AñadirUsuarios();
 module.exports = {
     arreglogeneral: arreglogeneral,
