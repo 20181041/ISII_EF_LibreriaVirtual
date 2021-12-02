@@ -55,7 +55,7 @@ router.post('/actualizoLibro/:idLibro', async(req, res) => {
     const Estado = req.body.estado;
     const ID_Usuario = req.user.ID_Usuario;
 
-    pool.query(`UPDATE usuario SET Nombre='${Titulo}', Precio='${Precio}', Autor='${Autor}', Tipo_Transaccion='${tipoTrans}',  Imperfectos='${Imperfectos}', Categoria='${Categoria}', Estado='${Estado}', ID_Usuario='${ID_Usuario}', descripcion='${descripcion}' WHERE ID_Libro= '${ID_Libro}'`)
+    pool.query(`UPDATE libro SET Nombre='${Titulo}', Precio='${Precio}', Autor='${Autor}', Tipo_Transaccion='${tipoTrans}',  Imperfectos='${Imperfectos}', Categoria='${Categoria}', Estado='${Estado}', ID_Usuario='${ID_Usuario}', descripcion='${descripcion}' WHERE ID_Libro = '${ID_Libro}'`)
 
 
     res.redirect(`/actualizar/${ID_Libro}`);
