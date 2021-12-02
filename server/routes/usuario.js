@@ -7,6 +7,7 @@ const vonage = new Vonage({
   apiKey: "97c4a7e0",
   apiSecret: "vfouBNKkgkrO1wR2"
 })
+const { isLoggedIn } = require('../lib/auth');
 //const { isLoggedIn } = require('../lib/auth'); 
 //Escribimos las rutas que van a interactuar con la  tabla usuarios 
 
@@ -16,7 +17,7 @@ router.get('/add', (req, res) => {
 
 });
 
-router.get("/mostrar", async (req, res) => {
+router.get("/mostrar", isLoggedIn,async (req, res) => {
     const usuario = await pool.query("SELECT * FROM usuario");
     console.log("el sistema ha recibido los datos", usuario);
     const legible = JSON.stringify(usuario);

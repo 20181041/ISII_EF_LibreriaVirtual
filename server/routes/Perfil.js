@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../database');
+const { isLoggedIn } = require('../lib/auth');
 
 function buscar_id(a, b) {
     var us1;
@@ -13,7 +14,7 @@ function buscar_id(a, b) {
     return us1
 }
 
-router.get('/MiPerfil-Editar', async(req, res) => {
+router.get('/MiPerfil-Editar', isLoggedIn,async(req, res) => {
 
     const id = req.user.ID_Usuario;
     const listaUsuarios = await pool.query('SELECT * FROM usuario');
@@ -43,7 +44,7 @@ router.get('/MiPerfil-Editar', async(req, res) => {
     });
 });
 
-router.get('/MiPerfil-Resumen', async(req, res) => {
+router.get('/MiPerfil-Resumen', isLoggedIn,async(req, res) => {
 
     const id = req.params.id;
     const listaUsuarios = await pool.query('SELECT * FROM usuario');
@@ -67,9 +68,9 @@ router.post('/MiPerfil-Resumen', async(req, res) => {
     }
     res.redirect('/MiPerfil-Resumen')
 });
-router.get('/MiPerfil-Tienda', async(req, res) => {
+router.get('/MiPerfil-Tienda', isLoggedIn,async(req, res) => {
     const id = req.user.ID_Usuario;
-    const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${req.params.ID_Usuario}`);
+    const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${id}`);
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
     const usuario = await pool.query('SELECT * from usuario');
