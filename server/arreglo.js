@@ -97,7 +97,7 @@ const BuscarLibroxID = async(id) => {
 }
 const AñadirTransaccion = async(Libro, id, idUsuario) => {
     const listaTransaccion = await GetTransaccion1(id)
-    const listaTransaccion2 = await GetTransaccion1(idUsuario)
+    const listaTransaccion2 = await GetTransaccion2(idUsuario)
     var encontrado = false;
     for (let i in listaTransaccion) {
         if (listaTransaccion[i].ID_Libro == Libro.ID_Libro) {
@@ -112,8 +112,18 @@ const AñadirTransaccion = async(Libro, id, idUsuario) => {
         listaTransaccion2.push(Libro)
     }
 }
+const BorrarTransaccion = async(idUsuario, idLibro) => {
+    const libroscarrito = await GetTransaccion2(idUsuario);
+    for (let x in libroscarrito) {
+        if (libroscarrito[x].ID == idLibro) {
+            libroscarrito.splice(x, 1)
+        }
+    }
+
+}
 AñadirUsuarios();
 module.exports = {
+    BorrarTransaccion: BorrarTransaccion,
     arreglogeneral: arreglogeneral,
     BorrarDelCarrito: BorrarDelCarrito,
     BuscarUsuario: BuscarUsuarioxID,

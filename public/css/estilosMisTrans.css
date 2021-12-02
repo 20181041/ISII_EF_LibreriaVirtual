@@ -29,3 +29,11 @@
  .alto {
      height: 50% !important;
  }
+
+ .enviadas{
+     display:none;
+ }
+
+ .botones{
+     width: 150px;
+ }
