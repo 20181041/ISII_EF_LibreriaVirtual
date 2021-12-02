@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../database');
+const { isLoggedIn } = require('../lib/auth');
 const { arreglogeneral, añadircarrito, GetCarrito, BorrarDelCarrito } = require('../arreglo')
 
 /*const libro1 = ["matilda","30", "Autor1", "Venta", "pág5 sucia", "comedia", "Pendiente", "matilda.png", "Comunicacion"];
@@ -25,7 +26,7 @@ function buscar_id(a, b) {
     return us1
 }
 
-router.post('/carrito/:id', async(req, res) => {
+router.post('/carrito/:id', isLoggedIn,  async(req, res) => {
     //var libroscarrito = getCarrito();
     //var librosID = getLibrosID();
     const id = req.params.id;

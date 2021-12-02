@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../database');
+const { isLoggedIn } = require('../lib/auth');
 
-router.get('/ingresar', async(req, res) => {
+router.get('/ingresar',  isLoggedIn,async(req, res) => {
     const libro = await pool.query('SELECT * from Libro');
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
@@ -31,7 +32,7 @@ router.post('/ingresoLibro/:id', async(req, res) => {
 
     res.redirect('/ingresar');
 });
-router.get('/actualizar/:idLibro', async(req, res) => {
+router.get('/actualizar/:idLibro', isLoggedIn, async(req, res) => {
     const libro = await pool.query(`SELECT * from Libro where ID_Libro = ${req.params.idLibro}`);
     const categorias = await pool.query('SELECT * from categorias');
     const estados = await pool.query('SELECT * from estados');
