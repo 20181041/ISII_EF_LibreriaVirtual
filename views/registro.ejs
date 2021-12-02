@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./css/estilosRegistro.css">
     <link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css " rel="stylesheet " integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC " crossorigin="anonymous ">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <title>Registro</title>
 </head>
 
 <div class="body ">
@@ -68,6 +69,18 @@
                         <div class="form-floating Secciones">
                             <input type="password" placeholder="Repetir Contraseña" name="psw-repeat" id="psw-repeat" required class="form-control">
                             <label class="form-label" for="floatingInput p-3">Repetir Contraseña</label>
+                        </div>
+
+                        <div class="form-floating Secciones">
+                            <select name="areausuario" placeholder="Seleciona un área" class="form-select" aria-label="Default select example">
+                                <option> NORTE </option>
+                                <option> ESTE </option>
+                                <option> SUR </option>
+                                <option> CENTRAL </option>
+                                <option> CENTRAL SUR </option>
+                                <option> BALNEAREOS DEL SUR </option>
+                            </select>
+                            <label class="form-label" for="floatingInput p-3">Selecciona un área</label>
                         </div>
             </form>
                             <div id="BotonRegistrar" class="form-floating">

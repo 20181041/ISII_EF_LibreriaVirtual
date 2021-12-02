@@ -43,7 +43,8 @@ router.post('/registro', async (req, res) => {
     var username = req.body.usuario;
     var correo = req.body.email;
     var password = req.body.psw;
-    pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, area, Calificacion) VALUES('${username}123', '${password}','${correo}', '${username}', '1','ESTE', '1' );`)
+    var area = req.body.areausuario;
+    pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, area, Calificacion) VALUES('${username}123', '${password}','${correo}', '${username}', '1','${area}', '1' );`)
 
     //     if(req.body.checkbox.checked=true){
     //         pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
