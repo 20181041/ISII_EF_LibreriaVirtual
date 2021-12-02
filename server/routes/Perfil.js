@@ -14,7 +14,7 @@ function buscar_id(a, b) {
     return us1
 }
 
-router.get('/MiPerfil-Editar', isLoggedIn,async(req, res) => {
+router.get('/MiPerfil-Editar', isLoggedIn, async(req, res) => {
 
     const id = req.user.ID_Usuario;
     const listaUsuarios = await pool.query('SELECT * FROM usuario');
@@ -44,13 +44,22 @@ router.get('/MiPerfil-Editar', isLoggedIn,async(req, res) => {
     });
 });
 
-router.get('/MiPerfil-Resumen', isLoggedIn,async(req, res) => {
+router.get('/MiPerfil-Resumen', isLoggedIn, async(req, res) => {
 
     const id = req.params.id;
     const listaUsuarios = await pool.query('SELECT * FROM usuario');
-    var us2 = buscar_id(listaUsuarios, id);
 
     res.render('MiperfilResumen', {
+        usuario: req.user
+    });
+});
+
+router.post('/cambiarimg', (req, res) => {
+    const id = req.user.ID_Usuario;
+    const image = req.body.img;
+    pool.query(`UPDATE usuario SET img='${image}' WHERE ID_Usuario= ${id}`)
+    var us2 = buscar_id(listaUsuarios, id);
+    res.redirect('/MiperfilResumen', {
         usuario: req.user
     });
 });
@@ -68,7 +77,7 @@ router.post('/MiPerfil-Resumen', async(req, res) => {
     }
     res.redirect('/MiPerfil-Resumen')
 });
-router.get('/MiPerfil-Tienda', isLoggedIn,async(req, res) => {
+router.get('/MiPerfil-Tienda', isLoggedIn, async(req, res) => {
     const id = req.user.ID_Usuario;
     const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${id}`);
     const categorias = await pool.query('SELECT * from categorias');
