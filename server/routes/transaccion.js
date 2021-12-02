@@ -1,8 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../database');
+const { isLoggedIn } = require('../lib/auth');
 
-router.get('/ZonaComunicacion', async(req, res) => {
+router.get('/ZonaComunicacion', isLoggedIn,async(req, res) => {
     const usuario = await pool.query('SELECT * FROM usuario');
     console.log('el sistema ha recibido los datos', usuario);
     res.render('ZonaComunicacion', {
@@ -10,7 +11,7 @@ router.get('/ZonaComunicacion', async(req, res) => {
     });
 });
 
-router.get('/ZonaConfirmacion', async(req, res) => {
+router.get('/ZonaConfirmacion',isLoggedIn, async(req, res) => {
     const usuario = await pool.query('SELECT * FROM usuario');
     console.log('el sistema ha recibido los datos', usuario);
     res.render('ZonaConfirmacion', {
@@ -36,13 +37,13 @@ router.post('/actualizar-calificacion', async(req, res) => {
 });
 
 
-router.get('/ZonaTransaccion', async(req, res) => {
+router.get('/ZonaTransaccion', isLoggedIn,async(req, res) => {
     res.render('ZonaTransaccion')
 });
 
 
 
-router.get('/MiPerfil-Transaccion', async(req, res) => {
+router.get('/MiPerfil-Transaccion',isLoggedIn, async(req, res) => {
     const id = req.user.ID_Usuario;
     const libro = await pool.query(`SELECT * from Libro where ID_Usuario = ${id}`);
     const categorias = await pool.query('SELECT * from categorias');
