@@ -7,7 +7,7 @@ const pool = require('../database');
 
 
 
-router.post('/send-emailx', async (req, res) => {
+router.post('/send-emailx', async(req, res) => {
 
     console.log(req.body);
     const { email } = req.body;
@@ -19,26 +19,19 @@ router.post('/send-emailx', async (req, res) => {
 
     var contraseñarecuperada = message.Password;
 
-    
- 
-        
     //Aquí es donde armamos el cuerpo del mensaje
     const contentHTML = `
         
                 <h1> 
                     Recuperación de contraseña
                 </h1>
-                <ul>
-
-                    <li>User Email: ${email}</li>
-                    
-                    
+                <ul> 
+                    <li>User Email: ${email}</li> 
                 </ul>
                 <p>SU CONTRASEÑA ES :</p>
                 <p> ${JSON.stringify(usuario)}</p>
 
-                <p> QUE TENGA UNA BUENA COMPRA!</p> 
-
+                <p> QUE TENGA UNA BUENA COMPRA!</p>  
                 `;
     const CLIENT_ID = "1043126957420-d39aqgccva9i1rh7n26sea1asn9uokii.apps.googleusercontent.com";
     const CLIENT_SECRET = "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";
@@ -95,5 +88,3 @@ router.post('/send-emailx', async (req, res) => {
         .catch(error => console.log(error.message));
 });
 module.exports = router;
-
-

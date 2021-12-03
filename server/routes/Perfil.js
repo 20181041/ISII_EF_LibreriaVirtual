@@ -70,11 +70,12 @@ router.post('/MiPerfil-Resumen', async(req, res) => {
     var nuevoUsername = req.body.usuario_nombres;
     var telefono = req.body.telefono;
     var area = req.body.area;
-
+    var image = req.body.image;
     if (area != "Escoge un area") {
-        pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}' WHERE ID_Usuario= ${id}`)
+        pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}', img='${image}' WHERE ID_Usuario= ${id}`)
         const actualizar = await pool.query('SELECT * FROM usuario');
     }
+    console.log(image)
     res.redirect('/MiPerfil-Resumen')
 });
 router.get('/MiPerfil-Tienda', isLoggedIn, async(req, res) => {

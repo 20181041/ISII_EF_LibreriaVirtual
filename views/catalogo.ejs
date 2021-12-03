@@ -42,7 +42,7 @@
             <div class="col-sm-5"> </div>
             <div class="col-sm-1 text-end">
                 <a href="/MiPerfil-Resumen" class="btn">
-                    <img src="/Images/MiProfile.png" style="width:40%"> <br>
+                    <img src="<%= usuario.img %>" style="width:40%"> <br>
                     <%= nombre %>
                 </a>
             </div>
@@ -53,28 +53,25 @@
                             <%= LibrosEnCarrito%>
                         </span>
                         <% }; %>
-                            <img id="carritoimg" src="/Images/MiCarrito.png" class="ml-3"> 
+                            <img id="carritoimg" src="/Images/MiCarrito.png" class="ml-3">
                             <span>Carrito</span>
-                            
-                        
                 </a>
             </div>
             <div class="col-sm-1 text-end">
                 <a href="/logout" class="btn">
-                    <img src="/Images/botonsalirpeneg.png" style="width:40%"> <br>
-                    Salir
+                    <img src="/Images/botonsalirpeneg.png" style="width:40%"> <br> Salir
                 </a>
             </div>
         </div>
-    </div>
-    <div class="catalogo">
-        <div class="container">
-            <div class="row mt-5 mb-5">
-                <div class="col-sm-3">
-                    <div class="card border border-dark" style="width: 14rem;left: 3rem">
-                        <img src="/Images/Libro1.png" class="card-img-top p-3 pb-0">
-                        <div class="card-body">
-                            
+        </div>
+        <div class="catalogo">
+            <div class="container">
+                <div class="row mt-5 mb-5">
+                    <div class="col-sm-3">
+                        <div class="card border border-dark" style="width: 14rem;left: 3rem">
+                            <img src="/Images/Libro1.png" class="card-img-top p-3 pb-0">
+                            <div class="card-body">
+
                                 <img src="/Images/Calificacion-4.png" class="w-100">
                                 <% libro.forEach((libro)=> { %>
                                     <% if (libro.ID_Libro==1) { %>

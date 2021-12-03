@@ -72,8 +72,7 @@ app.use(require('./routes/carrito'));
 app.use(require('./routes/Perfil'));
 
 
-// Starting the server 
-
+// Starting the server
 app.listen(app.get('port'), () => {
     console.log('Server is in port', app.get('port'));
 });
