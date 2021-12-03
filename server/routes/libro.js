@@ -2,15 +2,17 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
-const { BuscarLibroxID, GetCategoria,GetTipoTransaccion, GetEstado, GetListaLibros } = require ('../Generales')
+const { BuscarLibroxID, GetCategoria, GetTipoTransaccion, GetEstado, GetListaLibros } = require('../Generales')
+const { AñadirATienda } = require('../arreglo')
 
 
-router.get('/ingresar',  isLoggedIn,async(req, res) => {
+router.get('/ingresar', isLoggedIn, async(req, res) => {
     const libro = await GetListaLibros();
     const categorias = await GetCategoria();
     const estados = await GetEstado();
     const tipo_transaccion = await GetTipoTransaccion();
     res.render('IngresarLibro', {
+        usuario: req.user,
         libro: libro,
         categorias: categorias,
         estados: estados,
@@ -28,10 +30,10 @@ router.post('/ingresoLibro/:id', async(req, res) => {
     const descripcion = req.body.descripcion;
     const Categoria = req.body.categoria;
     const Estado = req.body.estado;
-    const ID_Usuario = req.params.id;
-    console.log('Este es el usuario', user.ID_Usuario);
+    const ID_Usuario = req.user.ID_Usuario;
+    console.log('Este es el usuario', ID_Usuario);
     pool.query(`INSERT INTO libro VALUES('${ID_Libro}', '${Titulo}','${Precio}', '${Autor}', '${tipoTrans}','${Imperfectos}', '${Categoria}', '${Estado}','${ID_Usuario}','${descripcion}');`)
-    
+
     res.redirect('/ingresar');
 });
 router.get('/actualizar/:idLibro', isLoggedIn, async(req, res) => {
