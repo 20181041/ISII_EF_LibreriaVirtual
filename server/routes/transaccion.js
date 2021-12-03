@@ -2,10 +2,12 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
-const {GetTransaccion1, AñadirTransaccion, BuscarLibroxID, GetTransaccion2, BorrarTransaccion} = require ('../arreglo')
+const {GetTransaccion1, AñadirTransaccion, GetTransaccion2, BorrarTransaccion} = require ('../arreglo')
+const {GetListaUsuarios, BuscarLibroxID, GetCategoria,GetTipoTransaccion, GetEstado } = require ('../Generales')
+
 
 router.get('/ZonaComunicacion', isLoggedIn,async(req, res) => {
-    const usuario = await pool.query('SELECT * FROM usuario');
+    const usuario = await GetListaUsuarios();
     console.log('el sistema ha recibido los datos', usuario);
     res.render('ZonaComunicacion', {
         usuario: usuario,
@@ -13,7 +15,7 @@ router.get('/ZonaComunicacion', isLoggedIn,async(req, res) => {
 });
 
 router.get('/ZonaConfirmacion',isLoggedIn, async(req, res) => {
-    const usuario = await pool.query('SELECT * FROM usuario');
+    const usuario = await GetListaUsuarios();
     console.log('el sistema ha recibido los datos', usuario);
     res.render('ZonaConfirmacion', {
         usuario: usuario,
@@ -58,9 +60,9 @@ router.get('/MiPerfil-Transaccion',isLoggedIn, async(req, res) => {
     const id = req.user.ID_Usuario;
     const libro = await GetTransaccion1(id);
     const libro2 = await GetTransaccion2(id);
-    const categorias = await pool.query('SELECT * from categorias');
-    const estados = await pool.query('SELECT * from estados');
-    const tipo_transaccion = await pool.query('SELECT * from tipo_transaccion');
+    const categorias = await GetCategoria();
+    const estados = await GetEstado();
+    const tipo_transaccion = await GetTipoTransaccion();
     res.render('MiPerfilTrans', {
         libro: libro,
         libro2: libro2,
@@ -69,4 +71,5 @@ router.get('/MiPerfil-Transaccion',isLoggedIn, async(req, res) => {
         tipo_transaccion: tipo_transaccion,
     });
 });
+
 module.exports = router;

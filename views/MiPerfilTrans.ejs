@@ -47,8 +47,12 @@
                 </div>
                 <div class="col-sm-9">
                     <div class="row fondoGris p-2">
-                        <button type="button" id="BEnviados" class="btn btn-secondary">Enviados</button> 
-                         <button type="button" id="BRecibidos" class="btn btn-info">Recibidos</button>
+                        <div class="btn-group btn-group-lg" role="group" aria-label="...">
+                            <button type="button" id="BEnviados" class="btn btn-secondary">Enviados</button> 
+                            <button type="button" id="BRecibidos" class="btn btn-info">Recibidos</button>
+                        </div>
+                        <br>
+                        
                         <div class="col-sm-4">
                             <input type="search" class="w-100 form-control" id="floatingInput" placeholder="Escriba el nombre del libro ...">
                         </div>
@@ -153,6 +157,7 @@
                                             <%= cat1.Nombre %>
                                         </label>
                                         <a class="btn btn-light mb-3 w-100" href="/actualizar/<%=cat1.ID_Libro%>">Editar</a>
+
                                         <form  method="POST" id="formAcepta" action="/AceptarT">
                                             <input type="hidden" name="Id_Libro" value= "<%=cat1.ID_Libro%>">
                                             <button type="submit" class="btn btn-success">Aceptar</button>

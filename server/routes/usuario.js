@@ -2,12 +2,14 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const Vonage = require('@vonage/server-sdk')
-const { arreglogeneral, añadirnuevo, añadircarrito, vercarrito, BuscarUsuario } = require('../arreglo')
+const {añadirnuevo} = require('../arreglo')
 const vonage = new Vonage({
     apiKey: "97c4a7e0",
     apiSecret: "vfouBNKkgkrO1wR2"
 })
 const { isLoggedIn } = require('../lib/auth');
+const {GetListaUsuarios, BuscarLibroxID, GetCategoria,GetTipoTransaccion, GetEstado } = require ('../Generales')
+
 //const { isLoggedIn } = require('../lib/auth'); 
 //Escribimos las rutas que van a interactuar con la  tabla usuarios 
 
@@ -18,7 +20,7 @@ router.get('/add', (req, res) => {
 });
 
 router.get("/mostrar", isLoggedIn, async(req, res) => {
-    const usuario = await pool.query("SELECT * FROM usuario");
+    const usuario = await GetListaUsuarios();
     console.log("el sistema ha recibido los datos", usuario);
     const legible = JSON.stringify(usuario);
     console.log(legible, undefined, 2);
@@ -46,15 +48,8 @@ router.post('/registro', async(req, res) => {
     var password = req.body.psw;
     var area = req.body.areausuario;
     pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, area, Calificacion, img) VALUES('${username}123', '${password}','${correo}', '${username}', '1','${area}', '1', '/Images/MiProfile.png');`)
-
-    //     if(req.body.checkbox.checked=true){
-    //         pool.query(`INSERT INTO usuario(Username, Password, Correo, Nombre_completo, Telefono, Departamento, Calificacion) VALUES('${username}', '${password}','${correo}', 'Fulanito', '1234567','Lima', '0' );`)
-    //     }else{
-    //         console.log("No se creó el usuario"where Correo = '${correo}'`)
-    //    } 
-
     var id;
-    const lista_usuarios = await pool.query('SELECT * FROM usuario');
+    const lista_usuarios = GetListaUsuarios();
     for (p in lista_usuarios) {
         if (lista_usuarios[p].Correo == correo) {
             id = lista_usuarios[p].ID_Usuario

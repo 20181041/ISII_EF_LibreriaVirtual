@@ -7,12 +7,6 @@ router.get('/Iniciarsesion', (req, res) => {
   res.render('Iniciarsesion');
 });
 
-
-
-
-
-
-
 router.post('/Iniciarsesion', (req, res, next) => {
   passport.authenticate('local.signin', {
     successRedirect: '/catalogo',

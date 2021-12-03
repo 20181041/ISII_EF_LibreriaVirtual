@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
-const { arreglogeneral, añadircarrito, GetCarrito, BorrarDelCarrito, BuscarLibroxID } = require('../arreglo')
+const { arreglogeneral, añadircarrito, GetCarrito, BorrarDelCarrito} = require('../arreglo')
+const {BuscarLibroxID } = require ('../Generales')
 
 
 router.post('/carrito/:id', isLoggedIn,  async(req, res) => {

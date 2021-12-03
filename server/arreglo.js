@@ -1,17 +1,12 @@
 const pool = require('./database');
+const {GetListaUsuarios} = require('./Generales')
 
 
 var arreglogeneral = [];
 
 
 /*FUNCIONES GENERALES*/
-const BuscarUsuarioxID = async(id) => {
-    for (let p in arreglogeneral) {
-        if (arreglogeneral[p].id == id) {
-            return (arreglogeneral[p])
-        }
-    }
-}
+
 
 const Añadirnuevo = async(id) => {
     arreglogeneral.push({
@@ -24,39 +19,51 @@ const Añadirnuevo = async(id) => {
 
 }
 
-const VerUsuarios = async(id) => {
+const VerUsuarios = async() => {
     console.log(arreglogeneral)
 }
 
 const AñadirUsuarios = async () =>{
-    const Usuarios = await pool.query('SELECT * from usuario');
+    const Usuarios = await GetListaUsuarios();
     for (let p in Usuarios){
       Añadirnuevo(Usuarios[p].ID_Usuario)
     }
 }
 
+const BuscarUsuarioEnArreglo = async(id) => {
+    for (let p in arreglogeneral) {
+        if (arreglogeneral[p].id == id) {
+            return (arreglogeneral[p])
+        }
+    }
+}
+
+
 /* FUNCIONES GET*/
 const GetCarrito = async(id) => {
-    const usuario = await BuscarUsuarioxID(id)
+    const usuario = await BuscarUsuarioEnArreglo(id)
     const carrito = usuario.carrito;
     return carrito;
 }
 
 const GetTransaccion1 = async(id) => {
-    const usuario = await BuscarUsuarioxID(id)
+    const usuario = await BuscarUsuarioEnArreglo(id)
     console.log(usuario)
     const listaTransaccion = usuario.transaccion;
     return listaTransaccion;
 }
 
 const GetTransaccion2 = async(id) => {
-    const usuario = await BuscarUsuarioxID(id)
+    const usuario = await BuscarUsuarioEnArreglo(id)
     const listaTransaccion = usuario.transaccion2;
     return listaTransaccion;
 }
 
-
-
+const GetTienda = async(id) => {
+    const usuario = await BuscarUsuarioEnArreglo(id)
+    const tienda = usuario.tienda;
+    return tienda;
+}
 /* FUNCIONES CARRITO*/
 const BorrarDelCarrito = async(id, idLibro) => {
     const libroscarrito = await GetCarrito(id);
@@ -85,16 +92,7 @@ const VerCarrito = async(id) => {
 }
 
 /*FUNCIONES TRANSACCION*/
-const BuscarLibroxID = async(id) => {
-    var us1
-    const a = await pool.query('SELECT * FROM libro')
-    for (let x = 0; x < a.length; x++) {
-        if (a[x].ID_Libro == id) {
-            us1 = a[x];
-        }
-    }
-    return us1
-}
+
 const AñadirTransaccion = async(Libro, id, idUsuario) => {
     const listaTransaccion = await GetTransaccion1(id)
     const listaTransaccion2 = await GetTransaccion2(idUsuario)
@@ -122,11 +120,11 @@ const BorrarTransaccion = async(idUsuario, idLibro) => {
 
 }
 AñadirUsuarios();
+
 module.exports = {
     BorrarTransaccion: BorrarTransaccion,
     arreglogeneral: arreglogeneral,
     BorrarDelCarrito: BorrarDelCarrito,
-    BuscarUsuario: BuscarUsuarioxID,
     añadirnuevo: Añadirnuevo,
     vercarrito: VerCarrito,
     añadircarrito: AñadirAlCarrito,
@@ -134,6 +132,6 @@ module.exports = {
     GetTransaccion1:GetTransaccion1,
     GetTransaccion2:GetTransaccion2,
     VerUsuarios: VerUsuarios,
+    GetTienda:GetTienda,
     AñadirTransaccion: AñadirTransaccion,
-    BuscarLibroxID:BuscarLibroxID
 };
