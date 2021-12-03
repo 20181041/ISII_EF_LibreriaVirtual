@@ -4,8 +4,6 @@ const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
 const {GetListaUsuarios, BuscarLibroxID, GetCategoria,  GetEstado, GetAreas } = require ('../Generales')
 
-
-
 router.get('/MiPerfil-Editar', isLoggedIn, async(req, res) => {
     var us1 = req.user;
     const listaAreas = await GetAreas();
@@ -49,11 +47,12 @@ router.post('/MiPerfil-Resumen', async(req, res) => {
     var nuevoUsername = req.body.usuario_nombres;
     var telefono = req.body.telefono;
     var area = req.body.area;
-
+    var image = req.body.image;
     if (area != "Escoge un area") {
         pool.query(`UPDATE usuario SET Username='${nuevoUsername}', Telefono='${telefono}', area='${area}' WHERE ID_Usuario= ${id}`)
         GetListaUsuarios();
     }
+    console.log(image)
     res.redirect('/MiPerfil-Resumen')
 });
 router.get('/MiPerfil-Tienda', isLoggedIn, async(req, res) => {

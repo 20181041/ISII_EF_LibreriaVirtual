@@ -32,57 +32,7 @@
                     <p id="descp"> <span><strong> Inicio / Perfil </strong></span></p>
                 </div>
                 <div class="mb-4">
-                    <img class="rounded mx-auto d-block" id="ImagenMP" src="/Images/MiProfile.png">
-                </div>
-                <div>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                    Cambia tu foto de perfil
-                                </button>
-                            </h2>
-
-                            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">
-                                    <div class="row">
-                                        <form method="post" action="/cambiarimg" style="width: 25%; padding: 0px; margin: 0px;">
-                                            <div class="col-sm-3">
-                                                <input type="hidden" name="image" value="/Images/PERFILUSER_1.jpg">
-                                                <button type="submit" class="w-100" style="color:rgb(0, 0, 0)">
-                                                    <img width="100%" src="/Images/PERFILUSER_1.jpg">
-                                                </button>
-                                            </div>
-                                        </form>
-                                        <form method="post" action="/cambiarimg" style="width: 25%;">
-                                            <div class="col-sm-3">
-                                                <input type="hidden" name="image" value="/Images/PERFILUSER_2.jpg">
-                                                <button type="submit" class="w-100" style="color:rgb(0, 0, 0)">
-                                                    <img width="100%" src="/Images/PERFILUSER_2.jpg">
-                                                    </button>
-                                            </div>
-                                        </form>
-                                        <form method="post" action="/cambiarimg" style="width: 25%;">
-                                            <div class="col-sm-3">
-                                                <input type="hidden" name="image" value="/Images/PERFILUSER_3.jpg">
-                                                <button type="submit" class="w-100" style="color:rgb(0, 0, 0)">
-                                                    <img width="100%" src="/Images/PERFILUSER_3.jpg">
-                                                </button>
-                                            </div>
-                                        </form>
-                                        <form method="post" action="/cambiarimg" style="width: 25%;">
-                                            <div class="col-sm-3">
-                                                <input type="hidden" name="image" value="/Images/PERFILUSER_4.jpg">
-                                                <button type="submit" class="w-100" style="color:rgb(0, 0, 0)">
-                                                    <img width="100%" src="/Images/PERFILUSER_4.jpg">
-                                                </button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <img class="rounded mx-auto d-block" id="ImagenMP" src="<%= usuario.img %>">
                 </div>
                 <div>
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">

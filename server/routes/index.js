@@ -5,8 +5,7 @@ const passport = require('../lib/passport');
 const pool = require('../database');
 const helpers = require('../lib/helpers');
 
-const Usuario1 =
-{
+const Usuario1 = {
     id: '1',
     Nombre: 'clau',
     Apellido: 'martinez',
@@ -14,8 +13,7 @@ const Usuario1 =
     Telefono: '998456780'
 };
 
-const Usuario2 =
-{
+const Usuario2 = {
     id: '2',
     Nombre: 'alejo',
     Apellido: 'anci',
@@ -24,8 +22,7 @@ const Usuario2 =
 };
 
 
-const Usuario3 =
-{
+const Usuario3 = {
     id: '3',
     Nombre: 'andrea',
     Apellido: 'lira',
@@ -35,12 +32,12 @@ const Usuario3 =
 
 const listaUsuarios = [Usuario1, Usuario2, Usuario3]
 
-router.get('/', async (req, res) => {
+router.get('/', async(req, res) => {
     res.render('ejemplo');
 });
 
 
-router.get('/Iniciarsesion', async (req, res) => {
+router.get('/Iniciarsesion', async(req, res) => {
     res.render('Iniciarsesion');
 });
 
@@ -48,8 +45,5 @@ router.get('/Iniciarsesion', async (req, res) => {
 router.get('/logout', (req, res) => {
     req.logOut();
     res.render('Iniciarsesion');
-  });
-
-
-
+});
 module.exports = router;
