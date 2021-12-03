@@ -55,80 +55,78 @@
                         <a href="/ingresar" type="button" class="btn-light mb-3 text-center pt-1" style="color: rgb(0, 0, 0)">
                             <strong>Agregar nuevo libro</strong>
                         </a>
-                        <% libro.forEach((cat)=> { %>
-                            <div class="row border border-2 border-dark mt-2 mb-2">
-                                <div class="col-sm-2 ">
-                                    <img src="./Images/Libro1.png" alt="img1" />
-                                </div>
-                                <!-- Editar -->
-                                <div class="col-sm-2 mt-5 mb-5  p-1">
-                                    <label class="titlib mt-3">
-                                        <%= cat.Nombre %>
-                                    </label>
-                                    <a class="btn btn-light mb-3 w-100" href="/actualizar/<%=cat.ID_Libro%>">Editar</a>
-                                </div>
-                                <!-- Info BD -->
-                                <div class="col-sm-8">
-                                    <div class="row p-0">
-                                        <div class="col-sm-4 p-1">
-                                            <div class="etiqueta">
-                                                <label class="titlib mt-3">Precio</label>
-                                            </div>
-                                            <div class="informativo">
-                                                <label id="anotacion">
-                                                    <%= cat.Precio %>
-                                                </label>
-                                            </div>
-                                            <div class="etiqueta">
-                                                <label class="titlib mt-3">Imperfectos</label>
-                                            </div>
-                                            <div class="informativo">
-                                                <label id="anotacion" style="font-size:14px">
-                                                    <%= cat.Imperfectos %>
-                                                </label>
-                                            </div>
+                        <div class="row border border-2 border-dark mt-2 mb-2">
+                            <div class="col-sm-2 ">
+                                <img src="./Images/Libro<%=libro.ID_Libro%>.png" alt="img1" />
+                            </div>
+                            <!-- Editar -->
+                            <div class="col-sm-2 mt-5 mb-5  p-1">
+                                <label class="titlib mt-3">
+                                    <%= libro.Nombre %>
+                                </label>
+                                <a class="btn btn-light mb-3 w-100" href="/actualizar/<%=libro.ID_Libro%>">Editar</a>
+                            </div>
+                            <!-- Info BD -->
+                            <div class="col-sm-8">
+                                <div class="row p-0">
+                                    <div class="col-sm-4 p-1">
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Precio</label>
                                         </div>
-                                        <div class="col-sm-4 p-">
-                                            <div class="etiqueta">
-                                                <label class="titlib mt-3">Autor</label>
-                                            </div>
-                                            <div class="informativo">
-                                                <label id="anotacion" style="font-size:12px">
-                                                    <%= cat.Autor %>
-                                                </label>
-                                            </div>
-                                            <div class="etiqueta">
-                                                <label class="titlib mt-3">Categoría</label>
-                                            </div>
-                                            <div class="informativo">
+                                        <div class="informativo">
+                                            <label id="anotacion">
+                                                <%= libro.Precio %>
+                                            </label>
+                                        </div>
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Imperfectos</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:14px">
+                                                <%= libro.Imperfectos %>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 p-">
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Autor</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion" style="font-size:12px">
+                                                <%= libro.Autor %>
+                                            </label>
+                                        </div>
+                                        <div class="etiqueta">
+                                            <label class="titlib mt-3">Categoría</label>
+                                        </div>
+                                        <div class="informativo">
 
-                                                <label id="anotacion">
-                                                    <%= cat.Categoria %>
-                                                </label>
-                                            </div>
+                                            <label id="anotacion">
+                                                <%= libro.Categoria %>
+                                            </label>
                                         </div>
-                                        <div class="col-sm-4 p-1">
-                                            <div class="etiquetax" id="xddd">
-                                                <label class="titlib mt-3">Tipo transacción</label>
-                                            </div>
-                                            <div class="informativo">
-                                                <label id="anotacion">
-                                                    <%= cat.Tipo_Transaccion %>
-                                                </label>
-                                            </div>
-                                            <div class="etiquetax" id="xddd">
-                                                <label class="titlib mt-3">Estado</label>
-                                            </div>
-                                            <div class="informativo">
-                                                <label id="anotacion">
-                                                    <%= cat.Estado %>
-                                                </label>
-                                            </div>
+                                    </div>
+                                    <div class="col-sm-4 p-1">
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Tipo transacción</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion">
+                                                <%= libro.Tipo_Transaccion %>
+                                            </label>
+                                        </div>
+                                        <div class="etiquetax" id="xddd">
+                                            <label class="titlib mt-3">Estado</label>
+                                        </div>
+                                        <div class="informativo">
+                                            <label id="anotacion">
+                                                <%= libro.Estado %>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <% }); %>
+                        </div>
                     </div>
                 </div>
             </div>

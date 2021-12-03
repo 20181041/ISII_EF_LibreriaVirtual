@@ -2,30 +2,31 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
-const { arreglogeneral, añadircarrito, GetCarrito, BorrarDelCarrito} = require('../arreglo')
-const {BuscarLibroxID } = require ('../Generales')
+const { arreglogeneral, añadircarrito, GetCarrito, BorrarDelCarrito } = require('../arreglo')
+const { BuscarLibroxID } = require('../Generales')
 
 
-router.post('/carrito/:id', isLoggedIn,  async(req, res) => {
+router.post('/carrito/:id', isLoggedIn, async(req, res) => {
     const id = req.params.id;
     var us1 = await BuscarLibroxID(id)
     const nuevoLibro = {
-         Nombre: us1.Nombre,
-         Precio: us1.Precio, 
-         Autor: us1.Autor, 
-         T_Transaccion: us1.Tipo_Transaccion, 
-         Imperfectos: us1.Imperfectos, 
-         Categoria: us1.Categoria, 
-         Estado : us1.Estado, 
-         Imagen: `Libro${id}.png`, 
-         Zona: "Transaccion",
-         ID: id,
-         ID_Usuario: us1.ID_Usuario 
-        };
+        Nombre: us1.Nombre,
+        Precio: us1.Precio,
+        Autor: us1.Autor,
+        T_Transaccion: us1.Tipo_Transaccion,
+        Imperfectos: us1.Imperfectos,
+        Categoria: us1.Categoria,
+        Estado: us1.Estado,
+        Imagen: `Libro${id}.png`,
+        Zona: "Transaccion",
+        ID: id,
+        ID_Usuario: us1.ID_Usuario
+    };
 
     añadircarrito(req.user.ID_Usuario, nuevoLibro)
 
     res.redirect('/catalogo')
+
 });
 
 

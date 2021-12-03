@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 const { isLoggedIn } = require('../lib/auth');
-const {GetListaUsuarios, BuscarLibroxID, GetCategoria,  GetEstado, GetAreas } = require ('../Generales')
+const { GetListaUsuarios, BuscarLibroxID, GetCategoria, GetEstado, GetAreas } = require('../Generales')
 
 router.get('/MiPerfil-Editar', isLoggedIn, async(req, res) => {
     var us1 = req.user;
@@ -55,6 +55,7 @@ router.post('/MiPerfil-Resumen', async(req, res) => {
     console.log(image)
     res.redirect('/MiPerfil-Resumen')
 });
+
 router.get('/MiPerfil-Tienda', isLoggedIn, async(req, res) => {
     const id = req.user.ID_Usuario;
     const libro = await BuscarLibroxID(id);

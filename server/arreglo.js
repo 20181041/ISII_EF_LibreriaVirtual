@@ -1,5 +1,5 @@
 const pool = require('./database');
-const {GetListaUsuarios} = require('./Generales')
+const { GetListaUsuarios } = require('./Generales')
 
 
 var arreglogeneral = [];
@@ -14,19 +14,18 @@ const Añadirnuevo = async(id) => {
         carrito: [],
         tienda: [],
         transaccion: [],
-        transaccion2:[]
+        transaccion2: []
     })
-
 }
 
 const VerUsuarios = async() => {
     console.log(arreglogeneral)
 }
 
-const AñadirUsuarios = async () =>{
+const AñadirUsuarios = async() => {
     const Usuarios = await GetListaUsuarios();
-    for (let p in Usuarios){
-      Añadirnuevo(Usuarios[p].ID_Usuario)
+    for (let p in Usuarios) {
+        Añadirnuevo(Usuarios[p].ID_Usuario)
     }
 }
 
@@ -60,11 +59,26 @@ const GetTransaccion2 = async(id) => {
 }
 
 const GetTienda = async(id) => {
-    const usuario = await BuscarUsuarioEnArreglo(id)
-    const tienda = usuario.tienda;
-    return tienda;
-}
-/* FUNCIONES CARRITO*/
+        const usuario = await BuscarUsuarioEnArreglo(id)
+        const tienda = usuario.tienda;
+        return tienda;
+    }
+    // FUNCIONES TIENDA
+
+const AñadirATienda = async(id, libro) => {
+        const tienda = await GetTienda(id);
+        var encontrado = false;
+        for (let i in tienda) {
+            if (tienda[i].ID == libro.ID) {
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            libro.img = "/Images/Libro0.png";
+            tienda.push(libro)
+        }
+    }
+    /* FUNCIONES CARRITO*/
 const BorrarDelCarrito = async(id, idLibro) => {
     const libroscarrito = await GetCarrito(id);
     for (let x in libroscarrito) {
@@ -129,9 +143,10 @@ module.exports = {
     vercarrito: VerCarrito,
     añadircarrito: AñadirAlCarrito,
     GetCarrito: GetCarrito,
-    GetTransaccion1:GetTransaccion1,
-    GetTransaccion2:GetTransaccion2,
+    GetTransaccion1: GetTransaccion1,
+    GetTransaccion2: GetTransaccion2,
     VerUsuarios: VerUsuarios,
-    GetTienda:GetTienda,
+    GetTienda: GetTienda,
     AñadirTransaccion: AñadirTransaccion,
+    AñadirATienda: AñadirATienda,
 };
