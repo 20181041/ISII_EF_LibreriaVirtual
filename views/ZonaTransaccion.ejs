@@ -33,12 +33,12 @@
                 <img src="./Images/Perfil_face.png" class="card-img-top">
                 <p></p>
                 <img src="./Images/Calificacion-5.png" class="w-100">
-                <div class="form-check mt-3">
+                <!--<div class="form-check mt-3">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
                     <label class="form-check-label" for="flexCheckIndeterminate">
                         Acepto la transaccion
                     </label>
-                </div>
+                </div>-->
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-2 border border-dark p-3">
@@ -46,12 +46,12 @@
                 <img src="./Images/Perfil_face.png" class="card-img-top">
                 <p></p>
                 <img src="/./Images/Calificacion-3.png" class="w-100">
-                <div class="form-check mt-3">
+                <!--<div class="form-check mt-3">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
                     <label class="form-check-label" for="flexCheckIndeterminate">
                         Acepto la transaccion
                     </label>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="row">
@@ -65,14 +65,39 @@
                 
             </div>
             <div class="col-sm-2">
-                <a href="/ZonaComunicacion" class="btn btn-primary text-center w-100 mt-3 mb-3">Continuar</a>
-            </div>
-            <div class="col-sm-3">
+                <form  method="POST" id="Confirmacion" action="/Confirmar">
+                    <input type="hidden" name= "libro" value="<%=libro%>">
+                    <input type="hidden" name= "peticion" value="<%=peticion%>">
+                    <input type="hidden" name= "dueno" value="<%=dueno%>">
+                    <% if(botonOfertante) { %>
+                        <button id="AceptoOfertante" class="btn btn-primary text-center w-100 mt-3 mb-3"> Aceptar </button>
+                    <%}%>  
 
+                    <% if(botonRecibe) { %>
+                        <button id="AceptoRecibe" class="btn btn-success text-center w-100 mt-3 mb-3"> Aceptar </button>
+                    <%}%>  
+   
+                </form>
+                
             </div>
+            
 
         </div>
-        <p class="text-center font-12">El boton continuar se activará cuando ambos acepten la transacción </p>
+        <form method="POST" id="formContinuar" action="/ZonaComunicacion">
+            <% if(botonContinuar) { %>
+                <input type="hidden" name= "libro" value="<%=libro%>">
+                <input type="hidden" name= "peticion" value="<%=peticion%>">
+                <input type="hidden" name= "dueno" value="<%=dueno%>">
+                <button type="submit" id="Continuar" class="btn btn-primary text-center w-100 mt-3 mb-3">Continuar</button>
+            <%}%>  
+
+            <% if(!botonContinuar) { %>
+                <p class="text-center font-12">El boton continuar se activará cuando ambos acepten la transacción </p>
+            <%}%>  
+
+        </form>
+       
+       
     </div>
 
     <!-- FIN DE CONTENIDO -->
@@ -80,5 +105,5 @@
     <%- include('templates/footer') %>
     
 </body>
-
+<script src='./JS/ZonaTransaccion.js' type='text/javascript'></script>
 </html>

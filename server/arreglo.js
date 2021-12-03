@@ -38,6 +38,15 @@ const BuscarUsuarioEnArreglo = async(id) => {
     }
 }
 
+const BuscarLibroEnCarrito = async(id1, id2)=>{
+    const carrito = await GetCarrito(id1);
+    for (let p in carrito) {
+        if (carrito[p].ID == id2) {
+            return (carrito[p])
+        }
+    }
+}
+
 
 /* FUNCIONES GET*/
 const GetCarrito = async(id) => {
@@ -48,7 +57,7 @@ const GetCarrito = async(id) => {
 
 const GetTransaccion1 = async(id) => {
     const usuario = await BuscarUsuarioEnArreglo(id)
-    console.log(usuario)
+    //console.log(usuario)
     const listaTransaccion = usuario.transaccion;
     return listaTransaccion;
 }
@@ -97,10 +106,11 @@ const AñadirTransaccion = async(Libro, id, idUsuario) => {
     const listaTransaccion = await GetTransaccion1(id)
     const listaTransaccion2 = await GetTransaccion2(idUsuario)
     var encontrado = false;
+    console.log(listaTransaccion)
     for (let i in listaTransaccion) {
-        if (listaTransaccion[i].ID_Libro == Libro.ID_Libro) {
-            console.log(listaTransaccion[i].ID_Libro)
-            console.log(Libro.ID_Libro)
+        if (listaTransaccion[i].ID == Libro.ID) {
+            //console.log(listaTransaccion[i].ID)
+            //console.log(Libro.ID)
             encontrado = true;
         }
     }
@@ -119,6 +129,15 @@ const BorrarTransaccion = async(idUsuario, idLibro) => {
     }
 
 }
+const BuscarenTransaccion = async(libro, arregloCambio) =>{
+    for(let i in arregloCambio){
+        if(arregloCambio[i].ID==libro){
+            NuevoLibro = arregloCambio[i]
+            return NuevoLibro
+        }
+    }
+}
+
 AñadirUsuarios();
 
 module.exports = {
@@ -129,9 +148,11 @@ module.exports = {
     vercarrito: VerCarrito,
     añadircarrito: AñadirAlCarrito,
     GetCarrito: GetCarrito,
+    BuscarenTransaccion:BuscarenTransaccion,
     GetTransaccion1:GetTransaccion1,
     GetTransaccion2:GetTransaccion2,
     VerUsuarios: VerUsuarios,
+    BuscarLibroEnCarrito: BuscarLibroEnCarrito,
     GetTienda:GetTienda,
     AñadirTransaccion: AñadirTransaccion,
 };

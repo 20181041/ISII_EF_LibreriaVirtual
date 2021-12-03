@@ -33,3 +33,9 @@
  .enviadas{
      display:none;
  }
+ .titlib{
+     font-weight: bold;
+     size: 80%;
+     text-align: center;
+     margin: auto;
+ }

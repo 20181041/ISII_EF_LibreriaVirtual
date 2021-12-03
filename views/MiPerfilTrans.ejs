@@ -73,7 +73,7 @@
                         <% libro.forEach((cat)=> { %>
                             <div class="row border border-2 border-dark mt-2 mb-2">
                                 <div class="col-sm-2 ">
-                                    <img src="./Images/Libro<%=cat.ID_Libro%>.png" alt="img1" />
+                                    <img src="./Images/<%=cat.Imagen%>" alt="img1" />
                                 </div>
                                 <!-- Editar -->
                                 <div class="col-sm-2 mt-5 mb-5  p-1">
@@ -128,7 +128,7 @@
                                             </div>
                                             <div class="informativo">
                                                 <label id="anotacion">
-                                                    <%= cat.Tipo_Transaccion %>
+                                                    <%= cat.T_Transaccion%>
                                                 </label>
                                             </div>
                                             <div class="etiquetax" id="xddd">
@@ -149,26 +149,14 @@
                             <% libro2.forEach((cat1)=> { %>
                                 <div class="row border border-2 border-dark mt-2 mb-2">
                                     <div class="col-sm-2 ">
-                                        <img src="./Images/Libro<%=cat1.ID_Libro%>.png" alt="img1" />
+                                        <img src="./Images/<%=cat1.Imagen%>" alt="img1" />
                                     </div>
                                     <!-- Editar -->
                                     <div class="col-sm-2 mt-5 mb-5  p-1">
                                         <label class="titlib mt-3">
                                             <%= cat1.Nombre %>
                                         </label>
-                                        <a class="btn btn-light mb-3 w-100" href="/actualizar/<%=cat1.ID_Libro%>">Editar</a>
-
-                                        <form  method="POST" id="formAcepta" action="/AceptarT">
-                                            <input type="hidden" name="Id_Libro" value= "<%=cat1.ID_Libro%>">
-                                            <button type="submit" class="btn btn-success">Aceptar</button>
-                                        </form>
-                                        
-                                        <form method="POST" id="formRechaza" action="/RechazarT">
-                                            <input type="hidden" name="Id_Libro" value= "<%=cat1.ID_Libro%>">
-                                            <input type="hidden" name="Id_Usuario" value = "<%=cat1.ID_Usuario%>">
-                                            <button type="submit" class="btn btn-danger">Rechazar</button>
-                                        </form>
-                                        
+                                      
                                     </div>
                                     <!-- Info BD -->
                                     <div class="col-sm-8">
@@ -216,7 +204,7 @@
                                                 </div>
                                                 <div class="informativo">
                                                     <label id="anotacion">
-                                                        <%= cat1.Tipo_Transaccion %>
+                                                        <%= cat1.T_Transaccion %>
                                                     </label>
                                                 </div>
                                                 <div class="etiquetax" id="xddd">
@@ -226,6 +214,20 @@
                                                     <label id="anotacion">
                                                         <%= cat1.Estado %>
                                                     </label>
+                                                </div>
+                                                <div class="mt-4">
+                                                    <div class="btn-group" role="group" aria-label="Basic example"> 
+                                                        <form  method="POST" id="formAcepta" action="/AceptarT">
+                                                            <input type="hidden" name="Id_Libro" value= "<%=cat1.ID%>">
+                                                            <input type= "hidden" name="Id_Peticion" value="<%=cat1.ID_Peticion%>">
+                                                            <button type="submit" class="btn btn-success">Aceptar</button>
+                                                        </form>
+                                                        <form method="POST" id="formRechaza" action="/RechazarT">
+                                                            <input type="hidden" name="Id_Libro" value= "<%=cat1.ID%>">
+                                                            <input type= "hidden" name="Id_Peticion" value="<%=cat1.ID_Peticion%>">
+                                                            <button type="submit" class="btn btn-danger">Rechazar</button>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

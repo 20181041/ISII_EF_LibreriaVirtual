@@ -18,9 +18,10 @@ router.post('/carrito/:id', isLoggedIn,  async(req, res) => {
          Categoria: us1.Categoria, 
          Estado : us1.Estado, 
          Imagen: `Libro${id}.png`, 
-         Zona: "Transaccion",
+         Zona: "Pendiente",
          ID: id,
-         ID_Usuario: us1.ID_Usuario 
+         ID_Usuario: us1.ID_Usuario,
+         ID_Peticion: req.user.ID_Usuario
         };
 
     añadircarrito(req.user.ID_Usuario, nuevoLibro)

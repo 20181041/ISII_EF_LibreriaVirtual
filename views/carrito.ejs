@@ -151,11 +151,12 @@
                                                        </div>
                                         </form>
                                                        <div class="Seccion-Boton">
-                                                            <% if (tn.Zona!="Completado" && tn.Zona!="Pendiente" ){ %>
-
-                                                                 <a href="/Zona<%= tn.Zona %>" id="zona" type="button" class="btn btn-warning"> Ver
-                                                                      Zona</a>
-                    
+                                                            <% if (tn.Zona!="Pendiente"){ %>
+                                                            <form method="POST" id="VerZona" action="/ZonaTransaccion">
+                                                                 <input type="hidden" name="IdUsuario" value="<%=tn.ID_Usuario%>"> 
+                                                                 <input type="hidden" name="IdLibro" value="<%=tn.ID%>"> 
+                                                                 <button id="zona" type="submit" class="btn btn-warning"> Ver Zona</button>
+                                                            </form>
                                                             <% } %>
                                                        </div>
                                         <form method="POST" id="PedirLibro" action="/EnviarTransaccion">

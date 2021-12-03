@@ -28,8 +28,9 @@ router.get('/MiPerfil-Editar', isLoggedIn, async(req, res) => {
 });
 
 router.get('/MiPerfil-Resumen', isLoggedIn, async(req, res) => {
+    var us1 = req.user
     res.render('MiperfilResumen', {
-        usuario: req.user
+        usuario: us1
     });
 });
 
