@@ -74,7 +74,6 @@ const AñadirATienda = async(id, libro) => {
             }
         }
         if (!encontrado) {
-            libro.img = "/Images/Libro0.png";
             tienda.push(libro)
         }
     }

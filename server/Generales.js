@@ -15,6 +15,16 @@ const BuscarLibroxID = async(id) => {
     }
     return us1
 }
+const BuscarLibrosxID = async(id) => {
+    var us1 = [];
+    const a = await GetListaLibros();
+    for (let x = 0; x < a.length; x++) {
+        if (a[x].ID_Usuario == id) {
+            us1.push(a[x]);
+        }
+    }
+    return us1
+}
 const GetListaUsuarios = async() => {
     const listausuarios = await pool.query('SELECT * FROM usuario')
     return listausuarios
@@ -52,6 +62,7 @@ module.exports = {
     GetListaLibros: GetListaLibros,
     GetListaUsuarios: GetListaUsuarios,
     BuscarLibroxID: BuscarLibroxID,
+    BuscarLibrosxID: BuscarLibrosxID,
     BuscarUsuarioxID: BuscarUsuarioxID,
     GetEstado: GetEstado,
     GetAreas: GetAreas,
